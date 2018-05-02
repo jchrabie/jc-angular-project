@@ -1,0 +1,25 @@
+@import "colors";
+
+#pres {
+    background-image: url(/assets/pres.png);
+    background-color: $turquoise;
+}
+
+.img-background {
+    background-position: center;
+    background-repeat: no-repeat; 
+    width: 100vw;
+    height: 45vh;
+}
+
+app-card {
+    flex: 1;
+    margin: 20px;
+    min-width: 250px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 50px;
+}

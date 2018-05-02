@@ -1,0 +1,6 @@
+<div class="img-background" id="pres"></div>
+<p i18n="@@introductionHeader">Hello</p>
+
+<div class="container">
+    <app-card *ngFor="let cardData of getCards()" [cardData]="cardData" ></app-card>
+</div>
