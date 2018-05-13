@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operators';
 
-const BASE_URL = 'http://localhost:4201/api';
+const BASE_URL = '//localhost:4201/api';
 
 @Injectable()
 export class RestService {
