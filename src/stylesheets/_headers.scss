@@ -1,0 +1,18 @@
+@import 'breakpoint';
+@import 'breakpoints';
+@import 'colors';
+
+h2 {
+    flex: 0 0 100%;
+    display: flex;
+    align-content: center;
+
+    @include breakpoint ($mobile) {
+        flex: 0 0 80%;
+    }
+
+    mat-icon {
+        color: $primary;
+        margin-right: 20px;
+    }
+}
