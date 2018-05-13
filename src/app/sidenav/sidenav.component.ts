@@ -10,7 +10,7 @@ import Link from '../../model/link';
 export class SidenavComponent implements OnInit {
   linkList: Link[];
 
-  constructor(private sideNavService: SidenavService) { }
+  constructor(public sideNavService: SidenavService) { }
 
   ngOnInit() {
     this.sideNavService.getLinkList().subscribe(res => {

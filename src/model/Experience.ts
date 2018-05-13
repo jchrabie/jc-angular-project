@@ -1,13 +1,13 @@
 export default class Experience {
-    private title: string;
-    private company: string;
-    private city: string;
-    private startDate: Date;
-    private endDate: Date;
-    private postCode: string;
-    private logo: string;
-    private content: string;
-    private chips: string[];
+    public title: string;
+    public company: string;
+    public city: string;
+    public startDate: Date;
+    public endDate: Date;
+    public postcode: string;
+    public logo: string;
+    public content: string;
+    public chips: string[];
 
     constructor() {
     }

@@ -8,7 +8,7 @@ import { SearchService } from '../service/search.service';
   styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent implements OnInit {
-  @Input() experience: Experience;
+  @Input() public experience: Experience;
 
   constructor(private searchService: SearchService) { }
 
