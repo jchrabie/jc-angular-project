@@ -1,7 +1,7 @@
-@import "breakpoint";
-
 mat-sidenav {
-    @include breakpoint(628px) {
-      background-color: aqua;
-    } 
+    min-width: 300px;
+}
+
+main {
+    margin: 64px 0;
 }

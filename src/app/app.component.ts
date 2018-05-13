@@ -16,7 +16,7 @@ export class AppComponent {
   title = 'app';
 
   constructor(
-    private router: Router, 
+    private router: Router,
     public analyticsService: AnalyticsService,
     public sidenavService: SidenavService
   ) {

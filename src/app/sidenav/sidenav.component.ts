@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SidenavService } from '../service/sidenav.service';
+import Link from '../../model/link';
 
 @Component({
   selector: 'app-sidenav',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
+  linkList: Link[];
 
-  constructor() { }
+  constructor(private sideNavService: SidenavService) { }
 
   ngOnInit() {
+    this.sideNavService.getLinkList().subscribe(res => {
+      this.linkList = res.map(link => <Link>link);
+    });
   }
 
+  getLinkList(): Link[] {
+    return this.linkList;
+  }
 }

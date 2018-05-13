@@ -5,21 +5,26 @@
     background-color: $turquoise;
 }
 
-.img-background {
-    background-position: center;
-    background-repeat: no-repeat; 
-    width: 100vw;
-    height: 45vh;
-}
-
-app-card {
-    flex: 1;
+h2 {
     margin: 20px;
-    min-width: 250px;
+    font-size: 3em;
+    flex: 0 0 100%;
+
+    .typing-element {
+        color: $primary;
+    }
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 50px;
+#introduction {
+    margin: 10px 20px;
+    font-size: 1.2em;
+    flex: 0 0 100%;
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+#signature {
+    font-style: italic;
 }

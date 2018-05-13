@@ -1,0 +1,26 @@
+<mat-expansion-panel expanded="true">
+    <mat-expansion-panel-header>
+        <button mat-mini-fab class="image" 
+            [style.backgroundImage]="'url(' + getExperience().logo + ')'">
+        </button>
+        <h3>
+            {{getExperience().company}}
+        </h3>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+        <h4>
+            {{getExperience().title}} - 
+            <small>{{getExperience().city}}({{getExperience().postcode}})</small>
+        </h4>
+        <div>{{getExperience().content}}</div>
+        <mat-chip-list #chipList>
+            <mat-chip 
+                *ngFor="let chip of getExperience().chips"
+                [color]="isSearched(chip) ? 'primary' : 'basic'" 
+                [selected]="true"
+            >
+                {{chip}}
+            </mat-chip>
+        </mat-chip-list>
+    </mat-panel-description>
+</mat-expansion-panel>

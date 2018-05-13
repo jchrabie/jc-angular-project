@@ -1,0 +1,33 @@
+@import 'breakpoint';
+@import 'breakpoints';
+@import 'colors';
+
+app-experience, h2, app-searchbar {
+    flex: 0 0 100%;
+
+    @include breakpoint ($mobile) {
+        flex: 0 0 80%;
+    }
+}
+
+h2 {
+    display: flex;
+    align-content: center;
+
+    mat-icon {
+        color: $primary;
+        margin-right: 20px;
+    }
+}
+
+.container {
+    justify-content: space-around;
+}
+
+mat-accordion {
+    width: 100%;
+
+    @include breakpoint ($mobile) {
+        width: 80%;
+    }
+}

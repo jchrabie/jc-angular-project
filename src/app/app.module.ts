@@ -3,43 +3,68 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-
-import { AnalyticsService } from './service/analytics.service';
-import { SidenavService } from './service/sidenav.service';
+import { FooterComponent } from './footer/footer.component';
+import { SkillsComponent } from './skills/skills.component';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { CardComponent } from './card/card.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { ContactComponent } from './contact/contact.component';
+import { CardContentComponent } from './card-content/card-content.component';
+import { SearchbarComponent } from './searchbar/searchbar.component';
+import { FormControl } from '@angular/forms';
+import { ExperienceListComponent } from './experience-list/experience-list.component';
+
+import { AnalyticsService } from './service/analytics.service';
+import { SidenavService } from './service/sidenav.service';
+import { RestService } from './service/rest.service';
+import { SearchService } from './service/search.service';
+import { FilteredSearchPipe } from './filtered-search.pipe';
 
 const route = [
-  { path: 'about', component: AboutComponent },
+  { path: 'skills', component: SkillsComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'experiences', component: ExperienceListComponent },
   { path: '', component: HomeComponent },
   { path: '**', redirectTo: '' }
-]
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent,
     HeaderComponent,
     SidenavComponent,
-    CardComponent
+    CardComponent,
+    FooterComponent,
+    SkillsComponent,
+    ExperienceComponent,
+    ContactComponent,
+    CardContentComponent,
+    SearchbarComponent,
+    ExperienceListComponent,
+    FilteredSearchPipe
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     MaterialModule,
+    HttpClientModule,
     RouterModule.forRoot(route)
   ],
   exports: [RouterModule],
   providers: [
     AnalyticsService,
     SidenavService,
-    { provide: LOCALE_ID, useValue: 'fr' } 
+    RestService,
+    SearchService,
+    { provide: LOCALE_ID, useValue: 'fr' }
   ],
   bootstrap: [AppComponent]
 })

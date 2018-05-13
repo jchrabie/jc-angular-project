@@ -1,0 +1,31 @@
+<mat-form-field class="demo-chip-list">
+  <mat-chip-list #chipList>
+    <mat-chip
+      *ngFor="let search of searches"
+      [selectable]="selectable"
+      [removable]="removable"
+      (remove)="remove(search)">
+      {{search.name}}
+      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+    </mat-chip>
+    <input
+      placeholder="Rechercher (ex: Angular, React, ...)"
+      #searchInput
+      [formControl]="searchCtrl"
+      [matAutocomplete]="auto"
+      [matChipInputFor]="chipList"
+      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      [matChipInputAddOnBlur]="addOnBlur"
+      (matChipInputTokenEnd)="add($event)"
+      (clic)="filter($event)"
+    />
+    <mat-error *ngIf="searchCtrl.hasError('chips')">
+      Please enter a valid email address
+    </mat-error>
+  </mat-chip-list>
+  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+    <mat-option *ngFor="let chips of filteredSearches | async" [value]="chips">
+      {{ chips }}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>

@@ -1,0 +1,47 @@
+@import "breakpoint";
+@import "breakpoints";
+@import 'badge';
+
+.card-button {
+    position: relative;
+    left: calc(75%);
+    bottom: 100px;
+    margin-bottom: -24px;
+}
+
+mat-card {
+    padding: 0;
+
+    .mat-card-image {
+        margin: 0;
+        width: 100%;
+        @include breakpoint($mobile) {
+          margin: 0;
+          width: 100%;
+        }
+    }
+
+    .mat-card-header {
+        display: flex;
+        flex-direction: row;
+        background-color: #3030308a;
+        padding: 16px 24px 0 24px;
+        margin: -4px 0;
+    }
+
+    .mat-expanded {
+        margin: 0 -24px -16px;
+    }
+
+    .mat-card-content {
+        min-height: 136px;
+    }
+}
+
+.mat-card>:last-child:not(.mat-card-footer) {
+    padding: 0px 24px 24px 24px;
+}
+
+.mat-card-avatar {
+    background-size: cover;
+  }

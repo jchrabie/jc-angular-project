@@ -1,0 +1,10 @@
+<div class="container">
+  <h2><mat-icon>work</mat-icon> Expériences</h2>
+  <app-searchbar></app-searchbar>
+  <mat-accordion>
+    <app-experience 
+    *ngFor="let experience of getExperiences() | filteredSearch" 
+    [experience]="experience"
+  ></app-experience>
+  </mat-accordion>
+</div>

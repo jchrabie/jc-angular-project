@@ -1,0 +1,53 @@
+
+@import "breakpoint";
+@import "breakpoints";
+
+mat-toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+mat-toolbar-row > * {
+    flex: 1 1 auto;
+}
+
+img {
+    height: 20px;
+}
+
+mat-icon {
+    margin-right: 20px;
+    &::after {
+        content: 'phone_iphone';
+        @include breakpoint($mobile) {
+            content: 'tablet';
+            @include breakpoint($tablette) {
+                content: 'desktop_windows';
+            } 
+        } 
+    }
+}
+
+#devices {
+    font-size: 0.5em;
+    font-weight: initial;
+    display: flex;
+    align-items: center;
+
+    & span::after {
+        content: 'mobile';
+        @include breakpoint($mobile) {
+            content: 'tablette';
+            @include breakpoint($tablette) {
+                content: 'desktop';
+            } 
+        } 
+    }
+}
+  
+.socialLinks {
+    background-color: white;
+}

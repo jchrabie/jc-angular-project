@@ -8,7 +8,7 @@ import { MatSidenav } from '@angular/material';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
- 
+
   constructor(public sidenavService: SidenavService) { }
 
   ngOnInit() {

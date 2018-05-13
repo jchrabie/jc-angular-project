@@ -1,6 +1,14 @@
 <div class="img-background" id="pres"></div>
-<p i18n="@@introductionHeader">Hello</p>
 
 <div class="container">
+    <h2>
+        Développeur 
+        <span class="typing-element"></span>
+    </h2>
+    <div id="introduction">
+        <p i18n="@@introductionHeader">Hello</p>
+        <span id="signature">- Joël</span>
+    </div>
+    
     <app-card *ngFor="let cardData of getCards()" [cardData]="cardData" ></app-card>
 </div>
