@@ -1,0 +1,21 @@
+@import 'breakpoint';
+@import 'breakpoints';
+
+.img-background {
+    background-position: center;
+    background-repeat: no-repeat; 
+    width: 100%;
+    height: 25vh;
+    margin-top: -8px;
+    background-size: cover;
+
+    @include breakpoint($breakpoint-medium) {
+        height: 35vh;
+        margin-top: 0;
+    }
+
+    @include breakpoint($breakpoint-large) {
+        height: 45vh;
+        background-size: contain;
+    }
+}

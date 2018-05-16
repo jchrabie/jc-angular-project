@@ -2,22 +2,28 @@
 @import 'breakpoints';
 @import 'headers';
 
-app-experience, app-searchbar {
-    flex: 0 0 100%;
-
-    @include breakpoint ($mobile) {
-        flex: 0 0 80%;
-    }
+#experiences {
+    background-image: url(/assets/experiences.png);
+    background-color: #e84c3c;
 }
+
 
 .container {
     justify-content: space-around;
-}
 
-mat-accordion {
-    width: 100%;
+    app-experience, app-searchbar {
+        flex: 0 0 100%;
+    
+        @include breakpoint ($breakpoint-medium) {
+            flex: 0 0 80%;
+        }
+    }
 
-    @include breakpoint ($mobile) {
-        width: 80%;
+    mat-accordion {
+        width: 100%;
+    
+        @include breakpoint ($breakpoint-medium) {
+            width: 80%;
+        }
     }
 }

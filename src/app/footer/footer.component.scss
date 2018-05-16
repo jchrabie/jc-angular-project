@@ -1,4 +1,3 @@
-
 @import "breakpoint";
 @import "breakpoints";
 
@@ -22,9 +21,9 @@ mat-icon {
     margin-right: 20px;
     &::after {
         content: 'phone_iphone';
-        @include breakpoint($mobile) {
+        @include breakpoint($breakpoint-medium) {
             content: 'tablet';
-            @include breakpoint($tablette) {
+            @include breakpoint($breakpoint-large) {
                 content: 'desktop_windows';
             } 
         } 
@@ -39,9 +38,9 @@ mat-icon {
 
     & span::after {
         content: 'mobile';
-        @include breakpoint($mobile) {
+        @include breakpoint($breakpoint-medium) {
             content: 'tablette';
-            @include breakpoint($tablette) {
+            @include breakpoint($breakpoint-large) {
                 content: 'desktop';
             } 
         } 

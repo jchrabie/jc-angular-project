@@ -25,7 +25,7 @@ export class SearchbarComponent implements OnInit {
 
   @ViewChild('searchInput') searchInput: ElementRef;
 
-  constructor(public restService: RestService, private searchService: SearchService) {
+  constructor(public restService: RestService, public searchService: SearchService) {
     this.restService.getChips().subscribe(chips => {
       this.chipsList = chips;
       this.allChips = this.chipsList;
