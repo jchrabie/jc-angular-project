@@ -24,4 +24,12 @@ mat-expansion-panel {
       flex: 1 1 100%;
     }
   }
+
+  mat-chip {
+    cursor: pointer!important;
+  }
+}
+
+.mat-chip-list-wrapper {
+  margin-top: 20px;
 }

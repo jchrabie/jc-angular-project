@@ -20,7 +20,6 @@ export class SearchbarComponent implements OnInit {
   separatorKeysCodes = [ENTER, COMMA];
   searchCtrl = new FormControl();
   filteredSearches: Observable<any[]>;
-  searches: any[] = [];
   chipsList = [];
   allChips = [];
 
@@ -39,7 +38,6 @@ export class SearchbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
   }
 
   add(event: MatChipInputEvent): void {
@@ -54,7 +52,6 @@ export class SearchbarComponent implements OnInit {
         return;
       }
 
-      this.searches.push({name: existingChips});
       this.filter(existingChips);
       this.searchService.setFilter(existingChips);
     }
@@ -65,13 +62,12 @@ export class SearchbarComponent implements OnInit {
     }
   }
 
-  remove(search: any): void {
-    const index = this.searches.indexOf(search);
+  remove(search: string): void {
+    const index = this.searchService.filteredSearch().indexOf(search);
 
     if (index >= 0) {
-      this.searches.splice(index, 1);
-      this.chipsList.push(search.name);
-      this.searchService.deleteFilter(search.name);
+      this.chipsList.push(search);
+      this.searchService.deleteFilter(search);
     }
   }
 
@@ -81,7 +77,6 @@ export class SearchbarComponent implements OnInit {
   }
 
   selected(event: MatAutocompleteSelectedEvent): void {
-    this.searches.push({ name: event.option.viewValue });
     this.searchService.setFilter(event.option.viewValue);
 
     this.searchInput.nativeElement.value = '';

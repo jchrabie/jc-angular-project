@@ -22,4 +22,13 @@ export class ExperienceComponent implements OnInit {
   isSearched(chips: string): boolean {
     return this.searchService.filteredSearch().includes(chips);
   }
+
+  selectChips(chips: string): void {
+    if (this.searchService.filteredSearch().includes(chips)) {
+      this.searchService.deleteFilter(chips);
+      return;
+    }
+
+    this.searchService.setFilter(chips);
+  }
 }
