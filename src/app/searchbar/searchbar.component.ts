@@ -3,7 +3,7 @@ import {Component, ElementRef, ViewChild, OnInit} from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import {MatAutocompleteSelectedEvent, MatChipInputEvent} from '@angular/material';
 import {map, startWith} from 'rxjs/operators';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { RestService } from '../service/rest.service';
 import { SearchService } from '../service/search.service';
 

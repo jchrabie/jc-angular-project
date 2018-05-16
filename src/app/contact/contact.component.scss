@@ -2,8 +2,6 @@
 @import 'headers';
 
 #gmap {
-    width: 100%;
-    height: 30vh;
     color: black;
 }
 
@@ -16,6 +14,10 @@
     flex: 1;
     flex-grow: 1;
     flex-basis: 0;
-    min-width: 260px;
+    min-width: 300px;
     max-width: 500px;
+}
+
+:host ::ng-deep app-card {
+    min-width: 300px
 }

@@ -5,6 +5,7 @@ import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -24,6 +25,7 @@ import { AnalyticsService } from './service/analytics.service';
 import { SidenavService } from './service/sidenav.service';
 import { RestService } from './service/rest.service';
 import { SearchService } from './service/search.service';
+
 import { FilteredSearchPipe } from './filtered-search.pipe';
 
 const route = [
@@ -56,6 +58,7 @@ const route = [
     ReactiveFormsModule,
     MaterialModule,
     HttpClientModule,
+    NgxChartsModule,
     RouterModule.forRoot(route)
   ],
   exports: [RouterModule],
