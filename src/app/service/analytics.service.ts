@@ -14,7 +14,7 @@ export class AnalyticsService {
     }
   }
 
-  emit(params) {
-    ga('send', 'event', params);
+  emit(...params) {
+    ga('send', 'event', ...params);
   }
 }

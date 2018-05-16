@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SidenavService } from '../service/sidenav.service';
+import { AnalyticsService } from '../service/analytics.service';
 import Link from '../../model/link';
 
 @Component({
@@ -10,7 +11,10 @@ import Link from '../../model/link';
 export class SidenavComponent implements OnInit {
   linkList: Link[];
 
-  constructor(public sideNavService: SidenavService) { }
+  constructor(
+    private sideNavService: SidenavService,
+    private analyticsService: AnalyticsService
+  ) { }
 
   ngOnInit() {
     this.sideNavService.getLinkList().subscribe(res => {
@@ -20,5 +24,10 @@ export class SidenavComponent implements OnInit {
 
   getLinkList(): Link[] {
     return this.linkList;
+  }
+
+  linkClick(link: string): void {
+    this.analyticsService.emit('SideNav', 'Links', 'link clicked', link);
+    this.sideNavService.toggle();
   }
 }

@@ -27,9 +27,10 @@ mat-expansion-panel {
 
   mat-chip {
     cursor: pointer!important;
+    margin: 8px;
   }
 }
 
-.mat-chip-list-wrapper {
+mat-chip-list {
   margin-top: 20px;
 }

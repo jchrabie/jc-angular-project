@@ -1,6 +1,6 @@
 
 <mat-list>
-  <a mat-list-item [routerLink]=" " role="button" (click)="sideNavService.toggle()">
+  <a mat-list-item [routerLink]=" " role="button" (click)="linkClick('header')">
     <img matListAvatar src="assets/avatar.jpg" alt="Accueil">
     <h2 matLine> Joël CHRABIE </h2>
     <h3 matLine>
@@ -9,7 +9,7 @@
   </a>
 </mat-list>
   <mat-nav-list>
-  <a mat-list-item [routerLink]="link.url" *ngFor="let link of getLinkList()" role="button" (click)="sideNavService.toggle()">
+  <a mat-list-item [routerLink]="link.url" *ngFor="let link of getLinkList()" role="button" (click)="linkClick(link.title)">
       <mat-icon matListIcon>{{link.icon}}</mat-icon>
       {{link.title}}
       <mat-divider></mat-divider>
