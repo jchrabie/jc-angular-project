@@ -1,35 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.css']
+  styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
   chartdata: boolean = false;
 
   // Chart
-  view: number[] = [500, 300];
+  view: number[] = [300, 500];
   countryData = [
     {
-      'name': 'France',
-      'value': 8940000
+      'name': 'Javascript',
+      'value': 60
     },
     {
-      'name': 'Lebanon',
-      'value': 8940000
-    },
-    {
-      'name': 'Germany',
-      'value': 8940000
-    },
-    {
-      'name': 'USA',
-      'value': 5000000
+      'name': 'TypeScript',
+      'value': 40
     }
   ];
   colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    domain: ['#00bcd4']
   };
 
   constructor() {
