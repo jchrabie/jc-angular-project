@@ -1,5 +1,6 @@
 @import 'breakpoint';
 @import 'breakpoints';
+@import 'colorss';
 
 .img-background {
     background-position: center;
@@ -8,6 +9,7 @@
     height: 25vh;
     margin-top: -8px;
     background-size: cover;
+    background-color: $primary;
 
     @include breakpoint($breakpoint-medium) {
         height: 35vh;

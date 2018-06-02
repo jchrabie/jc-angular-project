@@ -11,6 +11,12 @@ mat-sidenav-container {
     height: 100vh;
 }
 
+app-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: baseline;
+}
+
 .fill-remaining-space {
     flex: 1 1 auto;
 }

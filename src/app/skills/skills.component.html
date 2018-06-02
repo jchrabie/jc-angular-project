@@ -1,5 +1,8 @@
-<ngx-charts-pie-grid
-    [scheme]="colorScheme"
-    [results]="countryData"
-    (select)="onSelect($event)">
-</ngx-charts-pie-grid>
+<div *ngFor="let chart of charts">
+    <ngx-charts-advanced-pie-chart
+        [scheme]="chart.colorScheme"
+        [results]="chart.countryData"
+        [label]="chart.title"
+        (select)="chart.onSelect($event)">
+    </ngx-charts-advanced-pie-chart>
+</div>
