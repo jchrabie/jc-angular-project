@@ -9,16 +9,16 @@ exports.linkList = [
         "icon": "code",
         "url": "/skills",
     },
-    {
-        "title": "Formations",
-        "icon": "book",
-        "url": "/cv",
-    },
-    {
-        "title": "Réalisations",
-        "icon": "desktop_mac",
-        "url": "/realisation",
-    },
+    // {
+    //     "title": "Formations",
+    //     "icon": "book",
+    //     "url": "/cv",
+    // },
+    // {
+    //     "title": "Réalisations",
+    //     "icon": "desktop_mac",
+    //     "url": "/realisation",
+    // },
     {
         "title": "Contact",
         "icon": "contacts",
@@ -29,9 +29,9 @@ exports.linkList = [
         "icon": "picture_as_pdf",
         "url": "/pdf",
     },
-    {
-        "title": "Blog",
-        "icon": "speaker_notes",
-        "url": "/blog",
-    }
+    // {
+    //     "title": "Blog",
+    //     "icon": "speaker_notes",
+    //     "url": "/blog",
+    // }
 ]

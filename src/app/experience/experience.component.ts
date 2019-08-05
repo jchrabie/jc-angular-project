@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
 import Experience from '../../model/Experience';
 import { SearchService } from '../service/search.service';
 
@@ -10,7 +10,10 @@ import { SearchService } from '../service/search.service';
 export class ExperienceComponent implements OnInit {
   @Input() public experience: Experience;
 
-  constructor(private searchService: SearchService) { }
+  constructor(
+    private searchService: SearchService,
+    private cdr: ChangeDetectorRef
+  ) { }
 
   ngOnInit() {
   }

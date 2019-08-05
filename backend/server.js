@@ -8,36 +8,27 @@ const dataExperiences = require('./assets/json/experiences');
 
 app.use(bodyParser.json());
 
-app.use((res, req, next) => {
+app.use((_, req, next) => {
     req.header('Access-Control-Allow-Origin', '*');
     next();
 })
 
 const api = express.Router();
 
-api.get('/homeCards', (req, res) => {
-    res.json(dataCard.cards);
-});
+api.get('/homeCards', (_, res) => res.json(dataCard.cards));
 
-api.get('/socials', (req, res) => {
-    res.json(dataSocial.socials);
-});
+api.get('/socials', (_, res) => res.json(dataSocial.socials));
 
-api.get('/linkList', (req, res) => {
-    res.json(dataLinkList.linkList);
-});
+api.get('/linkList', (_, res) => res.json(dataLinkList.linkList));
 
-api.get('/experiences', (req, res) => {
-    res.json(dataExperiences.experiences);
-});
+api.get('/experiences', (_, res) => res.json(dataExperiences.experiences));
 
-api.get('/chips', (req, res) => {
+api.get('/chips', (_, res) => {
     const chips = [].concat.apply([], dataExperiences.experiences
-    .map(experience => experience.chips))
-    .filter(function(item, pos, self) {
-        return self.indexOf(item) == pos;
-    })
-    .sort();
+        .map(experience => experience.chips))
+        .filter((item, pos, self) => self.indexOf(item) == pos)
+        .sort();
+
     res.json(chips);
 });
 
@@ -45,6 +36,4 @@ app.use('/api', api);
 
 const port = 4201;
 
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
-})
+app.listen(port, () => console.log(`Listening on port ${port}`))

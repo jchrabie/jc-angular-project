@@ -8,19 +8,15 @@ import { RestService } from '../service/rest.service';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  private socials: Social[];
+  private socialsResp: Social[];
 
   constructor(private restService: RestService) { }
 
   ngOnInit() {
-    this.restService.getSocials().subscribe(res => {
-      this.socials = res.map(social => <Social>social);
-      console.log(this.socials);
-    });
+    this.restService.getSocials().subscribe(res => this.socialsResp = res.map(social => <Social>social));
   }
 
-  getSocials(): Social[] {
-    return this.socials;
+  get socials(): Social[] {
+    return this.socialsResp;
   }
-
 }

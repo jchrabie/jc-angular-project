@@ -5,7 +5,7 @@ exports.cards = [
         "icon": "layers",
         "imagePath": "/assets/design.jpg",
         "imageAlt": "",
-        "content": "Pationné par <span class='badge'>l'informatique</span>, je n'en reste pas moins attaché au rendu <span class='badge'>graphique</span> de l'application ou du site que je créé. Si aucune règle ne m'est imposée, je laisse mon imaginaire vagabonder tout en m'inspirant de ce qui existe déjà sur le net."
+        "content": "Pationné par <span class='badge'>l'informatique</span>, je n'en reste pas moins attaché au rendu <span class='badge'>graphique</span> de l'application ou du site que je crée. </br>Si aucune règle ne m'est imposée, je laisse mon imaginaire vagabonder tout en m'inspirant de ce qui existe déjà sur le net."
     },
     {
         "title": "I18n",
@@ -13,7 +13,7 @@ exports.cards = [
         "icon": "translate",
         "imagePath": "/assets/i18n.jpg",
         "imageAlt": "",
-        "content": "Parceque les sites web ont pour vocation d'être <span class='badge'>visible</span> partout dans le monde, j'ai pris à coeur d'utiliser des outils d'<span class='badge'>internationalisation</span> comme les fichiers .po et la librairie <span class='badge'>i18n</span> propre à Angular."
+        "content": "Parceque les sites web ont pour vocation d'être <span class='badge'>visible</span> partout dans le monde, j'ai pris à coeur d'utiliser des outils d'<span class='badge'>internationalisation</span> comme les fichiers xliff et la librairie <span class='badge'>i18n</span> propre à Angular."
     },
     {
         "title": "Responsive",
@@ -21,7 +21,7 @@ exports.cards = [
         "icon": "devices",
         "imagePath": "/assets/responsive.jpg",
         "imageAlt": "",
-        "content": "A l'heure de l'explosition de l'internet <span class='badge'>Mobile</span>, les sites web doivent permettre de s'afficher sur n'importe quel <span class='badge'>support</span>. Pour ce faire j'utilise de manière approprié le <span class='badge'>Responsive Design</span>."
+        "content": "A l'heure de l'explosition de l'internet <span class='badge'>Mobile</span>, les sites web doivent permettre de s'afficher sur n'importe quel <span class='badge'>support</span>. Pour ce faire j'utilise de manière approprié le <span class='badge'>Responsive Design</span> et le concept de <span class='badge'>Mobile First</span>."
     },
     {
         "title": "A11y",

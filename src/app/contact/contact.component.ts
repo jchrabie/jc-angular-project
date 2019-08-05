@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { } from '@types/googlemaps';
+/// <reference types="@types/googlemaps" />
+
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import Card from '../../model/Card';
 import CardContent from '../../model/CardContent';
 
@@ -9,7 +10,7 @@ import CardContent from '../../model/CardContent';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  @ViewChild('gmap') private gmapElement: any;
+  @ViewChild('gmap') private gmapElement: ElementRef;
   private map: google.maps.Map;
   private infowindow: google.maps.InfoWindow;
   private marker: google.maps.Marker;
@@ -68,9 +69,7 @@ export class ContactComponent implements OnInit {
       title: 'Joël CHRABIE'
     });
 
-    this.marker.addListener('click', function() {
-      this.infowindow.open(this.map, this.marker);
-    });
+    this.marker.addListener('click', ()  => this.infowindow.open(this.map, this.marker));
 
     this.infowindow.open(this.map, this.marker);
   }

@@ -11,7 +11,8 @@ import {
   MatListModule,
   MatChipsModule,
   MatFormFieldModule,
-  MatAutocompleteModule
+  MatAutocompleteModule,
+  MatMenuModule
 } from '@angular/material';
 
 @NgModule({
@@ -22,6 +23,7 @@ import {
     MatSidenavModule,
     MatCheckboxModule,
     MatCardModule,
+    MatMenuModule,
     MatExpansionModule,
     MatListModule,
     MatChipsModule,
@@ -32,6 +34,7 @@ import {
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    MatMenuModule,
     MatSidenavModule,
     MatCheckboxModule,
     MatCardModule,

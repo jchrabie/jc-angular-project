@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
-  private charts = [
+  public charts = [
     {
       title: 'Technologie',
       countryData: [

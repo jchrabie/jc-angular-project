@@ -10,9 +10,7 @@ import * as Typed from 'typed.js';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
   private cards: Card[] = [];
-  private card: Card;
 
   constructor(
     public analyticsService: AnalyticsService,
@@ -25,7 +23,7 @@ export class HomeComponent implements OnInit {
     });
 
     const options = {
-      strings: ['Web', 'Appli Hybride', 'Angular', 'Front', 'Ionic', 'Node'],
+      strings: ['Angular', 'Web', 'Front'],
       typeSpeed: 100,
       backSpeed: 100,
       showCursor: true,
@@ -33,7 +31,7 @@ export class HomeComponent implements OnInit {
       loop: true
     };
 
-    const typed = new Typed('.typing-element', options);
+    new Typed('.typing-element', options);
   }
 
   getCards(): Card[] {
