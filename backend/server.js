@@ -5,6 +5,7 @@ const dataCard = require('./assets/json/cards');
 const dataSocial = require('./assets/json/socials');
 const dataLinkList = require('./assets/json/linkList');
 const dataExperiences = require('./assets/json/experiences');
+const dataSkills = require('./assets/json/skills');
 
 app.use(bodyParser.json());
 
@@ -16,6 +17,8 @@ app.use((_, req, next) => {
 const api = express.Router();
 
 api.get('/homeCards', (_, res) => res.json(dataCard.cards));
+
+api.get('/skills', (_, res) => res.json(dataSkills.skills));
 
 api.get('/socials', (_, res) => res.json(dataSocial.socials));
 

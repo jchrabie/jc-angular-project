@@ -1,11 +1,12 @@
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {Component, ElementRef, ViewChild, OnInit} from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
-import {MatAutocompleteSelectedEvent, MatChipInputEvent} from '@angular/material';
+import {MatAutocompleteSelectedEvent, MatChipInputEvent, MatAutocompleteTrigger} from '@angular/material';
 import {map, startWith} from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { RestService } from '../service/rest.service';
 import { SearchService } from '../service/search.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-searchbar',
@@ -23,9 +24,18 @@ export class SearchbarComponent implements OnInit {
   chipsList = [];
   allChips = [];
 
-  @ViewChild('searchInput') searchInput: ElementRef;
+  @ViewChild(MatAutocompleteTrigger) autocomplete: MatAutocompleteTrigger;
+  @ViewChild('searchInput') searchRef: ElementRef;
+  get searchInput(): HTMLInputElement {
+    return this.searchRef.nativeElement;
+  }
 
-  constructor(public restService: RestService, public searchService: SearchService) {
+
+  constructor(
+    public restService: RestService,
+    public searchService: SearchService,
+    private translate: TranslateService
+  ) {
     this.restService.getChips().subscribe(chips => {
       this.chipsList = chips;
       this.allChips = this.chipsList;
@@ -35,9 +45,17 @@ export class SearchbarComponent implements OnInit {
         map(search => search ? this.filter(search) : this.chipsList.slice())
       );
     });
+
+    this.translate.onLangChange
+      .subscribe(() => {
+        this.searchInput.click();
+        this.autocomplete.closePanel();
+      });
   }
 
   ngOnInit(): void {
+    this.searchInput.click();
+    this.autocomplete.closePanel();
   }
 
   add(event: MatChipInputEvent): void {
@@ -79,6 +97,6 @@ export class SearchbarComponent implements OnInit {
   selected(event: MatAutocompleteSelectedEvent): void {
     this.searchService.setFilter(event.option.viewValue);
 
-    this.searchInput.nativeElement.value = '';
+    this.searchInput.value = '';
   }
 }

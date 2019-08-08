@@ -1,3 +1,65 @@
 {
-  "HELLO": "Salut {{value}}"
+  "HELLO": "Salut {{value}}",
+  "introduction": "Passionné et captivé depuis toujours par le développement informatique, j'ai entrepris une reconversion professionnelle dans le développement informatique.<br/>Fort de mes différentes expériences rayonnantes autour du framework Angular, j'ai décidé de me lancer en tant que <span class='badge'>Freelance</span>",
+  "devweb": "Développeur Freelance",
+  "showMore": "EN SAVOIR PLUS",
+  "search": "Rechercher (ex: Angular, React, ...)",
+  "sideNav": {
+    "home": "Accueil",
+    "experiences": "Expériences",
+    "skills": "Compétences",
+    "contact": "Contact",
+    "pdf": "CV PDF"
+  },
+  "experiences": {
+    "title": "Expériences",
+    "capgemini": {
+      "company": "Capgemini",
+      "title": "Développeur Web Senior",
+      "content": "Suite à une mission en tant que prestataire pour Capgemini, j'ai choisi d'intégrer directement l'entreprise."
+    },
+    "creative": {
+      "company": "Creative",
+      "title": "Développeur Web",
+      "content": "Arrivé chez Creative, j'ai travaillé à Sopra Steria pour la CNAMTS en AngularJS et chez Capgemini pour un client dans le secteur du retail de luxe français."
+    },
+    "sqli": {
+      "company": "SQLI",
+      "title": "Développeur Web",
+      "content": "Embauché sur profil, j'ai travaillé en interne sur divers missions, technologies et frameworks."
+    },
+    "cgi": {
+      "company": "CGI",
+      "title": "Développeur Web (stagiaire)",
+      "content": "Suite à ma formation à l'ENI, j'ai réalisé au sein de CGI une application mobile hybride avec Ionic 1."
+    }
+  },
+  "design": {
+    "title": "Design",
+    "subtitle": "Matérial Design",
+    "imageAlt": "",
+    "content": "Pationné par l'<span class='badge'>informatique</span>, je n'en reste pas moins attaché au rendu <span class='badge'>graphique</span> de l'application ou du site que je crée. </br>Si aucune règle ne m'est imposée, je laisse mon imaginaire vagabonder tout en m'inspirant de ce qui existe déjà sur le net."
+  },
+  "i18n": {
+    "title": "I18n",
+    "subtitle": "Internationalisation",
+    "imageAlt": "",
+    "content": "Parceque les sites web ont pour vocation d'être <span class='badge'>visible</span> partout dans le monde, j'ai pris à coeur d'utiliser des outils d'<span class='badge'>internationalisation</span> comme les fichiers xliff et la librairie <span class='badge'>i18n</span> propre à Angular."
+  },
+  "responsive": {
+    "title": "Responsive",
+    "subtitle": "Adaptation Multi Devices",
+    "imageAlt": "",
+    "content": "A l'heure de l'explosition de l'internet <span class='badge'>mobile</span>, les sites web doivent permettre de s'afficher sur n'importe quel <span class='badge'>support</span>. Pour ce faire j'utilise de manière approprié le <span class='badge'>responsiveDesign</span> et le concept de <span class='badge'>mobileFirst</span>."
+  },
+  "a11y": {
+    "title": "A11y",
+    "subtitle": "Accessibilité",
+    "imageAlt": "",
+    "content": "Améliorer l’<span class='badge'>accessibilité</span> de votre site web permettra de toucher un public plus large, d’augmenter le trafic et les <span class='badge'>conversions</span> sur votre site. Il faut toujours être conscient qu’entre 15% et 20% de la population souffrent d’un <span class='badge'>handicap</span>: visuel, auditif, moteur…"
+  },
+  "contact": {
+    "title": "Contact",
+    "content": "<p>Besoin d'un collaborateur <span class=\"badge\">dynamique</span> et <span class=\"badge\">ambicieux</span>, envie de me connaître un peu plus ou de me recruter?</p><p>Vous trouverez tout le necéssaire ci-après.</p><p>Vous pouvez télécharger ma carte de visite au format <a href=\"assets/jcVcard.vcf\" aria-label=\"Carte de Visite\"><span class=\"badge\">vCard</span></a>, pour m'ajouter facilement à votre carnet d'adresses, m'envoyer un message électronique ou me contacter directement par téléphone.</p><p>Je m'engage à vous répondre dans un délai de <span class=\"badge\">24 heures</span>.</p>"
+  }
 }

@@ -1,11 +1,16 @@
 exports.linkList = [
     {
-        "title": "Expériences",
+        "type": "sideNav.home",
+        "icon": "home",
+        "url": "/",
+    },
+    {
+        "type": "sideNav.experiences",
         "icon": "work",
         "url": "/experiences",
     },
     {
-        "title": "Compétences",
+        "type": "sideNav.skills",
         "icon": "code",
         "url": "/skills",
     },
@@ -20,12 +25,12 @@ exports.linkList = [
     //     "url": "/realisation",
     // },
     {
-        "title": "Contact",
+        "type": "sideNav.contact",
         "icon": "contacts",
         "url": "/contact",
     },
     {
-        "title": "CV au format PDF",
+        "type": "sideNav.pdf",
         "icon": "picture_as_pdf",
         "url": "/pdf",
     },

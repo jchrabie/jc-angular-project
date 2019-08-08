@@ -1,8 +1,8 @@
-<div *ngFor="let chart of charts">
-    <ngx-charts-advanced-pie-chart
-        [scheme]="chart.colorScheme"
-        [results]="chart.countryData"
-        [label]="chart.title"
-        (select)="chart.onSelect($event)">
-    </ngx-charts-advanced-pie-chart>
+<div class="img-background" id="skills"></div>
+<h2>{{'skills.name' | translate}}</h2>
+<div *ngFor="let skill of skills">
+    <div class="container">
+        <h3>{{skill.name}}</h3>
+        <app-card *ngFor="let item of skill.content" [cardData]="item"></app-card>
+    </div>
 </div>

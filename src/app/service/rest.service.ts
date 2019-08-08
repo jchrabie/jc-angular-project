@@ -14,6 +14,10 @@ export class RestService {
     return this.http.get(`${BASE_URL}/homeCards`);
   }
 
+  getSkills(): Observable<any> {
+    return this.http.get(`${BASE_URL}/skills`);
+  }
+
   getSocials(): Observable<any> {
     return this.http.get(`${BASE_URL}/socials`);
   }

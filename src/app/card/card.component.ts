@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import Card from '../../model/Card';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -10,7 +11,12 @@ export class CardComponent implements OnInit {
   @Input() private cardData: Card;
   @Input() private isList?: boolean;
 
-  constructor() { }
+
+  get card(): Card {
+    return this.cardData;
+  }
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     if (!this.isList) {
@@ -30,7 +36,12 @@ export class CardComponent implements OnInit {
     return iconCardUrl;
   }
 
-  getCard(): Card {
-    return this.cardData;
+  goTo(link: string) {
+    if (!link) {
+      return;
+    }
+
+    window.open(link, '_blank');
   }
+
 }

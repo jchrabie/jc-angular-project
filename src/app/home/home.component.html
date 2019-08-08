@@ -2,13 +2,13 @@
 
 <div class="container">
     <h2>
-        Développeur Freelance 
+        {{'devweb' | translate}} 
         <span class="typing-element"></span>
     </h2>
     <div id="introduction">
-        <p i18n="@@myId">Hello</p>
+        <p [innerHtml]="'introduction' | translate"></p>
         <span id="signature">- Joël</span>
     </div>
     
-    <app-card *ngFor="let cardData of getCards()" [cardData]="cardData" ></app-card>
+    <app-card *ngFor="let cardData of cards" [cardData]="cardData" ></app-card>
 </div>

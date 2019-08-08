@@ -18,10 +18,6 @@ export class ExperienceComponent implements OnInit {
   ngOnInit() {
   }
 
-  getExperience(): Experience {
-    return this.experience;
-  }
-
   isSearched(chips: string): boolean {
     return this.searchService.filteredSearch().includes(chips);
   }

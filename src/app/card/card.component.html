@@ -1,13 +1,30 @@
-<mat-card *ngIf="getCard()">
-  <img mat-card-image [src]="getCard().imagePath" [alt]="getCard().imageAlt">
-  <mat-card-header>
-    <mat-card-title>{{getCard().title}}</mat-card-title>
-    <mat-card-subtitle>{{getCard().subtitle}}</mat-card-subtitle>
+<mat-card *ngIf="card">
+  <img mat-card-image [src]="card.imagePath" [alt]="card.imageAlt">
+  <mat-card-header *ngIf="card.type; else rawHeader">
+    <mat-card-title>{{card.type + '.title' | translate}}</mat-card-title>
+    <mat-card-subtitle>{{card.type + '.subtitle' | translate}}</mat-card-subtitle>
   </mat-card-header>
-  <button mat-fab color="primary" class="card-button">
-    <mat-icon>{{getCard().icon}}</mat-icon>
+  <ng-template #rawHeader>
+    <mat-card-header>
+      <mat-card-title>{{card.title}}</mat-card-title>
+      <mat-card-subtitle>{{card.subtitle}}</mat-card-subtitle>
+    </mat-card-header>
+  </ng-template>
+  <button mat-fab color="primary" class="card-button" [ngClass]="{'no-content': !card.content && !card.type}" (click)="goTo(card.link)">
+    <mat-icon *ngIf="card.customIcon; else materialIcon" [svgIcon]="card.icon"></mat-icon>
+    <ng-template #materialIcon>
+        <mat-icon>{{card.icon}}</mat-icon>
+      </ng-template>
   </button>
-  <mat-card-content>
-    <app-card-content [cardContent]="getCard().content" [isList]="isList"> </app-card-content>
+  <mat-card-content *ngIf="card.type; else rawContent">
+    <app-card-content [cardContent]="card.type + '.content' | translate"></app-card-content>
   </mat-card-content>
+  <ng-template #rawContent>
+    <mat-card-content *ngIf="card.content || isList">
+      <app-card-content [cardContent]="card.content" [isList]="isList"></app-card-content>
+    </mat-card-content>
+  </ng-template>
+  <mat-card-actions *ngIf="card.showMore">
+    <button mat-button>{{'showMore' | translate}}</button>
+  </mat-card-actions>
 </mat-card>

@@ -4,12 +4,12 @@
       *ngFor="let search of searchService.filteredSearch()"
       [selectable]="selectable"
       [removable]="removable"
-      (remove)="remove(search)">
+      (click)="remove(search)">
       {{search}}
       <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
     </mat-chip>
     <input
-      placeholder="Rechercher (ex: Angular, React, ...)"
+      placeholder="{{'search' | translate}}"
       #searchInput
       [formControl]="searchCtrl"
       [matAutocomplete]="auto"
@@ -18,10 +18,8 @@
       [matChipInputAddOnBlur]="addOnBlur"
       (matChipInputTokenEnd)="add($event)"
       (clic)="filter($event)"
+      id="chip-list-input"
     />
-    <mat-error *ngIf="searchCtrl.hasError('chips')">
-      Please enter a valid email address
-    </mat-error>
   </mat-chip-list>
   <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
     <mat-option *ngFor="let chips of filteredSearches | async" [value]="chips">

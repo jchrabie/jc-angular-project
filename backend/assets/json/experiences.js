@@ -1,13 +1,29 @@
 exports.experiences = [
     {
-        "company": "Creative Atlantique",
-        "city": "St Herblain",
-        "startDate": "",
-        "endDate": "",
+        "type": "experiences.capgemini",
+        "city": "Nantes",
+        "startDate": "01/10/2018",
+        "endDate": "10/10/2019",
         "postcode": "44",
-        "title": "Concepteur Développeur Informatique",
+        "logo": "assets/logo/capgemini.png",
+        "chips": [
+            "Angular",
+            "TypeScript",
+            "Node",
+            "JavaScript",
+            "Sass",
+            "HTML5",
+            "jQuery",
+        ],
+        "showMore": true
+    },
+    {
+        "type": "experiences.creative",
+        "city": "Saint Herblain",
+        "startDate": "14/10/2016",
+        "endDate": "30/09/2018",
+        "postcode": "44",
         "logo": "assets/logo/creative.png",
-        "content": "Embauché sur profil, j'ai travaillé sur divers missions, technologies et frameworks.",
         "chips": [
             "Angular",
             "Node",
@@ -22,14 +38,12 @@ exports.experiences = [
         ]
     },
     {
-        "company": "SQLI",
+        "type": "experiences.sqli",
         "city": "La Chapelle Sur Erdre",
-        "startDate": "",
-        "endDate": "",
+        "startDate": "03/2016",
+        "endDate": "10/2016",
         "postcode": "44",
-        "title": "Concepteur Développeur Informatique ",
         "logo": "assets/logo/sqli.png",
-        "content": "Embauché sur profil, j'ai travaillé sur divers missions, technologies et frameworks.",
         "chips": [
             "AngularJs",
             "Angular",
@@ -46,14 +60,12 @@ exports.experiences = [
         ]
     },
     {
-        "company": "CGI",
+        "type": "experiences.cgi",
         "city": "Carquefou",
-        "startDate": "",
-        "endDate": "",
+        "startDate": "02/2016",
+        "endDate": "03/2016",
         "postcode": "44",
-        "title": "Concepteur Développeur Informatique ",
         "logo": "assets/logo/cgi.png",
-        "content": "Embauché sur profil, j'ai travaillé sur divers missions, technologies et frameworks.",
         "chips": [
             "Ionic",
             "AngularJs",

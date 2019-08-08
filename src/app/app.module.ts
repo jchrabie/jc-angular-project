@@ -29,6 +29,7 @@ import { RestService } from './service/rest.service';
 import { SearchService } from './service/search.service';
 
 import { FilteredSearchPipe } from './filtered-search.pipe';
+import { SpeedDialFabComponent } from './speed-dial-fab/speed-dial-fab.component';
 
 const route = [
   { path: 'skills', component: SkillsComponent },
@@ -58,7 +59,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     CardContentComponent,
     SearchbarComponent,
     ExperienceListComponent,
-    FilteredSearchPipe
+    FilteredSearchPipe,
+    SpeedDialFabComponent
   ],
   imports: [
     BrowserModule,

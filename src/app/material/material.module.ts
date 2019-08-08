@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import {
   MatButtonModule,
   MatToolbarModule,
@@ -12,7 +12,8 @@ import {
   MatChipsModule,
   MatFormFieldModule,
   MatAutocompleteModule,
-  MatMenuModule
+  MatMenuModule,
+  MatTooltipModule
 } from '@angular/material';
 
 @NgModule({
@@ -28,6 +29,7 @@ import {
     MatListModule,
     MatChipsModule,
     MatFormFieldModule,
+    MatTooltipModule,
     MatAutocompleteModule
   ],
   exports: [
@@ -39,6 +41,7 @@ import {
     MatCheckboxModule,
     MatCardModule,
     MatExpansionModule,
+    MatTooltipModule,
     MatListModule,
     MatChipsModule,
     MatFormFieldModule,

@@ -10,7 +10,7 @@ import * as Typed from 'typed.js';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  private cards: Card[] = [];
+  private _cards: Card[] = [];
 
   constructor(
     public analyticsService: AnalyticsService,
@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.restService.getCards().subscribe(res => {
-      this.cards = res.map(card => <Card>card);
+      this._cards = res.map(card => <Card>card);
     });
 
     const options = {
@@ -34,8 +34,7 @@ export class HomeComponent implements OnInit {
     new Typed('.typing-element', options);
   }
 
-  getCards(): Card[] {
-    return this.cards;
+  get cards(): Card[] {
+    return this._cards;
   }
-
 }

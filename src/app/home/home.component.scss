@@ -1,4 +1,5 @@
 @import 'colorss';
+@import 'badge';
 
 #pres {
     background-image: url(/assets/pres.png);
@@ -7,7 +8,7 @@
 h2 {
     margin: 20px;
     font-size: 3em;
-    flex: 0 0 100%;
+    flex: 0 0 94%;
 
     .typing-element {
         color: $primary;
@@ -17,7 +18,7 @@ h2 {
 #introduction {
     margin: 10px 20px;
     font-size: 1.2em;
-    flex: 0 0 100%;
+    flex: 0 0 94%;
 
     p {
         margin-bottom: 0;

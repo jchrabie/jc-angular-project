@@ -3,6 +3,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import Card from '../../model/Card';
 import CardContent from '../../model/CardContent';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
@@ -16,9 +17,12 @@ export class ContactComponent implements OnInit {
   private marker: google.maps.Marker;
   private mapOption: google.maps.MapOptions;
   private latLng: google.maps.LatLng;
-  public card: Card;
+  public card: any;
 
-  constructor() {
+  constructor(private translateService: TranslateService) {
+    this.translateService.onLangChange
+    .subscribe(() => this.translateService.get(this.card.subtitleRaw)
+      .subscribe(res => this.card.subtitle = res));
   }
 
   ngOnInit() {
@@ -27,18 +31,18 @@ export class ContactComponent implements OnInit {
   }
 
   initCard(): void {
-    this.card = new Card({
-      title:  'Joël CHRABIE',
-      subtitle:  'Développeur Web',
-      icon:  'code',
-      imagePath:  '/assets/carteDeVisite.jpg ',
-      imageAlt:  ' ',
+    this.card = {
+      title: 'Joël CHRABIE',
+      subtitleRaw: 'devweb',
+      icon: 'code',
+      imagePath: '/assets/carteDeVisite.jpg ',
+      imageAlt: ' ',
       content: [
         new CardContent('06 88 74 00 93', 'Mobile', 'phone'),
         new CardContent('36 Boulevard du Tertre - Saint-Herblain', 'Localisation', 'place'),
         new CardContent('joel.chrabie@gmail.com', 'Mail', 'email')
       ]
-    });
+    };
   }
 
   initMap(): void {

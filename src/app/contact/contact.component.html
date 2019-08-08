@@ -2,19 +2,7 @@
 <div class="container">
   <div id="informations">
     <h2><mat-icon>contacts</mat-icon>Contact</h2>
-      <p>
-        Besoin d'un collaborateur <span class="badge">dynamique et ambicieux</span>, 
-        envie de me connaître un peu plus ou de me recruter?
-      </p>
-      <p>Vous trouverez tout le necéssaire ci-après.</p>
-      <p>Vous pouvez télécharger ma carte de visite au format 
-        <a href="assets/jcVcard.vcf" class="ng-scope" aria-label="Carte de Visite">
-          <span class="badge">vCard</span>
-        </a>
-        , pour m'ajouter facilement à votre carnet d'adresses, m'envoyer un message électronique 
-        ou me contacter directement par téléphone.
-      </p>
-      <p>Je m'engage à vous répondre dans un délai de <span class="badge">24 heures</span>.</p>
+      <div [innerHTML]="{{contact.content}}"></div>
   </div>
   <app-card [cardData]="card" [isList]="true"></app-card>
 </div>

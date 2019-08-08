@@ -22,10 +22,6 @@ export class SidenavComponent implements OnInit {
     });
   }
 
-  getLinkList(): Link[] {
-    return this.linkList;
-  }
-
   linkClick(link: string): void {
     this.analyticsService.emit('SideNav', 'Links', 'link clicked', link);
     this.sideNavService.toggle();

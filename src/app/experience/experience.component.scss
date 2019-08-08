@@ -23,6 +23,11 @@ mat-expansion-panel {
     & > * {
       flex: 1 1 100%;
     }
+
+    & > button {
+      flex: 0 0 auto;
+      margin-top: 15px;
+    }
   }
 
   mat-chip {

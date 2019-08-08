@@ -1,26 +1,16 @@
-#canvas {
-    height: 100px;
+
+@import 'headers';
+
+#skills {
+    background-image: url(/assets/skills.jpg);
+    background-color: #45c2ba;
 }
 
-:host ::ng-deep ngx-charts-advanced-pie-chart {
-    fill: white;
-    font-size: 1.5em;
-
-    .total-value, .item-value {
-        display: none;
-    }
-
-    .item-label {
-        margin-top: 0!important;
-    }
+h2 {
+    margin: 20px;
+    font-size: 3em;
+    flex: 0 0 94%;
 }
-
-div {
-    flex: 1 1 50%;
-    height: 33vh;
-    min-width: 450px;
-
-    h3 {
-        text-align: center;
-    }
+h3 {
+    flex: 0 0 94%;
 }

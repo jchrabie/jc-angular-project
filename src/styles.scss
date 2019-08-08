@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    font-family: Roboto;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 mat-sidenav-container {
@@ -43,7 +43,7 @@ app-skills {
 
 
     @include breakpoint ($breakpoint-medium) {
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     app-card {

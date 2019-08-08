@@ -23,6 +23,7 @@
     
         @include breakpoint ($breakpoint-medium) {
             width: 80%;
+            margin-bottom: 20px;
         }
     }
 }

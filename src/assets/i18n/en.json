@@ -1,3 +1,65 @@
 {
-  "HELLO": "hello {{value}}"
+  "HELLO": "hello {{value}}",
+  "introduction": "Passionate and always fascinated by computer development, I undertook a professional reconversion in the computer development. <br/> With my various experiences radiating around the Angular framework, I decided to get started as <span class='badge'>Freelance</span>",
+  "devweb": "Freelance Developer",
+  "search": "Search (eg: Angular, React, ...)",
+  "showMore": "SHOW MORE",
+  "sideNav": {
+    "home": "Home",
+    "experiences": "Experiences",
+    "skills": "Skills",
+    "contact": "Contact",
+    "pdf": "PDF CV (French version)"
+  },
+  "experiences": {
+    "title": "Experiences",
+    "capgemini": {
+      "company": "Capgemini",
+      "title": "Senior web developer",
+      "content": "Following a mission as a provider for Capgemini, I chose to integrate the company directly."
+    },
+    "creative": {
+      "company": "Creative",
+      "title": "Web developer",
+      "content": "Arrived at Creative, I worked at Sopra Steria for the CNAMTS in AngularJS and at Capgemini for a client in the French luxury retail sector."
+    },
+    "sqli": {
+      "company": "SQLI",
+      "title": "Web developer",
+      "content": "Hired on profile, I worked internally on various missions, technologies and frameworks."
+    },
+    "cgi": {
+      "company": "CGI",
+      "title": "Web developer (trainee)",
+      "content": "Following my training at ENI, I realized in CGI a hybrid mobile application with Ionic 1."
+    }
+  },
+  "design": {
+    "title": "Design",
+    "subtitle": "Material Design",
+    "imageAlt": "",
+    "content": "With the <span class='badge'>IT</span>, I'm still attached to the rendering <span class='badge'>graphic</span> of the application or site I created. </br> If no rule is imposed on me, I let my imagination wander while inspiring me with what already exists on the net."
+  },
+  "i18n": {
+    "title": "I18n",
+    "subtitle": "Internationalization",
+    "imageAlt": "",
+    "content": "Because the websites are intended to be <span class='badge'>visible</span> all over the world, I took to heart to use <span class='badge'>internationalization</span> tools as Angular's own xliff files and <span class='badge'>ngxTranslate</span> library."
+  },
+  "responsive": {
+    "title": "Responsive",
+    "subtitle": "Multi Devices Adaptation",
+    "imageAlt": "",
+    "content": "At the time of the explosion of the Internet <span class='badge'>mobile</span>, websites must be able to display on any <span class='badge'>support</span>. To do this I use the <span class='badge'>responsiveDesign</span> and the concept of <span class='badge'>mobileFirst</span> appropriately."
+  },
+  "a11y": {
+    "title": "A11y",
+    "subtitle": "Accessibility",
+    "imageAlt": "",
+    "content": "Improving the <span class='badge'>accessibility</span> of your website will reach a wider audience, increase traffic and <span class='badge'>conversions</span> on your site. site. Always be aware that between 15% and 20% of the population suffer from a <span class='badge'>handicap</span>: visual, auditory, motor ..."
+  },
+  "contact": {
+    "title": "Contact",
+    "content": "<p> Need a <span class=\"badge \"> dynamic </span> and <span class=\"badge\">ambitious</span> guy, want to know me a little more or to hire me? </p> <p> You will find all the following information: </p> <p> You can download my business card in <a href=\"assets/jcVcard.vcf\" aria-label=\"Business Card \"> <span class=\"vCard </span> </a>, to easily add me to your address book, send me an e-mail or contact me directly over the phone. </p> <p> I will respond to you within <span class=\"badge \"> 24 hours </span>. </p>"
+  }
 }

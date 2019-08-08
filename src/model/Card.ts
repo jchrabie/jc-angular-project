@@ -1,21 +1,33 @@
-import CardContent from './CardContent';
+
 
 export default class Card {
-    private title: string;
-    private subtitle: string;
-    private imagePath: string;
-    private imageAlt: string;
-    private content: string | CardContent[];
-    private icon: string;
+    private _type: string;
+    private _icon: string;
+    private _imagePath: string;
+    private _showMore: boolean;
 
     constructor(object?: any) {
         if (object) {
-            this.title = object.title;
-            this.subtitle = object.subtitle;
-            this.imagePath = object.imagePath;
-            this.imageAlt = object.imageAlt;
-            this.content = object.content;
-            this.icon = object.icon;
+            this._type = object.type;
+            this._icon = object.icon;
+            this._imagePath = object.imagePath;
+            this._showMore = object.showMore;
         }
+    }
+
+    get type(): string {
+        return this._type;
+    }
+
+    get icon(): string {
+        return this._icon;
+    }
+
+    get imagePath(): string {
+        return this._imagePath;
+    }
+
+    get showMore(): boolean {
+        return this._showMore;
     }
 }

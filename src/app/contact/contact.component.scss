@@ -21,3 +21,8 @@
 :host ::ng-deep app-card {
     min-width: 300px
 }
+
+p.small.mat-line {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: .8em;
+}
