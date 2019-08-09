@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import Card from '../../model/Card';
-import { RestService } from '../service/rest.service';
+import { RestService } from '../shared/service/rest.service';
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',

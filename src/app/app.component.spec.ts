@@ -1,6 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { AnalyticsService } from './service/analytics.service';
+import { AnalyticsService } from './shared/service/analytics.service';
 import { RouterTestingModule } from '@angular/router/testing';
 
 describe('AppComponent', () => {

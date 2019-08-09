@@ -1,0 +1,16 @@
+.blog-container {
+    display: flex;
+    padding: 20px 40px;
+    
+    .author {
+        flex: 1 1 10%;
+    }
+
+    .content {
+        flex: 1 1 70%;
+    }
+
+    .otherPosts {
+        flex: 1 1 15%;
+    }
+}

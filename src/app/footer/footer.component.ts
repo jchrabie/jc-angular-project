@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Social from '../../model/social';
-import { RestService } from '../service/rest.service';
+import { RestService } from '../shared/service/rest.service';
 
 @Component({
   selector: 'app-footer',

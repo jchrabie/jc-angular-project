@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SidenavService } from '../service/sidenav.service';
-import { AnalyticsService } from '../service/analytics.service';
+import { SidenavService } from '../shared/service/sidenav.service';
+import { AnalyticsService } from '../shared/service/analytics.service';
 import Link from '../../model/link';
 
 @Component({

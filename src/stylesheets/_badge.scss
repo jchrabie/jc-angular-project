@@ -13,6 +13,7 @@
     vertical-align: middle;
     background-color: $primary;
     border-radius: 10px;
+    cursor: pointer;
 
     &::before {
         content: '#'

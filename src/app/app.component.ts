@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatSidenav, MatIconRegistry } from '@angular/material';
 import { TranslateService } from '@ngx-translate/core';
 
 import 'hammerjs';
-import { AnalyticsService } from './service/analytics.service';
-import { SidenavService } from './service/sidenav.service';
+import { AnalyticsService } from './shared/service/analytics.service';
+import { SidenavService } from './shared/service/sidenav.service';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,7 @@ import { SidenavService } from './service/sidenav.service';
   styleUrls: ['./app.component.scss'],
   providers: [ SidenavService, MatSidenav ]
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   constructor(
     private router: Router,
     public analyticsService: AnalyticsService,
@@ -92,5 +92,10 @@ export class AppComponent {
       `typescript`,
       this.domSanitizer.bypassSecurityTrustResourceUrl(`assets/svg/typescript.svg`)
     );
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => Array.from(document.getElementsByClassName('badge'))
+      .forEach((el: any) => el.onclick = () => window.open(`https://twitter.com/hashtag/${el.textContent}`, '_blank')));
   }
 }

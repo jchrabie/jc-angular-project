@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SidenavService } from '../service/sidenav.service';
+import { SidenavService } from '../shared/service/sidenav.service';
 import { MatSidenav } from '@angular/material';
 
 @Component({

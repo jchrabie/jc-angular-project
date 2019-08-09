@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AnalyticsService } from '../service/analytics.service';
+import { AnalyticsService } from '../shared/service/analytics.service';
 import Card from '../../model/Card';
-import { RestService } from '../service/rest.service';
+import { RestService } from '../shared/service/rest.service';
 import * as Typed from 'typed.js';
 
 @Component({

@@ -2,7 +2,7 @@
 <div class="container">
   <div id="informations">
     <h2><mat-icon>contacts</mat-icon>Contact</h2>
-      <div [innerHTML]="{{contact.content}}"></div>
+      <div [innerHTML]="'contact.content' | translate"></div>
   </div>
   <app-card [cardData]="card" [isList]="true"></app-card>
 </div>

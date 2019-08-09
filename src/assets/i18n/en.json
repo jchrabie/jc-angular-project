@@ -60,6 +60,6 @@
   },
   "contact": {
     "title": "Contact",
-    "content": "<p> Need a <span class=\"badge \"> dynamic </span> and <span class=\"badge\">ambitious</span> guy, want to know me a little more or to hire me? </p> <p> You will find all the following information: </p> <p> You can download my business card in <a href=\"assets/jcVcard.vcf\" aria-label=\"Business Card \"> <span class=\"vCard </span> </a>, to easily add me to your address book, send me an e-mail or contact me directly over the phone. </p> <p> I will respond to you within <span class=\"badge \"> 24 hours </span>. </p>"
+    "content": "<p>Need a <span class='badge'>dynamic</span> and <span class='badge'>ambitious</span> collaborator, want to know me a little more or to recruit me? </p> <p>You will find all the following information.</p> <p> You can download my business card in <span class='badge'>vCard</span> format, to easily add me to your address book, send me an e-mail or contact me directly by phone</p><p>I promise to answer you within 24 hours.</p>"
   }
 }

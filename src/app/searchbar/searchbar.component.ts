@@ -4,8 +4,8 @@ import {FormControl, Validators} from '@angular/forms';
 import {MatAutocompleteSelectedEvent, MatChipInputEvent, MatAutocompleteTrigger} from '@angular/material';
 import {map, startWith} from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { RestService } from '../service/rest.service';
-import { SearchService } from '../service/search.service';
+import { RestService } from '../shared/service/rest.service';
+import { SearchService } from '../shared/service/search.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({

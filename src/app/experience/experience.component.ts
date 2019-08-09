@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
 import Experience from '../../model/Experience';
-import { SearchService } from '../service/search.service';
+import { SearchService } from '../shared/service/search.service';
 
 @Component({
   selector: 'app-experience',
