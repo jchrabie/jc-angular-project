@@ -25,8 +25,8 @@ mat-icon {
             content: 'tablet';
             @include breakpoint($breakpoint-large) {
                 content: 'desktop_windows';
-            } 
-        } 
+            }
+        }
     }
 }
 

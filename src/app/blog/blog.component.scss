@@ -1,16 +1,46 @@
+@import "breakpoint";
+@import "breakpoints";
+
 .blog-container {
     display: flex;
     padding: 20px 40px;
-    
+
     .author {
-        flex: 1 1 10%;
+        display: none;
+
+        @include breakpoint($breakpoint-large) {
+            flex: 1 1 20%;
+            display: block;
+        }
+
+        mat-card {
+            position: sticky;
+            top: 80px;
+
+            .mat-card-header {
+                flex-direction: column;
+
+                .header-image {
+                    margin: -15px auto 0;
+                    background-image: url(assets/avatar.jpg);
+                    background-size: cover;
+                }
+            }
+        }
     }
 
     .content {
-        flex: 1 1 70%;
+        flex: 1 1 80%;
+        padding: 0;
+
+        @include breakpoint($breakpoint-large) {
+            flex: 1 1 60%;
+            padding: 0 40px;
+        }
     }
 
     .otherPosts {
-        flex: 1 1 15%;
+        flex: 1 1 20%;
     }
 }
+
