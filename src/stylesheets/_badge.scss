@@ -7,11 +7,11 @@
     font-size: 12px;
     font-weight: 700;
     line-height: 1;
-    color: $deep-grey;
+    color: var(--background);
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
-    background-color: $primary;
+    background-color: var(--primary);
     border-radius: 10px;
     cursor: pointer;
 

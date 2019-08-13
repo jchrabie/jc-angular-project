@@ -17,13 +17,14 @@
             margin-bottom: 17px;
 
             &.active {
-                background-color: white;
+                background-color: var(--background-light);
             }
         }
     }
 }
   
 .fab-toggler {
+    background-color: var(--background-light);
     float: right;
     z-index: 100;
 }

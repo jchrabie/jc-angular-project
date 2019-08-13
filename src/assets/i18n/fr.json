@@ -62,5 +62,8 @@
     "title": "Contact",
     "content": "<p>Besoin d'un collaborateur <span class=\"badge\">dynamique</span> et <span class=\"badge\">ambitieux</span>, envie de me connaître un peu plus ou de me recruter?</p><p>Vous trouverez tout le necéssaire ci-après.</p><p>Vous pouvez télécharger ma carte de visite au format <a href=\"assets/jcVcard.vcf\" aria-label=\"Carte de Visite\"><span class=\"badge\">vCard</span></a>, pour m'ajouter facilement à votre carnet d'adresses, m'envoyer un message électronique ou me contacter directement par téléphone.</p><p>Je m'engage à vous répondre dans un délai de 24 heures.</p>"
   },
-  "contactMe": "ME CONTACTER"
+  "contactMe": "ME CONTACTER",
+  "skills": {
+    "name": "Compétences"
+  }
 }

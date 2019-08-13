@@ -1,11 +1,11 @@
-<div id="fab-dismiss" 
-     *ngIf="fabTogglerState === 'active'" 
+<div id="fab-dismiss"
+     *ngIf="fabTogglerState === 'active'"
      (click)="onToggleFab()">
 </div>
 <div class="fab-container">
   <button mat-mini-fab class="fab-toggler"
           (click)="onToggleFab()">
-    <i class="material-icons" [@fabToggler]="{value: fabTogglerState}">flag</i>
+    <mat-icon [svgIcon]="selectedLang === 'en' ? 'english' : 'france'"></mat-icon>
   </button>
   <div [@speedDialStagger]="buttons.length">
     <button *ngFor="let btn of buttons"
@@ -13,10 +13,10 @@
             [matTooltip]="btn.tooltip"
             matTooltipPosition="left"
             class="fab-secondary"
-            (click)="changeTranslation(btn.text)"
-            [ngClass]="{active: btn.text === selectedLang}"
+            (click)="changeTranslation(btn.lang)"
+            [ngClass]="{active: btn.lang === selectedLang}"
             color="secondary">
-      <img [src]="'assets/' + btn.text + '.png'" alt="">
+      <mat-icon [svgIcon]="btn.text"></mat-icon>
     </button>
   </div>
 </div>

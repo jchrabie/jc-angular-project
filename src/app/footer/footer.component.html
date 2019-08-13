@@ -1,12 +1,12 @@
 <mat-toolbar color="basic" role="footer">
     <mat-toolbar-row>
       <div id="devices">
-        <mat-icon></mat-icon>
+        <mat-icon id="device"></mat-icon>
         <span>Vous êtes sur la version </span>
       </div>
       <a [href]="social.url" *ngFor="let social of socials" ng-if="socials.length">
         <button mat-mini-fab class="socialLinks">
-          <img [src]="social.imagePath"/>
+            <mat-icon [svgIcon]="social.title"></mat-icon>
         </button>
         <span class="sr-only">{{social.title}}</span>
       </a>

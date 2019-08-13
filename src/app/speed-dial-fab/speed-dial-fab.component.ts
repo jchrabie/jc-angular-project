@@ -11,11 +11,13 @@ import { TranslateService } from '@ngx-translate/core';
 export class SpeedDialFabComponent {
   private fabButtons = [
     {
-      text: 'fr',
+      text: 'france',
+      lang: 'fr',
       tooltip: 'Français'
     },
     {
-      text: 'en',
+      text: 'english',
+      lang: 'en',
       tooltip: 'English'
     },
   ];

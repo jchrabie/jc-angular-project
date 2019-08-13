@@ -57,8 +57,20 @@ export class AppComponent implements AfterViewInit {
       this.domSanitizer.bypassSecurityTrustResourceUrl(`assets/svg/css.svg`)
     )
     .addSvgIcon(
+      `english`,
+      this.domSanitizer.bypassSecurityTrustResourceUrl(`assets/svg/english.svg`)
+    )
+    .addSvgIcon(
       `europe`,
       this.domSanitizer.bypassSecurityTrustResourceUrl(`assets/svg/europe.svg`)
+    )
+    .addSvgIcon(
+      `facebook`,
+      this.domSanitizer.bypassSecurityTrustResourceUrl(`assets/svg/facebook.svg`)
+    )
+    .addSvgIcon(
+      `france`,
+      this.domSanitizer.bypassSecurityTrustResourceUrl(`assets/svg/france.svg`)
     )
     .addSvgIcon(
       `html`,
@@ -71,6 +83,14 @@ export class AppComponent implements AfterViewInit {
     .addSvgIcon(
       `javascript`,
       this.domSanitizer.bypassSecurityTrustResourceUrl(`assets/svg/javascript.svg`)
+    )
+    .addSvgIcon(
+      `linkedin`,
+      this.domSanitizer.bypassSecurityTrustResourceUrl(`assets/svg/linkedin.svg`)
+    )
+    .addSvgIcon(
+      `malte`,
+      this.domSanitizer.bypassSecurityTrustResourceUrl(`assets/svg/malte.svg`)
     )
     .addSvgIcon(
       `nodejs`,

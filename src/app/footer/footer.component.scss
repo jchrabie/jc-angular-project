@@ -17,7 +17,7 @@ img {
     height: 20px;
 }
 
-mat-icon {
+#device {
     margin-right: 20px;
     &::after {
         content: 'phone_iphone';
@@ -42,11 +42,11 @@ mat-icon {
             content: 'tablette';
             @include breakpoint($breakpoint-large) {
                 content: 'desktop';
-            } 
-        } 
+            }
+        }
     }
 }
-  
+
 .socialLinks {
-    background-color: white;
+    background-color: var(--background-light);
 }
