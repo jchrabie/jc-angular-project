@@ -3,8 +3,7 @@
      (click)="onToggleFab()">
 </div>
 <div class="fab-container">
-  <button mat-mini-fab class="fab-toggler"
-          (click)="onToggleFab()">
+  <button mat-mini-fab class="fab-toggler" (click)="onToggleFab()">
     <mat-icon [svgIcon]="selectedLang === 'en' ? 'english' : 'france'"></mat-icon>
   </button>
   <div [@speedDialStagger]="buttons.length">
@@ -14,9 +13,10 @@
             matTooltipPosition="left"
             class="fab-secondary"
             (click)="changeTranslation(btn.lang)"
-            [ngClass]="{active: btn.lang === selectedLang}"
+            [color]="btn.lang === selectedLang ? 'primary' : 'default'"
             color="secondary">
       <mat-icon [svgIcon]="btn.text"></mat-icon>
+      <span class="sr-only" translate [translateParams]="{value: btn.tooltip}">changeLanguage</span>
     </button>
   </div>
 </div>

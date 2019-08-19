@@ -9,7 +9,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AnalyticsService } from './service/analytics.service';
 import { SidenavService } from './service/sidenav.service';
-import { RestService } from './service/rest.service';
+import { ThemeService } from './service/theme.service';
 import { SearchService } from './service/search.service';
 
 import { CardComponent } from './components/card/card.component';
@@ -42,8 +42,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     providers: [
         AnalyticsService,
         SidenavService,
-        RestService,
         SearchService,
+        ThemeService,
     ],
     declarations: [
         CardComponent,

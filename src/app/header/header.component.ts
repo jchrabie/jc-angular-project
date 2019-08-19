@@ -1,17 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { SidenavService } from '../shared/service/sidenav.service';
 import { MatSidenav } from '@angular/material';
+import { ThemeService } from '../shared/service/theme.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
-  constructor(public sidenavService: SidenavService) { }
+  constructor(
+    public sidenavService: SidenavService,
+    private themeService: ThemeService
+  ) { }
 
-  ngOnInit() {
+  toggleTheme() {
+    this.themeService.isDarkTheme() ? this.themeService.setLightTheme() : this.themeService.setDarkTheme();
   }
-
 }

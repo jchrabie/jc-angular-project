@@ -22,6 +22,7 @@ const route = [
   { path: 'contact', component: ContactComponent },
   { path: 'experiences', component: ExperienceListComponent },
   { path: '', component: HomeComponent },
+  { path: 'pdf', redirectTo: 'assets/CV.pdf'},
   {
       path: 'blog',
       loadChildren: './blog/blog-routing.module#BlogRoutingModule'

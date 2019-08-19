@@ -1,9 +1,8 @@
 /// <reference types="@types/googlemaps" />
+import { TranslateService } from '@ngx-translate/core';
 
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import Card from '../../model/Card';
 import CardContent from '../../model/CardContent';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  @ViewChild('gmap') private gmapElement: ElementRef;
+  @ViewChild('gmap', { static: true }) private gmapElement: ElementRef;
   private map: google.maps.Map;
   private infowindow: google.maps.InfoWindow;
   private marker: google.maps.Marker;

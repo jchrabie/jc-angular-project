@@ -1,4 +1,4 @@
-exports.cards = [
+export const cards: Card[] = [
     {
         "type": "design",
         "icon": "layers",
@@ -24,3 +24,10 @@ exports.cards = [
         "showMore": true
     }
 ]
+
+export interface Card {
+    type: string;
+    icon: string;
+    imagePath: string;
+    showMore: boolean
+}

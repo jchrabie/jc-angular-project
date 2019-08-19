@@ -3,8 +3,8 @@
   <h2><mat-icon>work</mat-icon> {{'experiences.title' | translate}}</h2>
   <app-searchbar></app-searchbar>
   <mat-accordion>
-    <app-experience 
-    *ngFor="let experience of getExperiences() | filteredSearch" 
+    <app-experience
+    *ngFor="let experience of experiences | filteredSearch"
     [experience]="experience"
   ></app-experience>
   </mat-accordion>

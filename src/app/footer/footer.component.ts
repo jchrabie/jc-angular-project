@@ -1,22 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import Social from '../../model/social';
-import { RestService } from '../shared/service/rest.service';
+import { Component } from '@angular/core';
+import { socials, Social } from '../shared/constants/socials.constants';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
-  private socialsResp: Social[];
-
-  constructor(private restService: RestService) { }
-
-  ngOnInit() {
-    this.restService.getSocials().subscribe(res => this.socialsResp = res.map(social => <Social>social));
-  }
-
+export class FooterComponent {
   get socials(): Social[] {
-    return this.socialsResp;
+    return socials;
   }
 }

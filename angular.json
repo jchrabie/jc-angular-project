@@ -127,6 +127,7 @@
             ],
             "assets": [
               "src/assets",
+              "src/assets/json",
               "src/favicon.ico"
             ]
           }

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import Typed from 'typed.js';
+
 import { AnalyticsService } from '../shared/service/analytics.service';
-import Card from '../../model/Card';
-import { RestService } from '../shared/service/rest.service';
-import * as Typed from 'typed.js';
+import { cards, Card } from '../shared/constants/cards.constants';
 
 @Component({
   selector: 'app-home',
@@ -10,18 +10,11 @@ import * as Typed from 'typed.js';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  private _cards: Card[] = [];
-
   constructor(
-    public analyticsService: AnalyticsService,
-    public restService: RestService
+    public analyticsService: AnalyticsService
   ) { }
 
   ngOnInit() {
-    this.restService.getCards().subscribe(res => {
-      this._cards = res.map(card => <Card>card);
-    });
-
     const options = {
       strings: ['Angular', 'Web', 'Front'],
       typeSpeed: 100,
@@ -35,6 +28,6 @@ export class HomeComponent implements OnInit {
   }
 
   get cards(): Card[] {
-    return this._cards;
+    return cards;
   }
 }

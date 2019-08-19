@@ -1,12 +1,12 @@
-import {COMMA, ENTER} from '@angular/cdk/keycodes';
-import {Component, ElementRef, ViewChild, OnInit} from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
-import {MatAutocompleteSelectedEvent, MatChipInputEvent, MatAutocompleteTrigger} from '@angular/material';
-import {map, startWith} from 'rxjs/operators';
+import { COMMA, ENTER } from '@angular/cdk/keycodes';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { MatAutocompleteSelectedEvent, MatChipInputEvent, MatAutocompleteTrigger } from '@angular/material';
+import { map, startWith } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { RestService } from '../shared/service/rest.service';
 import { SearchService } from '../shared/service/search.service';
 import { TranslateService } from '@ngx-translate/core';
+import { chips } from '../shared/constants/experiences.constants';
 
 @Component({
   selector: 'app-searchbar',
@@ -24,27 +24,25 @@ export class SearchbarComponent implements OnInit {
   chipsList = [];
   allChips = [];
 
-  @ViewChild(MatAutocompleteTrigger) autocomplete: MatAutocompleteTrigger;
-  @ViewChild('searchInput') searchRef: ElementRef;
+  @ViewChild(MatAutocompleteTrigger, { static: true }) autocomplete: MatAutocompleteTrigger;
+  @ViewChild('searchInput', { static: true }) searchRef: ElementRef;
+
   get searchInput(): HTMLInputElement {
     return this.searchRef.nativeElement;
   }
 
 
   constructor(
-    public restService: RestService,
     public searchService: SearchService,
     private translate: TranslateService
   ) {
-    this.restService.getChips().subscribe(chips => {
-      this.chipsList = chips;
-      this.allChips = this.chipsList;
+    this.chipsList = chips;
+    this.allChips = this.chipsList;
 
-      this.filteredSearches = this.searchCtrl.valueChanges.pipe(
-        startWith(null),
-        map(search => search ? this.filter(search) : this.chipsList.slice())
-      );
-    });
+    this.filteredSearches = this.searchCtrl.valueChanges.pipe(
+      startWith(null),
+      map(search => search ? this.filter(search) : this.chipsList.slice())
+    );
 
     this.translate.onLangChange
       .subscribe(() => {

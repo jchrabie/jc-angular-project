@@ -1,4 +1,4 @@
-exports.socials = [
+export const socials: Social[] = [
     {
         "title": "facebook",
         "url": "",
@@ -11,4 +11,9 @@ exports.socials = [
         "title": "linkedin",
         "url": "https://www.linkedin.com/in/joël-chrabie-02076839",
     }
-]
+];
+
+export interface Social {
+    title: string;
+    url: string;
+}

@@ -1,24 +1,10 @@
 :root {
-    /* Colors */
-    --foreground: #08090a;
-    --foreground-secondary: #41474d;
-    --foreground-tertiary: #797c80;
-    --foreground-quaternary: #f4faff;
-    --foreground-light: #41474d;
-
-    --background: #3030308a;
-    --background-secondary: #a3b9cc;
-    --background-tertiary: #5c7d99;
-    --background-light: #ffffff;
+    --foreground: #3030308a;
+    --background: #303030;
 
     --primary: #00bcd4;
     --primary-dark: rgb(97,169,160);
-    --primary-light: #45c2ba;
+    --primary-light: #45c3b8;
 
-    --error-default: #ef3e36;
-    --error-dark: #800600;
-    --error-light: #ffcecc;
-
-    /* Shadows */
-    --background-tertiary-shadow: 0 1px 3px 0 rgba(92, 125, 153, 0.5);
+    --text: white;
 }

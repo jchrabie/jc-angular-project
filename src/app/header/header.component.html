@@ -11,5 +11,10 @@
 
   <button mat-icon-button routerLink="">
     <mat-icon>home</mat-icon>
+    <span class="sr-only">Retour à la page d'accueil</span>
+  </button>
+  <button mat-icon-button (click)="toggleTheme()">
+    <mat-icon>invert_colors</mat-icon>
+    <span class="sr-only">Changer le thème</span>
   </button>
 </mat-toolbar>

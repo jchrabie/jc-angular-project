@@ -3,6 +3,7 @@
 @import 'breakpoints';
 @import 'background-images';
 @import 'scrollbar';
+@import 'colorss';
 
 body {
     margin: 0;
@@ -13,6 +14,10 @@ mat-sidenav-container {
     height: 100vh;
 }
 
+.mat-drawer-container {
+    background-color: var(--background);
+    color: var(--text);
+}
 app-skills {
     display: flex;
     flex-wrap: wrap;

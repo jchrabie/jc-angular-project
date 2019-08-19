@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-
 import { MatSidenav } from '@angular/material';
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+
+import { linkList, Link } from '../constants/linkList.constants';
 
 const BASE_URL = '//localhost:4201/api';
 
@@ -10,14 +9,14 @@ const BASE_URL = '//localhost:4201/api';
 export class SidenavService {
   public opened = false;
 
-  constructor(private sidenav: MatSidenav, private http: HttpClient) { }
+  constructor(private sidenav: MatSidenav) { }
 
   toggle() {
     this.sidenav.toggle();
     this.opened = !this.opened;
   }
 
-  getLinkList(): Observable<any> {
-    return this.http.get(`${BASE_URL}/linkList`);
+  getLinkList(): Link[] {
+    return linkList;
   }
 }

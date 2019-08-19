@@ -27,7 +27,7 @@ mat-card {
     .mat-card-header {
         display: flex;
         flex-direction: row;
-        background-color: #3030308a;
+        background-color: var(--foreground);
         padding: 16px 24px 0 24px;
         margin: -4px 0;
     }

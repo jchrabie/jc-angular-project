@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import Card from '../../../../model/Card';
 import { ActivatedRoute } from '@angular/router';
+
+import { Card } from '../../constants/cards.constants';
 
 @Component({
   selector: 'app-card',
@@ -10,7 +11,6 @@ import { ActivatedRoute } from '@angular/router';
 export class CardComponent implements OnInit {
   @Input() private cardData: Card;
   @Input() private isList?: boolean;
-
 
   get card(): Card {
     return this.cardData;

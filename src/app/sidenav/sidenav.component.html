@@ -16,7 +16,7 @@
     [routerLinkActiveOptions]="{ exact: true }"
     *ngFor="let link of linkList"
     role="button"
-    (click)="linkClick(link.title)">
+    (click)="linkClick(link.url)">
       <mat-icon matListIcon>{{link.icon}}</mat-icon>
       {{link.type | translate}}
       <mat-divider></mat-divider>
