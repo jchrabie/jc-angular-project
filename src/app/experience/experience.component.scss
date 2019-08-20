@@ -34,6 +34,12 @@ mat-expansion-panel {
     cursor: pointer!important;
     margin: 8px;
   }
+
+  .cta {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 mat-chip-list {

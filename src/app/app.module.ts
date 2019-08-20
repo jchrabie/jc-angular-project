@@ -24,7 +24,7 @@ const route = [
   { path: '', component: HomeComponent },
   { path: 'pdf', redirectTo: 'assets/CV.pdf'},
   {
-      path: 'blog',
+      path: 'blog/:template',
       loadChildren: './blog/blog-routing.module#BlogRoutingModule'
   },
   { path: '**', redirectTo: '' }
@@ -48,7 +48,7 @@ const route = [
   imports: [
     BlogModule,
     NgxChartsModule,
-    RouterModule.forRoot(route),
+    RouterModule.forRoot(route, { useHash: false, anchorScrolling: 'enabled' }),
     SharedModule,
   ],
   exports: [

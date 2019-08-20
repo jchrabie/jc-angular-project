@@ -9,20 +9,28 @@
     </mat-expansion-panel-header>
     <mat-panel-description>
         <h4>
-            {{experience.type + '.title' | translate}} - 
-            <small>{{experience.city}}({{experience.postcode}})</small>
+            {{experience.type + '.title' | translate}} -
+            <small> {{experience.city}}({{experience.postcode}})</small>
         </h4>
         <div>{{experience.type + '.content' | translate}}</div>
         <mat-chip-list #chipList>
-            <mat-chip 
+            <mat-chip
                 *ngFor="let chip of experience.chips"
-                [color]="isSearched(chip) ? 'primary' : 'basic'" 
+                [color]="isSearched(chip) ? 'primary' : 'basic'"
                 [selected]="true"
                 (click)="selectChips(chip)"
             >
                 {{chip}}
             </mat-chip>
         </mat-chip-list>
-        <button *ngIf="experience.showMore" mat-raised-button>{{ 'showMore' | translate}}</button>
+        <div class="cta">
+            <button *ngIf="experience.showMore"
+                mat-raised-button
+                color="primary"
+                [routerLink]="[experience.url]"
+                routerLinkActive="router-link-active">
+                {{ 'showMore' | translate}}
+            </button>
+        </div>
     </mat-panel-description>
 </mat-expansion-panel>

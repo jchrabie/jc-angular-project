@@ -15,32 +15,59 @@
 
         mat-card {
             position: sticky;
-            top: 80px;
+            top: 120px;
 
             .mat-card-header {
                 flex-direction: column;
 
                 .header-image {
-                    margin: -15px auto 0;
+                    margin: -55px auto 0;
+                    height: 80px;
                     background-image: url(/assets/avatar.jpg);
                     background-size: cover;
+                    width: 80px;
                 }
+
+                .mat-card-header-text {
+                    text-align: center;
+                    margin-top: 20px;
+                }
+            }
+
+            mat-card-actions {
+                display: flex;
+                justify-content: center;
             }
         }
     }
 
     .content {
-        flex: 1 1 80%;
+        flex: 1 1 100%;
         padding: 0;
 
         @include breakpoint($breakpoint-large) {
             flex: 1 1 60%;
             padding: 0 40px;
         }
+
+        a {
+            color: var(--primary);
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .project {
+            margin: 50px 0;
+        }
     }
 
     .otherPosts {
-        flex: 1 1 20%;
+        display: none;
+
+        @include breakpoint($breakpoint-large) {
+            flex: 1 1 20%;
+            display: block;
+        }
 
         mat-card {
             height: 100%;
@@ -51,19 +78,23 @@
         }
 
         ul {
-            padding: 0;
             width: max-content;
 
             li {
                 list-style: none;
 
+                &::before {
+                    content: "•";
+                    color: var(--primary);
+                    display: inline-block;
+                    width: 1.5em;
+                    font-size: 1.5em;
+                    margin-left: -1em;
+                }
+
                 a {
                     text-decoration: none;
                     color: var(--background-light);
-
-                    &::before {
-                        content: '> '
-                    }
                 }
             }
         }
