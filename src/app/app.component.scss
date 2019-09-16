@@ -5,3 +5,11 @@ mat-sidenav {
 main {
     margin: 64px 0;
 }
+
+cookie-law .cookie-law-wrapper {
+    background: var(--background-dark);
+
+    .copy span {
+        color: var(--text);
+    }
+}

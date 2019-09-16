@@ -1,40 +1,5 @@
-<div *ngIf="article">
-  <div class="img-background" [style.backgroundImage]="'url('+ article.image +')'"></div>
-  <div class="blog-container">
-    <div class="author">
-        <mat-card>
-            <mat-card-header>
-              <div mat-card-avatar class="header-image"></div>
-              <mat-card-title>Joël CHRABIE</mat-card-title>
-              <mat-card-subtitle>{{'devweb' | translate}}</mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-actions>
-              <button mat-raised-button [routerLink]="['/contact']" color="primary">{{'contactMe' | translate}}</button>
-            </mat-card-actions>
-          </mat-card>
-    </div>
-    <div class="content" #content>
-      <h2>{{article.title}} <small>{{article.dates}}</small></h2>
-      <div class="project" *ngFor="let project of article.projects" [id]="project.id">
-        <h3>{{project.title}} - {{project.date}}</h3>
-        <p [innerHTML]="project.content"></p>
-      </div>
-    </div>
-    <div class="otherPosts">
-      <mat-card>
-        <h3>Projet {{article.title}}:</h3>
-        <ul>
-          <li *ngFor="let project of article.projects">
-            <a (click)="scrollToElement(project.id)">{{project.title}}</a>
-          </li>
-        </ul>
-        <h3>Vous aimerez aussi:</h3>
-        <ul>
-          <li *ngFor="let otherLink of article.other">
-            <a [routerLink]="[otherLink.url]">{{otherLink.title}}</a>
-          </li>
-        </ul>
-      </mat-card>
-    </div>
-  </div>
+<div id="blog" class="img-background"></div>
+<div class="container">
+  <app-breadcrumbs [breadcrumbs]="breadcrumbs"></app-breadcrumbs>
+  <app-card *ngFor="let cardData of cards" [cardData]="cardData" ></app-card>
 </div>

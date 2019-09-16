@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 import { Card } from '../../constants/cards.constants';
+import { AnalyticsService } from '../../service/analytics.service';
 
 @Component({
   selector: 'app-card',
@@ -16,7 +16,7 @@ export class CardComponent implements OnInit {
     return this.cardData;
   }
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private analyticsService: AnalyticsService) { }
 
   ngOnInit() {
     if (!this.isList) {
@@ -36,12 +36,7 @@ export class CardComponent implements OnInit {
     return iconCardUrl;
   }
 
-  goTo(link: string) {
-    if (!link) {
-      return;
-    }
-
-    window.open(link, '_blank');
+  onShowMore(rawName: string, name: string) {
+    this.analyticsService.emit('Card', 'showMore', 'click', rawName || name);
   }
-
 }

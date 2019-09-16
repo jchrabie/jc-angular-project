@@ -1,6 +1,6 @@
-<mat-expansion-panel>
-    <mat-expansion-panel-header>
-        <button mat-mini-fab class="image" 
+<mat-expansion-panel [expanded]="step === 0" #panel>
+    <mat-expansion-panel-header (click)="togglePanel()">
+        <button mat-mini-fab class="image"
             [style.backgroundImage]="'url(' + experience.logo + ')'">
         </button>
         <h3>
@@ -26,6 +26,7 @@
         <div class="cta">
             <button *ngIf="experience.showMore"
                 mat-raised-button
+                (click)="showMore(experience.name)"
                 color="primary"
                 [routerLink]="[experience.url]"
                 routerLinkActive="router-link-active">

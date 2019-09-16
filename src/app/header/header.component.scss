@@ -5,3 +5,16 @@ mat-toolbar {
     right: 0;
     z-index: 2;
 }
+#menu {
+    &::before {
+        content: " ";
+        background-color: var(--background);
+        height: 180px;
+        position: absolute;
+        z-index: -1;
+        width: 180px;
+        display: block;
+        border-radius: 0 0 100% 100%;
+        transform: translate(-53%, -71%);
+    }
+}

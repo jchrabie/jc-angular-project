@@ -1,14 +1,25 @@
+<div class="head-text">
+    <h2>Joël CHRABIE</h2>
+    <p>Bienvenue sur mon site web et profitez de la vue!</p>
+    <button mat-raised-button color="primary" [routerLink]="['/contact']" (click)="hireClick()">Hire Me!</button>
+</div>
 <div class="img-background" id="pres"></div>
 
 <div class="container">
-    <h2>
-        {{'devweb' | translate}} 
+    <h2 id="title">
+        {{'devweb' | translate}}
         <span class="typing-element"></span>
     </h2>
     <div id="introduction">
-        <p [innerHtml]="'introduction' | translate"></p>
+        <div [innerHtml]="'introduction' | translate"></div>
         <span id="signature">- Joël</span>
+
+        <h3>Don't hesitate to Share!</h3>
+        <share-buttons [theme]="'circles-dark'"
+            [include]="['facebook','twitter','linkedin']"
+            [show]="3"
+            [showText]="true"
+            [url]="'https://www.joelchrabie.com'"
+        ></share-buttons>
     </div>
-    
-    <app-card *ngFor="let cardData of cards" [cardData]="cardData" ></app-card>
 </div>

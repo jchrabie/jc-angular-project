@@ -1,0 +1,19 @@
+a {
+    color: var(--primary);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.project {
+    margin: 50px 0;
+}
+
+h2 small {
+    display: block;
+    float: right;
+    color: var(--text-light);
+}
+
+.content {
+    padding: 20px;
+}

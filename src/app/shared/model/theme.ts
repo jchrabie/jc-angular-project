@@ -8,13 +8,15 @@ export const light: Theme = {
     properties: {
         '--foreground': '#3030301b',
 
-        '--background': '#F4FAFF',
+        '--background': 'white',
+        '--background-dark': '#DDD',
 
         '--primary': '#00bcd4',
         '--primary-dark': 'rgb(97,169,160)',
         '--primary-light': '#45c3b8',
 
-        '--text': 'black'
+        '--text': 'black',
+        '--text-light': '#555'
     }
 };
 
@@ -24,11 +26,13 @@ export const dark: Theme = {
         '--foreground': '#3030308a',
 
         '--background': '#303030',
+        '--background-dark': '#151515',
 
         '--primary': '#00bcd4',
         '--primary-dark': 'rgb(97,169,160)',
         '--primary-light': '#45c3b8',
 
-        '--text': 'white'
+        '--text': 'white',
+        '--text-light': '#bbb'
     }
 };

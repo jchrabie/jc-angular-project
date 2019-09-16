@@ -1,15 +1,23 @@
-<mat-sidenav-container>
-    <mat-sidenav #sidenav mode="over" [(opened)]="sidenavService.opened" color="primary">
-        <app-sidenav></app-sidenav>
-    </mat-sidenav>
+<div class="wrapper">
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav mode="over" [(opened)]="sidenavService.opened" (openedChange)="sidenavService.onOpenedChange($event)" color="primary">
+            <app-sidenav></app-sidenav>
+        </mat-sidenav>
 
-    <mat-sidenav-content>
-        <app-header></app-header>
+        <mat-sidenav-content>
+            <app-header></app-header>
 
-        <main>
-            <router-outlet></router-outlet>
-        </main>
-        
-        <app-footer></app-footer>
-    </mat-sidenav-content>
-</mat-sidenav-container>
+            <main>
+                <router-outlet></router-outlet>
+            </main>
+            <app-footer></app-footer>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+    <cookie-law
+        position="bottom"
+        #cookieLaw
+        name="cookieLaw"
+        (isSeen)="cookieLawSeen = $event">
+        J'utilise des cookies pour me permettre de mieux comprendre comment le site est utilisé. En continuant à utiliser ce site, vous acceptez cette politique.
+    </cookie-law>
+</div>

@@ -1,8 +1,11 @@
 mat-list {
-    margin-top: -40px;
+    margin-top: -20px;
 
     & .small {
-        color: rgba(255, 255, 255, 0.6);
-        font-size: .8em;
+        font-size: .6em;
+    }
+
+    mat-icon {
+        color: var(--primary);
     }
 }

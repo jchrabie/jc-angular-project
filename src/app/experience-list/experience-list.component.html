@@ -1,11 +1,12 @@
 <div class="img-background" id="experiences"></div>
 <div class="container">
-  <h2><mat-icon>work</mat-icon> {{'experiences.title' | translate}}</h2>
+  <h2 class="sr-only">{{'experiences.title' | translate}}</h2>
   <app-searchbar></app-searchbar>
   <mat-accordion>
     <app-experience
-    *ngFor="let experience of experiences | filteredSearch"
+    *ngFor="let experience of experiences | filteredSearch; let i = index"
     [experience]="experience"
+    [step]="i"
   ></app-experience>
   </mat-accordion>
 </div>

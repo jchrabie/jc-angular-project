@@ -1,6 +1,5 @@
 @import 'breakpoint';
 @import 'breakpoints';
-@import 'colorss';
 
 h2 {
     flex: 0 0 100%;
@@ -12,7 +11,7 @@ h2 {
     }
 
     mat-icon {
-        color: var(--primary);
+        color: var(--text);
         margin-right: 20px;
     }
 }

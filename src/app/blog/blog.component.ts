@@ -1,41 +1,40 @@
-import { Component, OnInit, ViewEncapsulation, ViewChild, ElementRef } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 import { blog, Article } from '../shared/constants/blog.constants';
-
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss'],
-  encapsulation: ViewEncapsulation.None,
 })
 export class BlogComponent implements OnInit {
-  public article: Article;
-  public card = {
-    title: 'Joël CHRABIE',
-    subtitleRaw: 'devweb',
-    imagePath: '/assets/carteDeVisite.jpg '
-  };
-
+  private param: string;
   constructor(
-    private activatedRoute: ActivatedRoute,
-    private router: Router
-  ) { }
+    private route: ActivatedRoute,
+  ) {}
 
   ngOnInit() {
-    this.activatedRoute
-      .params
-      .subscribe(param => {
-        this.article = blog.find(art => art.template === param.template);
-
-        if (!this.article) {
-          this.router.navigate(['/']);
-        }
-      });
+    this.route
+      .queryParams
+      .subscribe(params => this.param = params.frag);
   }
 
-  scrollToElement(id: string): void {
-    document.getElementById(id).scrollIntoView({behavior: 'smooth', block: 'center', inline: 'start'});
+  get cards(): Article[] {
+    return this.param ? blog.filter(article => article.group === this.param) : blog;
+  }
+
+  get breadcrumbs(): any[] {
+    const breadcrumb = [ { name: 'Blog', url: '/blog', queryParams: {}, active: !this.param } ];
+
+    if (this.param) {
+      breadcrumb.push({
+        name: this.param.charAt(0).toUpperCase() + this.param.slice(1),
+        url: '/blog', queryParams: { frag: this.param },
+        active: true
+      });
+    }
+
+    return breadcrumb;
   }
 }

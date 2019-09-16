@@ -16,5 +16,11 @@
       "es2017",
       "dom"
     ]
-  }
+  },
+  "files": [
+      "src/typings.d.ts",
+      "src/polyfills.ts",
+      "src/app/app.module.ts",
+      "src/main.ts"
+  ]
 }

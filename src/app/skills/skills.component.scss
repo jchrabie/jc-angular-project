@@ -6,11 +6,16 @@
     background-color: var(--primary-light);
 }
 
+.container .container {
+    padding: 0;
+}
+
 h2 {
-    margin: 20px;
+    margin: 0;
     font-size: 3em;
     flex: 0 0 94%;
 }
+
 h3 {
     flex: 0 0 94%;
 }

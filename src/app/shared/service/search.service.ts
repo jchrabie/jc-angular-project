@@ -13,7 +13,7 @@ export class SearchService {
 
   setFilter(therm: string): void {
     this.filter.push(therm);
-    this.analyticsService.emit('Experiences', 'Chips Search', 'chips', therm);
+    this.analyticsService.emit('Experiences', 'Chips Search', 'adding', therm);
   }
 
   deleteFilter(therm: string): void {
@@ -21,6 +21,7 @@ export class SearchService {
 
     if (index >= 0) {
       this.filter.splice(index, 1);
+      this.analyticsService.emit('Experiences', 'Chips Search', 'deleting', therm);
     }
   }
 }

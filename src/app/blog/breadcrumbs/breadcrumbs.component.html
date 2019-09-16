@@ -1,0 +1,12 @@
+<ul>
+    <li>
+        <a [routerLink]="['/']" (click)="onClick('home')"><mat-icon>home</mat-icon></a>
+    </li>
+    <li *ngFor="let item of breadcrumbs">
+        <a
+            [routerLink]="['/' + item.url]"
+            [queryParams]="item.queryParams"
+            [ngClass]="{'active': item.active}"
+            (click)="onClick(item.name)">{{item.name}}</a>
+    </li>
+</ul>

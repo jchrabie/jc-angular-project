@@ -1,6 +1,8 @@
-import { Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
-import Experience from '../../model/Experience';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { SearchService } from '../shared/service/search.service';
+import { AnalyticsService } from '../shared/service/analytics.service';
+import { MatExpansionPanel } from '@angular/material';
+import { Experience } from '../shared/constants/experiences.constants';
 
 @Component({
   selector: 'app-experience',
@@ -9,10 +11,12 @@ import { SearchService } from '../shared/service/search.service';
 })
 export class ExperienceComponent implements OnInit {
   @Input() public experience: Experience;
+  @Input() public step: number;
+  @ViewChild('panel', { static: true }) panel: MatExpansionPanel;
 
   constructor(
     private searchService: SearchService,
-    private cdr: ChangeDetectorRef
+    private analyticsService: AnalyticsService,
   ) { }
 
   ngOnInit() {
@@ -22,6 +26,10 @@ export class ExperienceComponent implements OnInit {
     return this.searchService.filteredSearch().includes(chips);
   }
 
+  togglePanel(): void {
+    this.analyticsService.emit('click', 'experiences', this.experience.name, this.panel.expanded ? 'Panel Expanded' : 'Panel Closed');
+  }
+
   selectChips(chips: string): void {
     if (this.searchService.filteredSearch().includes(chips)) {
       this.searchService.deleteFilter(chips);
@@ -29,5 +37,9 @@ export class ExperienceComponent implements OnInit {
     }
 
     this.searchService.setFilter(chips);
+  }
+
+  showMore(expName: string) {
+    this.analyticsService.emit('click', 'experiences', 'showMore', expName);
   }
 }

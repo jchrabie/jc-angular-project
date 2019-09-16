@@ -1,0 +1,112 @@
+@import "breakpoint";
+@import "breakpoints";
+
+.blog-container {
+    display: flex;
+    padding: 20px 40px;
+
+    .author {
+        display: none;
+
+        @include breakpoint($breakpoint-large) {
+            flex: 1 1 20%;
+            display: block;
+        }
+
+        mat-card {
+            position: sticky;
+            top: 120px;
+
+            .mat-card-header {
+                flex-direction: column;
+
+                .header-image {
+                    margin: -55px auto 0;
+                    height: 80px;
+                    background-image: url(/assets/avatar.jpg);
+                    background-size: cover;
+                    width: 80px;
+                }
+
+                .mat-card-header-text {
+                    text-align: center;
+                    margin-top: 20px;
+                }
+            }
+
+            mat-card-actions {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    app-article-content {
+        flex: 1 1 100%;
+        padding: 0;
+
+        @include breakpoint($breakpoint-large) {
+            flex: 1 1 60%;
+            padding: 0 40px;
+        }
+    }
+
+    .otherPosts {
+        display: none;
+
+        @include breakpoint($breakpoint-large) {
+            flex: 1 1 20%;
+            display: block;
+        }
+
+        mat-card {
+            height: calc(100vh - 190px);
+            position: sticky;
+            top: 80px;
+        }
+
+        ul {
+            width: max-content;
+
+            li {
+                list-style: none;
+
+                &::before {
+                    content: "▸";
+                    color: var(--primary);
+                    display: inline-block;
+                    width: 1.5em;
+                    font-size: 1.5em;
+                    margin-left: -1em;
+                }
+
+                a {
+                    text-decoration: none;
+                    cursor: pointer;
+                    color: var(--background-light);
+                }
+            }
+        }
+    }
+
+    .back-to-top {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        &#mobile-back-to-top {
+            position: fixed;
+            display: block;
+            left: auto;
+            right: 20px;
+            transform: translate(0, 0);
+            bottom: 75px;
+
+            @include breakpoint($breakpoint-large) {
+                display: none;
+            }
+        }
+    }
+}
+

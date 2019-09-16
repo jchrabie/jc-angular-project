@@ -1,6 +1,6 @@
 {
   "HELLO": "Salut {{value}}",
-  "introduction": "Passionné et captivé depuis toujours par le développement informatique, j'ai entrepris une reconversion professionnelle dans le développement informatique.<br/>Fort de mes différentes expériences rayonnantes autour du framework Angular, j'ai décidé de me lancer en tant que <span class='badge'>Freelance</span>",
+  "introduction": "<p>Passionné et captivé depuis toujours par l'IT, j'ai entrepris une reconversion professionnelle dans le développement informatique.<br/>Fort de mes différentes expériences rayonnantes autour du framework Angular, j'ai décidé de me lancer en tant que <span class='badge'>Freelance</span> sur la région Nantaise.</p><p>Ce site créé en <span class='badge'>Angular8</span> est un moyen pour moi de vous montrer mes compétences, mais aussi afin d'approfondir mes différentes expériences.</p><p>Le CV est un passage obligé, mais bien peu d'informations y sont indiquées, c'est pourquoi, dans la rubrique <span class='badge'>Expériences</span> du menu, vous aurez la possibilité d'en savoir plus.</p><p>Dans la section <span class='badge'>Compétences</span> vous pourrez visualiser en un rapide coup d'oeil aussi bien mes compétences techniques que les concepts et les méthodologies que j'ai appliqué tout au long de mes expériences</p><p>Si le format web ne vous convient pas, ou si vous souhaitez imprimer mon CV, vous avez la possibilité de l'avoir en PDF en cliquant sur <span class='badge'>CV PDF</span><p>Et enfin, si vous êtes convaincu, vous pourrez me contacter grâce à la rubrique <span class='badge'>Contact</span></p>",
   "devweb": "Développeur Freelance",
   "showMore": "EN SAVOIR PLUS",
   "search": "Rechercher (ex: Angular, React, ...)",
@@ -60,7 +60,7 @@
   },
   "contact": {
     "title": "Contact",
-    "content": "<p>Besoin d'un collaborateur <span class=\"badge\">dynamique</span> et <span class=\"badge\">ambitieux</span>, envie de me connaître un peu plus ou de me recruter?</p><p>Vous trouverez tout le necéssaire ci-après.</p><p>Vous pouvez télécharger ma carte de visite au format <a href=\"assets/jcVcard.vcf\" aria-label=\"Carte de Visite\"><span class=\"badge\">vCard</span></a>, pour m'ajouter facilement à votre carnet d'adresses, m'envoyer un message électronique ou me contacter directement par téléphone.</p><p>Je m'engage à vous répondre dans un délai de 24 heures.</p>"
+    "content": "<p>Besoin d'un Freelance <span class=\"badge\">dynamique</span> et <span class=\"badge\">compétent</span>, envie de me connaître un peu plus ou de me recruter?</p><p>Vous trouverez tout le necéssaire ci-après.</p><p>Vous pouvez télécharger ma carte de visite au format <a href=\"assets/jcVcard.vcf\" aria-label=\"Carte de Visite\"><span class=\"badge\">vCard</span></a>, pour m'ajouter facilement à votre carnet d'adresses, m'envoyer un message électronique ou me contacter directement par téléphone.</p><p>Je m'engage à vous répondre dans un délai de 24 heures.</p>"
   },
   "contactMe": "ME CONTACTER",
   "skills": {

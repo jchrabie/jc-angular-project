@@ -16,6 +16,7 @@ import { CardComponent } from './components/card/card.component';
 import { CardContentComponent } from './components/card-content/card-content.component';
 import { FilteredSearchPipe } from './pipes/filtered-search.pipe';
 import { MaterialModule } from '../material/material.module';
+import { RouterModule } from '@angular/router';
 
 
 // AoT requires an exported function for factories
@@ -36,6 +37,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         MaterialModule,
         BrowserModule,
         BrowserAnimationsModule,
+        RouterModule,
         ReactiveFormsModule,
         HttpClientModule,
     ],

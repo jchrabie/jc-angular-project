@@ -1,5 +1,5 @@
 <mat-toolbar color="primary" role="header">
-  <button mat-icon-button (click)="sidenavService.toggle()">
+  <button id="menu" mat-icon-button (click)="sidenavService.toggle()" matTooltip="Menu" matTooltipPosition="below">
     <mat-icon>menu</mat-icon>
   </button>
 
@@ -9,12 +9,20 @@
 
   <span class="fill-remaining-space"></span>
 
-  <button mat-icon-button routerLink="">
+  <button mat-icon-button routerLink="" (click)="homeClick()" matTooltip="Retour à la page d'accueil" matTooltipPosition="below">
     <mat-icon>home</mat-icon>
     <span class="sr-only">Retour à la page d'accueil</span>
   </button>
-  <button mat-icon-button (click)="toggleTheme()">
+  <button
+    mat-icon-button
+    (click)="toggleTheme()"
+    matTooltip="Inverser le thème du site"
+    matTooltipPosition="below"
+    class="fab-secondary">
     <mat-icon>invert_colors</mat-icon>
     <span class="sr-only">Changer le thème</span>
+  </button>
+  <button mat-raised-button [routerLink]="['/contact']" class="fab-secondary" (click)="hireClick()">
+    Hire Me!
   </button>
 </mat-toolbar>

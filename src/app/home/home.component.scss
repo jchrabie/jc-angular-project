@@ -1,14 +1,59 @@
-@import 'colorss';
 @import 'badge';
+@import "breakpoint";
+@import "breakpoints";
 
 #pres {
-    background-image: url(/assets/pres.png);
+    background-image: url(/assets/pres.jpg);
 }
 
-h2 {
+.head-text {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #303030;
+    padding: 0 10px;
+    position: absolute;
+    height: 25vh;
+
+    h2 {
+        margin: 0;
+    }
+
+    p {
+        display: none;
+        margin-top: 0;
+    }
+
+    @include breakpoint($breakpoint-medium) {
+        height: 35vh;
+        margin-top: -1px;
+
+        p {
+            display: block;
+        }
+    }
+
+    @include breakpoint($breakpoint-large) {
+        height: 50vh;
+    }
+}
+
+#title {
     margin: 20px;
     font-size: 3em;
     flex: 0 0 94%;
+    height: 174px;
+
+    @include breakpoint($breakpoint-medium) {
+        height: 116px;
+    }
+
+    @include breakpoint($breakpoint-large) {
+        height: initial;
+    }
 
     .typing-element {
         color: var(--primary);
@@ -16,7 +61,7 @@ h2 {
 }
 
 #introduction {
-    margin: 10px 20px;
+    margin: 10px 20px 50px;
     font-size: 1.2em;
     flex: 0 0 94%;
 

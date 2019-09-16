@@ -1,0 +1,51 @@
+<div *ngIf="article">
+    <div class="img-background" [style.backgroundImage]="'url('+ article.imagePath +')'" [id]="article.title.toLowerCase() + '-img'"></div>
+    <div class="blog-container">
+      <div class="author">
+          <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar class="header-image"></div>
+                <mat-card-title>Joël CHRABIE</mat-card-title>
+                <mat-card-subtitle>{{'devweb' | translate}}</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-actions>
+                <button mat-raised-button [routerLink]="['/contact']" color="primary">{{'contactMe' | translate}}</button>
+              </mat-card-actions>
+            </mat-card>
+      </div>
+      <app-article-content [article]="article"></app-article-content>
+      <div class="otherPosts">
+        <mat-card>
+          <h3>{{article.title}}:</h3>
+          <ul>
+            <li *ngFor="let project of article.projects">
+              <a (click)="scrollToElement(project.id)">{{project.title}}</a>
+            </li>
+          </ul>
+          <h3>Vous aimerez aussi:</h3>
+          <ul>
+            <li *ngFor="let otherLink of article.other">
+              <a [routerLink]="[otherLink.url]">{{otherLink.title}}</a>
+            </li>
+          </ul>
+          <button
+            mat-mini-fab
+            color="primary"
+            class="back-to-top"
+            (click)="scrollToElement(article.title.toLowerCase() + '-img')"
+            tooltip="Retour en haut de page">
+            <mat-icon>keyboard_arrow_up</mat-icon>
+          </button>
+        </mat-card>
+      </div>
+      <button
+        mat-mini-fab
+        color="primary"
+        class="back-to-top"
+        tooltip="Retour en haut de page"
+        (click)="scrollToElement(article.title.toLowerCase() + '-img')"
+        id="mobile-back-to-top">
+        <mat-icon>keyboard_arrow_up</mat-icon>
+      </button>
+    </div>
+  </div>

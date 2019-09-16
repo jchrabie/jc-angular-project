@@ -8,17 +8,18 @@
     </h3>
   </a>
 </mat-list>
-  <mat-nav-list>
-  <a
-    mat-list-item
-    [routerLink]="link.url"
-    routerLinkActive="active-link"
-    [routerLinkActiveOptions]="{ exact: true }"
-    *ngFor="let link of linkList"
-    role="button"
-    (click)="linkClick(link.url)">
-      <mat-icon matListIcon>{{link.icon}}</mat-icon>
-      {{link.type | translate}}
-      <mat-divider></mat-divider>
-  </a>
+<mat-nav-list>
+  <ng-container *ngFor="let link of linkList">
+    <a
+      mat-list-item
+      [routerLink]="link.url"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: link.type !== 'Blog' }"
+      role="button"
+      (click)="linkClick(link.url)">
+        <mat-icon matListIcon>{{link.icon}}</mat-icon>
+        {{link.type | translate}}
+        <mat-divider></mat-divider>
+    </a>
+  </ng-container>
 </mat-nav-list>

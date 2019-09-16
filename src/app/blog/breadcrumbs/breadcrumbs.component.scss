@@ -1,0 +1,114 @@
+ul {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+
+    li {
+      float:left;
+
+      a {
+        color: var(--text);
+        display: block;
+        background: var(--primary);
+        text-decoration: none;
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 10px 0 5px;
+        text-align: center;
+        margin-right: 23px;
+      }
+
+      &:nth-child(even) {
+        a {
+          background-color: var(--primary);
+
+          &:before {
+            border-color: var(--primary);
+            border-left-color: transparent;
+          }
+
+          &:after {
+            border-left-color: var(--primary);
+          }
+        }
+      }
+
+      &:first-child {
+        a {
+          padding-left: 15px;
+          border-radius: 4px 0 0 4px;
+
+          &:before {
+            border: none;
+           }
+        }
+      }
+      &:last-child {
+        a {
+          padding-right: 15px;
+          border-radius: 0 4px 4px 0;
+
+          &:after {
+            border: none;
+           }
+        }
+      }
+
+      a {
+        mat-icon {
+          padding: 7px 0px;
+        }
+
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          border: 0 solid var(--primary);
+          border-width: 20px 10px;
+          width: 0;
+          height: 0;
+        }
+
+        &:before {
+          left: -20px;
+          border-left-color: transparent;
+        }
+
+        &:after {
+          left: 100%;
+          border-color: transparent;
+          border-left-color: var(--primary);
+        }
+
+        &:hover, &:active {
+          background-color: var(--primary-dark);
+
+          &:before {
+            border-color: var(--primary-dark);
+            border-left-color: transparent;
+          }
+
+          &:after {
+            border-left-color: var(--primary-dark);
+          }
+        }
+
+        &.active {
+            background-color: var(--background);
+            cursor: default;
+
+            &:before {
+              border-color: var(--background);
+              border-left-color: transparent;
+            }
+
+            &:after {
+              border-left-color: var(--background);
+            }
+          }
+      }
+    }
+}

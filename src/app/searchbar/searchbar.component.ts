@@ -1,8 +1,8 @@
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
-import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent, MatChipInputEvent, MatAutocompleteTrigger } from '@angular/material';
-import { map, startWith } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { SearchService } from '../shared/service/search.service';
 import { TranslateService } from '@ngx-translate/core';
@@ -13,10 +13,9 @@ import { chips } from '../shared/constants/experiences.constants';
   templateUrl: './searchbar.component.html',
   styleUrls: ['./searchbar.component.scss']
 })
-export class SearchbarComponent implements OnInit {
+export class SearchbarComponent {
   visible: boolean = true;
   selectable: boolean = true;
-  removable: boolean = true;
   addOnBlur: boolean = false;
   separatorKeysCodes = [ENTER, COMMA];
   searchCtrl = new FormControl();
@@ -31,7 +30,6 @@ export class SearchbarComponent implements OnInit {
     return this.searchRef.nativeElement;
   }
 
-
   constructor(
     public searchService: SearchService,
     private translate: TranslateService
@@ -40,7 +38,6 @@ export class SearchbarComponent implements OnInit {
     this.allChips = this.chipsList;
 
     this.filteredSearches = this.searchCtrl.valueChanges.pipe(
-      startWith(null),
       map(search => search ? this.filter(search) : this.chipsList.slice())
     );
 
@@ -51,18 +48,13 @@ export class SearchbarComponent implements OnInit {
       });
   }
 
-  ngOnInit(): void {
-    this.searchInput.click();
-    this.autocomplete.closePanel();
-  }
-
   add(event: MatChipInputEvent): void {
     const input = event.input;
     const value = event.value;
 
     // Add our search
     if ((value || '').trim()) {
-      const existingChips = this.chipsList.find(chips => chips.match(new RegExp(value, 'i')));
+      const existingChips = this.chipsList.find(chip => chip.match(new RegExp(value, 'i')));
 
       if (!existingChips) {
         return;

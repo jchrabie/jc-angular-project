@@ -1,12 +1,12 @@
-<mat-form-field class="demo-chip-list">
+<mat-form-field class="chip-list">
   <mat-chip-list #chipList>
     <mat-chip
       *ngFor="let search of searchService.filteredSearch()"
       [selectable]="selectable"
-      [removable]="removable"
-      (click)="remove(search)">
+      removable="true"
+      (remove)="remove(search)">
       {{search}}
-      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      <mat-icon matChipRemove (click)="remove(search)">cancel</mat-icon>
     </mat-chip>
     <input
       placeholder="{{'search' | translate}}"

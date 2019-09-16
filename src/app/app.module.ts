@@ -1,6 +1,10 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
+import { CookieLawModule } from 'angular2-cookie-law';
+import { ShareButtonsModule } from '@ngx-share/buttons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -46,10 +50,15 @@ const route = [
     SpeedDialFabComponent
   ],
   imports: [
+    BrowserModule.withServerTransition({ appId: 'jc-angular-project' }),
+    ShareButtonsModule,
     BlogModule,
-    NgxChartsModule,
-    RouterModule.forRoot(route, { useHash: false, anchorScrolling: 'enabled' }),
+    HttpClientModule,
+    HttpClientJsonpModule,
+    FontAwesomeModule,
+    CookieLawModule,
     SharedModule,
+    RouterModule.forRoot(route, { useHash: false, scrollPositionRestoration: 'top' }),
   ],
   exports: [
     RouterModule

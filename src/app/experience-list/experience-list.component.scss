@@ -3,7 +3,7 @@
 @import 'headers';
 
 #experiences {
-    background-image: url(/assets/experiences.png);
+    background-image: url(/assets/experiences.jpg);
 }
 
 
@@ -12,7 +12,7 @@
 
     app-experience, app-searchbar {
         flex: 0 0 100%;
-    
+
         @include breakpoint ($breakpoint-medium) {
             flex: 0 0 80%;
         }
@@ -20,7 +20,7 @@
 
     mat-accordion {
         width: 100%;
-    
+
         @include breakpoint ($breakpoint-medium) {
             width: 80%;
             margin-bottom: 20px;

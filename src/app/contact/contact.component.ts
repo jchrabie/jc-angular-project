@@ -1,8 +1,8 @@
-/// <reference types="@types/googlemaps" />
 import { TranslateService } from '@ngx-translate/core';
 
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import CardContent from '../../model/CardContent';
+
 
 @Component({
   selector: 'app-contact',
@@ -10,22 +10,15 @@ import CardContent from '../../model/CardContent';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  @ViewChild('gmap', { static: true }) private gmapElement: ElementRef;
-  private map: google.maps.Map;
-  private infowindow: google.maps.InfoWindow;
-  private marker: google.maps.Marker;
-  private mapOption: google.maps.MapOptions;
-  private latLng: google.maps.LatLng;
   public card: any;
 
   constructor(private translateService: TranslateService) {
     this.translateService.onLangChange
-    .subscribe(() => this.translateService.get(this.card.subtitleRaw)
-      .subscribe(res => this.card.subtitle = res));
+      .subscribe(() => this.translateService.get(this.card.subtitleRaw)
+        .subscribe(res => this.card.subtitle = res));
   }
 
   ngOnInit() {
-    this.initMap();
     this.initCard();
   }
 
@@ -39,41 +32,8 @@ export class ContactComponent implements OnInit {
       content: [
         new CardContent('06 88 74 00 93', 'Mobile', 'phone'),
         new CardContent('36 Boulevard du Tertre - Saint-Herblain', 'Localisation', 'place'),
-        new CardContent('joel.chrabie@gmail.com', 'Mail', 'email')
+        new CardContent('contact@joelchrabie.com', 'Mail', 'email')
       ]
     };
-  }
-
-  initMap(): void {
-    this.latLng = new google.maps.LatLng(47.215350, -1.606093);
-    this.mapOption = {
-      center: this.latLng,
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-
-    this.map = new google.maps.Map(this.gmapElement.nativeElement, this.mapOption);
-
-    this.initMarker();
-  }
-
-  initMarker(): void {
-    this.infowindow = new google.maps.InfoWindow({
-      content: `<div id= 'infoWindow '>
-        <h3>Joël CHRABIE</h3>
-        <div>36 Boulevard du Tertre</div>
-        <div>44800 Saint-Herblain</div>
-      <div>`,
-    });
-
-    this.marker = new google.maps.Marker({
-      position: this.latLng,
-      map: this.map,
-      title: 'Joël CHRABIE'
-    });
-
-    this.marker.addListener('click', ()  => this.infowindow.open(this.map, this.marker));
-
-    this.infowindow.open(this.map, this.marker);
   }
 }
