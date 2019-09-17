@@ -11,6 +11,7 @@ import { AnalyticsService } from './service/analytics.service';
 import { SidenavService } from './service/sidenav.service';
 import { ThemeService } from './service/theme.service';
 import { SearchService } from './service/search.service';
+import { AuthService } from './service/auth.service';
 
 import { CardComponent } from './components/card/card.component';
 import { CardContentComponent } from './components/card-content/card-content.component';
@@ -43,6 +44,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ],
     providers: [
         AnalyticsService,
+        AuthService,
         SidenavService,
         SearchService,
         ThemeService,

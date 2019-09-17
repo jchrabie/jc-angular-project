@@ -31,7 +31,7 @@ export class ContactComponent implements OnInit {
       imageAlt: ' ',
       content: [
         new CardContent('06 88 74 00 93', 'Mobile', 'phone'),
-        new CardContent('36 Boulevard du Tertre - Saint-Herblain', 'Localisation', 'place'),
+        new CardContent('Nantes', 'Localisation', 'place'),
         new CardContent('contact@joelchrabie.com', 'Mail', 'email')
       ]
     };

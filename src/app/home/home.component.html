@@ -11,6 +11,8 @@
         <span class="typing-element"></span>
     </h2>
     <div id="introduction">
+            <button mat-raised-button color="primary" (click)="login()">Login</button>
+            <button mat-raised-button color="warn" (click)="logout()">Logout</button>
         <div [innerHtml]="'introduction' | translate"></div>
         <span id="signature">- Joël</span>
 

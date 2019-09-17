@@ -26,7 +26,7 @@ export const blog: Article[] = [
                 title: 'Air France KLM',
                 id: 'afklm',
                 date: '2 jours',
-                content: `<p>Vous vous demandez très probablement pourquoi je vous parle d'un projet de deux jours ?</p><p>Tout simplement, car il s'agissait pour moi d'une expérience extra-ordinaire!</p><p>Air France KLM à réalisé un appel d'offres pour la refonte et la maintenance de l'ensemble de leurs applications, intranet, extranet ... qui étaient initialement réalisé en interne afin de l'externaliser. </p><p>Après une première sélection de cinq partenaires, ils ont fait appel à la société <a href="https://www.goood.com/">goood</a> afin de réaliser un <span class="badge">hackaton</span> de deux jours dans les locaux de KLM à Amsterdam en spécifiant l'équipe type dont ils avaient besoin (1 Scrum Master, 4 développeurs) avec un Front en Angular et un backend en Java</p><p>J'ai donc été choisi pour représenter Capgemini en tant que lead tech Front lors de ce hackaton. Initialement très nerveux a cette idée, je me suis laissé convaincre et je ne le regrette absolument pas! Le challenge en valait la chandelle.</p><p>Après une grosse préparation pendant près d'un mois (Hackaton blanc, perfection de notre anglais, amélioration de nos compétences, ...) nous sommes allés à Amsterdam.</p><p>Arrivé 2ème, Ce hackaton a permis de faire connaître Capgemini auprès d'Air France KLM, ce qui nous a d'ailleurs permis de gagner par la suite un autre appel d'offres</p>`,
+                content: `<p>Vous vous demandez très probablement pourquoi je vous parle d'un projet de deux jours ?</p><p>Tout simplement, car il s'agissait pour moi d'une expérience extra-ordinaire!</p><p>Air France KLM à réalisé un appel d'offres pour la refonte et la maintenance de l'ensemble de leurs applications, intranet, extranet ... qui étaient initialement réalisé en interne afin de l'externaliser. </p><p>Après une première sélection de cinq partenaires, ils ont fait appel à la société <a href="https://www.goood.com/">goood</a> afin de réaliser un <span class="badge">hackaton de deux jours dans les locaux de KLM à Amsterdam en spécifiant l'équipe type dont ils avaient besoin (1 Scrum Master, 4 développeurs) avec un Front en Angular et un backend en Java</p><p>J'ai donc été choisi pour représenter Capgemini en tant que lead tech Front lors de ce hackaton. Initialement très nerveux a cette idée, je me suis laissé convaincre et je ne le regrette absolument pas! Le challenge en valait la chandelle.</p><p>Après une grosse préparation pendant près d'un mois (Hackaton blanc, perfection de notre anglais, amélioration de nos compétences, ...) nous sommes allés à Amsterdam.</p><p>Arrivé 2ème, Ce hackaton a permis de faire connaître Capgemini auprès d'Air France KLM, ce qui nous a d'ailleurs permis de gagner par la suite un autre appel d'offres</p>`,
                 skills: ['Angular', 'TypeScript', 'Responsive', 'Javascript', 'HTML', 'Sass', 'SCRUM']
             },
             {
@@ -125,14 +125,14 @@ export const blog: Article[] = [
                 title: 'Poc',
                 id: 'poc',
                 date: '4 mois',
-                content: '<p>Ca y est, premier emploi! Me voici titulaire d\'un Bac + 4  délivré par l\'<span class="badge">ENI<span> à Saint Herblain.</p><p> Et c\'est SQLI qui me donne ma première chance en me recrutant sur profil.</p><p>N\'étant encore qu\'un jeune diplômé, les clients ne se bousculent pas pour m\'engager. C\'est pas grave, SQLI me propose avec deux stagiaires d\'école d\'ingénieurs de réaliser un <span class="badge">POC<span> sur le sujet de la Blockchain.</p><p>Le but de ce POC était de créer une application Android permettant de louer une voiture autonome (simulé avec une carte Raspberry) avec des transactions faite sur une <span class="badge">blockchain</span> privé avec pour monnaie de l\'<span class="badge">etherum</span>.<br/>Ainsi qu\'un Dashboard web afin de visualiser en direct les transactions échangées entre la voiture, et l\'application.</p><p>Mes missions étaient essentiellement sur la production de l\'application en <span class="badge">android</span> ainsi que le dashboard sur un tout nouveau framework encore en version beta: <span class="badge">angular2</span> avec diverse librairie pour réaliser des charts avec <a href="https://www.chartjs.org/">Chartsjs</a>.</p>',
+                content: '<p>Ca y est, premier emploi! Me voici titulaire d\'un Bac + 4  délivré par l\'<span class="badge">ENI<span> à Saint Herblain.</p><p> Et c\'est SQLI qui me donne ma première chance en me recrutant sur profil.</p><p>N\'étant encore qu\'un jeune diplômé, les clients ne se bousculent pas pour m\'engager. C\'est pas grave, SQLI me propose avec deux stagiaires d\'école d\'ingénieurs de réaliser un <span class="badge">POC<span> sur le sujet de la Blockchain.</p><p>Le but de ce POC était de créer une application Android permettant de louer une voiture autonome (simulé avec une carte Raspberry) avec des transactions faite sur une <span class="badge">blockchain privé avec pour monnaie de l\'<span class="badge">etherum.<br/>Ainsi qu\'un Dashboard web afin de visualiser en direct les transactions échangées entre la voiture, et l\'application.</p><p>Mes missions étaient essentiellement sur la production de l\'application en <span class="badge">android ainsi que le dashboard sur un tout nouveau framework encore en version beta: <span class="badge">angular2 avec diverse librairie pour réaliser des charts avec <a href="https://www.chartjs.org/">Chartsjs</a>.</p>',
                 skills: ['Angular', 'jQuery', 'TypeScript', 'Android', 'Responsive', 'Javascript', 'HTML', 'Sass', 'SCRUM']
             },
             {
                 title: 'Missions, POC, TMA',
                 id: 'next',
                 date: '3 mois',
-                content: '<p>Et après?</p><p>Encore inexpérimenté, SQLI n\'a pas réussi à me trouver de mission fixe.</p><p>J\'ai donné quelques coups de mains, je me suis formé, amélioré sur divers <span class="badge">frameworks</span> et techno. Mais au bout d\'un certain temps, je n\'aspirais plus qu\'à trouver une véritable mission.</p><p>C\'est pourquoi j\'ai décidé de quitter SQLI, en intégrant le groupe <a href="/blog/creative">Creative</a> vers de nouvelles aventures!</p>',
+                content: '<p>Et après?</p><p>Encore inexpérimenté, SQLI n\'a pas réussi à me trouver de mission fixe.</p><p>J\'ai donné quelques coups de mains, je me suis formé, amélioré sur divers <span class="badge">frameworks et techno. Mais au bout d\'un certain temps, je n\'aspirais plus qu\'à trouver une véritable mission.</p><p>C\'est pourquoi j\'ai décidé de quitter SQLI, en intégrant le groupe <a href="/blog/creative">Creative</a> vers de nouvelles aventures!</p>',
                 skills: ['Joomla!', 'jQuery', 'AngularJs', 'Javascript', 'HTML', 'Sass']
 
             }
@@ -220,7 +220,7 @@ export const blog: Article[] = [
         showMore: true,
         subtitle: 'I18n',
         imagePath: 'assets/i18n.jpg',
-        content: `Parceque les sites web ont pour vocation d'être <span class='badge'>visible</span> partout dans le monde, j'ai pris à coeur d'utiliser des outils d'<span class='badge'>internationalisation</span> comme les fichiers xliff et la librairie <span class='badge'>i18n</span> propre à Angular.`,
+        content: `Parceque les sites web ont pour vocation d'être visible partout dans le monde, j'ai pris à coeur d'utiliser des outils d'internationalisation comme les fichiers xliff et la librairie i18n propre à Angular.`,
         icon: 'translate',
         projects: [
             {
@@ -296,7 +296,7 @@ export const blog: Article[] = [
         ],
         showMore: true,
         subtitle: 'Adaptation Multi Devices',
-        content: `A l'heure de l'explosition de l'internet <span class='badge'>mobile</span>, les sites web doivent permettre de s'afficher sur n'importe quel <span class='badge'>support</span>. Pour ce faire j'utilise de manière approprié le <span class='badge'>responsiveDesign</span> et le concept de <span class='badge'>mobileFirst</span>.`,
+        content: `A l'heure de l'explosition de l'internet mobile, les sites web doivent permettre de s'afficher sur n'importe quel support. Pour ce faire j'utilise de manière approprié le responsiveDesign et le concept de mobileFirst.`,
         icon: 'devices',
         imagePath: 'assets/responsive.jpg',
         projects: [
@@ -462,7 +462,7 @@ export const blog: Article[] = [
         ],
         showMore: true,
         subtitle: 'a11y',
-        content: `Améliorer l’<span class='badge'>accessibilité</span> de votre site web permettra de toucher un public plus large, d’augmenter le trafic et les <span class='badge'>conversions</span> sur votre site. Il faut toujours être conscient qu’entre 15% et 20% de la population souffrent d’un <span class='badge'>handicap</span>: visuel, auditif, moteur…`,
+        content: `Améliorer l’accessibilité de votre site web permettra de toucher un public plus large, d’augmenter le trafic et les conversions sur votre site. Il faut toujours être conscient qu’entre 15% et 20% de la population souffrent d’un handicap: visuel, auditif, moteur…`,
         icon: 'accessible_forward',
         imagePath: 'assets/a11y.jpg',
         projects: [
@@ -545,7 +545,7 @@ export const blog: Article[] = [
         ],
         showMore: true,
         subtitle: 'Données utilisateurs',
-        content: `Améliorer l’<span class='badge'>accessibilité</span> de votre site web permettra de toucher un public plus large, d’augmenter le trafic et les <span class='badge'>conversions</span> sur votre site. Il faut toujours être conscient qu’entre 15% et 20% de la population souffrent d’un <span class='badge'>handicap</span>: visuel, auditif, moteur…`,
+        content: `Améliorer l’accessibilité de votre site web permettra de toucher un public plus large, d’augmenter le trafic et les conversions sur votre site. Il faut toujours être conscient qu’entre 15% et 20% de la population souffrent d’un handicap: visuel, auditif, moteur…`,
         imagePath: 'assets/analytics.jpg',
         icon: 'bar_chart',
         projects: [{
@@ -593,4 +593,8 @@ export interface Project {
     date?: string;
     content: string;
     skills?: string[];
+}
+
+export function getArticleByTemplate(template: string): Article {
+    return blog.find(article => article.template === template);
 }
