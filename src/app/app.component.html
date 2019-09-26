@@ -7,11 +7,7 @@
         <mat-sidenav-content>
             <app-header></app-header>
 
-            <main><ul>
-                <li class="text" *ngFor="let item of items">
-                  {{item.name}}
-                </li>
-              </ul>
+            <main>
                 <router-outlet></router-outlet>
             </main>
             <app-footer></app-footer>
