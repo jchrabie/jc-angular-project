@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import Typed from 'typed.js';
 
 import { AnalyticsService } from '../shared/service/analytics.service';
-import { AuthService } from '../shared/service/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +11,6 @@ import { AuthService } from '../shared/service/auth.service';
 export class HomeComponent implements OnInit {
   constructor(
     private analyticsService: AnalyticsService,
-    private authService: AuthService
   ) { }
 
   ngOnInit() {
@@ -30,17 +28,5 @@ export class HomeComponent implements OnInit {
 
   hireClick() {
     this.analyticsService.emit('click', 'home', 'hiring', 'Click');
-  }
-
-  login() {
-    this.authService.loginWithGoogle().then((data) => {
-      console.log(data);
-    });
-  }
-
-  logout() {
-    this.authService.logout().then((data) => {
-      console.log(data);
-    });
   }
 }

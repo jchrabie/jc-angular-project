@@ -1,8 +1,11 @@
 import { Component} from '@angular/core';
 import { SidenavService } from '../shared/service/sidenav.service';
-import { MatSidenav } from '@angular/material';
 import { ThemeService } from '../shared/service/theme.service';
 import { AnalyticsService } from '../shared/service/analytics.service';
+import { MatDialog } from '@angular/material/dialog';
+import { LoginComponent } from '../shared/components/login/login.component';
+import { AuthService } from '../shared/service/auth.service';
+import { User } from 'firebase';
 
 @Component({
   selector: 'app-header',
@@ -10,12 +13,24 @@ import { AnalyticsService } from '../shared/service/analytics.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  public user: User;
 
   constructor(
     public sidenavService: SidenavService,
     public analyticsService: AnalyticsService,
-    private themeService: ThemeService
-  ) { }
+    private themeService: ThemeService,
+    public authService: AuthService,
+    public dialog: MatDialog
+  ) {}
+
+  openLogin(): void {
+    const dialogRef = this.dialog.open(LoginComponent, {
+      width: '500px',
+      data: {}
+    });
+
+    dialogRef.afterClosed().subscribe();
+  }
 
   toggleTheme() {
     this.themeService.isDarkTheme() ? this.themeService.setLightTheme() : this.themeService.setDarkTheme();

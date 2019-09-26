@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -18,6 +18,7 @@ import { CardContentComponent } from './components/card-content/card-content.com
 import { FilteredSearchPipe } from './pipes/filtered-search.pipe';
 import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
+import { LoginComponent } from './components/login/login.component';
 
 
 // AoT requires an exported function for factories
@@ -39,6 +40,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         BrowserModule,
         BrowserAnimationsModule,
         RouterModule,
+        FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
     ],
@@ -52,7 +54,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     declarations: [
         CardComponent,
         CardContentComponent,
-        FilteredSearchPipe
+        FilteredSearchPipe,
+        LoginComponent
     ],
     exports: [
         CardComponent,
@@ -63,8 +66,12 @@ export function HttpLoaderFactory(http: HttpClient) {
         BrowserAnimationsModule,
         ReactiveFormsModule,
         HttpClientModule,
+        FormsModule,
         TranslateModule,
         FilteredSearchPipe,
     ],
+    entryComponents: [
+        LoginComponent
+    ]
 })
 export class SharedModule { }

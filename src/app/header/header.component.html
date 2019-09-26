@@ -15,6 +15,25 @@
   </button>
   <button
     mat-icon-button
+    (click)="openLogin()"
+    matTooltip="S'identifier"
+    matTooltipPosition="below"
+    *ngIf="!(authService.user$ | async); else delog">
+    <mat-icon>person</mat-icon>
+    <span class="sr-only">S'identifier</span>
+  </button>
+  <ng-template #delog>
+      <button
+        mat-icon-button
+        (click)="this.authService.logout()"
+        matTooltip="Se délogué"
+        matTooltipPosition="below">
+        <mat-icon>power_settings_new</mat-icon>
+        <span class="sr-only">Se délogué</span>
+      </button>
+  </ng-template>
+  <button
+    mat-icon-button
     (click)="toggleTheme()"
     matTooltip="Inverser le thème du site"
     matTooltipPosition="below"
