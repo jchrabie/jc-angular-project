@@ -1,7 +1,6 @@
 import { Component, ViewChild, ElementRef} from '@angular/core';
-import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatDialog } from '@angular/material/dialog';
-import { Observable } from 'rxjs';
 import { User } from 'firebase';
 
 import { SidenavService } from '../shared/service/sidenav.service';
@@ -17,7 +16,7 @@ import { AuthService } from '../shared/service/auth.service';
 })
 export class HeaderComponent {
   public user: User;
-  public breakpoint$: Observable<BreakpointState>;
+  public isMobile: boolean;
   @ViewChild('menu', {static: true}) public menu: ElementRef;
 
   constructor(
@@ -28,7 +27,8 @@ export class HeaderComponent {
     public dialog: MatDialog,
     private breakpointObserver: BreakpointObserver
   ) {
-    this.breakpoint$ = this.breakpointObserver.observe('(max-width: 600px)');
+    this.breakpointObserver.observe('(max-width: 600px)')
+      .subscribe(breakpoint => this.isMobile = breakpoint.matches);
   }
 
   openLogin(): void {
