@@ -1,11 +1,14 @@
-import { Component} from '@angular/core';
+import { Component, ViewChild, ElementRef} from '@angular/core';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { MatDialog } from '@angular/material/dialog';
+import { Observable } from 'rxjs';
+import { User } from 'firebase';
+
 import { SidenavService } from '../shared/service/sidenav.service';
 import { ThemeService } from '../shared/service/theme.service';
 import { AnalyticsService } from '../shared/service/analytics.service';
-import { MatDialog } from '@angular/material/dialog';
 import { LoginComponent } from '../shared/components/login/login.component';
 import { AuthService } from '../shared/service/auth.service';
-import { User } from 'firebase';
 
 @Component({
   selector: 'app-header',
@@ -14,14 +17,19 @@ import { User } from 'firebase';
 })
 export class HeaderComponent {
   public user: User;
+  public breakpoint$: Observable<BreakpointState>;
+  @ViewChild('menu', {static: true}) public menu: ElementRef;
 
   constructor(
     public sidenavService: SidenavService,
     public analyticsService: AnalyticsService,
     private themeService: ThemeService,
     public authService: AuthService,
-    public dialog: MatDialog
-  ) {}
+    public dialog: MatDialog,
+    private breakpointObserver: BreakpointObserver
+  ) {
+    this.breakpoint$ = this.breakpointObserver.observe('(max-width: 600px)');
+  }
 
   openLogin(): void {
     const dialogRef = this.dialog.open(LoginComponent, {

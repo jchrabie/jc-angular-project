@@ -1,3 +1,6 @@
+@import "breakpoint";
+@import "breakpoints";
+
 .modal-image{
     height: 100px;
     width: calc(100% + 48px);
@@ -8,11 +11,28 @@
 
 .flex-elem {
     display: flex;
-    justify-content: space-between;
+    justify-content: initial;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+
+    @include breakpoint($breakpoint-medium) {
+        align-items: initial;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
-mat-form-field, table {
+table {
+    table-layout: fixed;
     width: 100%;
+}
+
+mat-form-field {
+    width: 100%;
+
+    .mat-form-field-suffix {
+        align-self: flex-end;
+    }
 }
 
 td:first-child {
@@ -21,6 +41,15 @@ td:first-child {
 
 .mat-dialog-content {
     overflow: inherit;
+    max-height: 50vh;
+}
+
+.mat-dialog-actions {
+    flex-direction: column;
+
+    @include breakpoint($breakpoint-medium) {
+        flex-direction: row;
+    }
 }
 
 .btn-login {
@@ -37,6 +66,11 @@ td:first-child {
     transition-timing-function: ease-in-out;
     padding: 0;
     border-radius: 5px;
+    margin: 10px 0;
+
+    @include breakpoint($breakpoint-medium) {
+        margin: 0;
+    }
 
     &:focus,
     &:hover {
@@ -130,6 +164,9 @@ mat-radio-group {
     text-decoration: underline;
     font-weight: normal;
     font-size: 14px;
-    align-self: flex-end;
     cursor: pointer;
+
+    @include breakpoint($breakpoint-medium) {
+        align-self: flex-end;
+    }
 }

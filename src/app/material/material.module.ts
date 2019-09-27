@@ -39,7 +39,8 @@ import {
     MatFormFieldModule,
     MatTooltipModule,
     MatSnackBarModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatMenuModule
   ],
   exports: [
     MatToolbarModule,
@@ -59,7 +60,8 @@ import {
     MatListModule,
     MatChipsModule,
     MatFormFieldModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatMenuModule
   ],
 })
 export class MaterialModule { }

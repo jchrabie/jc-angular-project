@@ -31,7 +31,7 @@ export class AuthService {
             this.user = user;
 
             this.user$.next(this.user);
-            this._snackBar.open(`Bonjour ${this.user.displayName}!`, '', { duration: 4000 });
+            this._snackBar.open(`Bonjour ${this.user && this.user.displayName || ''}!`, '', { duration: 4000 });
         });
     }
 
