@@ -10,7 +10,7 @@
   <span class="fill-remaining-space"></span>
 
   <ng-container *ngIf="isMobile; else notMenu">
-    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu" matTooltip="Menu" matTooltipPosition="below">
       <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
