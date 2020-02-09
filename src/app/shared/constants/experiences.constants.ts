@@ -1,5 +1,23 @@
 export const experiences: Experience[] = [
     {
+        type: 'experiences.dsia',
+        name: 'DSIA',
+        url: '/blog/dsia',
+        city: 'Nantes',
+        startDate: '14/11/2019',
+        endDate: '',
+        postcode: '44',
+        logo: 'assets/logo/dsia.png',
+        chips: [
+            'Angular',
+            'TypeScript',
+            'JavaScript',
+            'Sass',
+            'HTML5',
+        ],
+        showMore: false
+    },
+    {
         type: 'experiences.capgemini',
         name: 'Capgemini',
         url: '/blog/capgemini',

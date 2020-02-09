@@ -1,5 +1,52 @@
 export const blog: Article[] = [
     {
+        template: 'freelance',
+        group: 'freelance',
+        breadcrumbs: [
+            { name: 'Blog', url: '/blog', active: false },
+            { name: 'Freelance', url: '/blog/freelance', active: true },
+        ],
+        showMore: true,
+        icon: 'send',
+        title: 'Free-Lance',
+        subtitle: `Développeur Web Senior`,
+        content: `Fini les CDI dans les ESN, je me lance en tant que Free-Lance !`,
+        imagePath: 'assets/liberte.jpg',
+        dates: 'Novembre 2019 - Aujourd\'hui',
+        projects: [
+            {
+                title: 'Démarrage du projet',
+                id: 'demarrage',
+                date: '',
+                content: `<p>Être libre et se lancer, #Freelance !</p>
+                <p>Ca y est, je saute le pas. Après plusieurs années dans les ESN, je viens de décider de me lancer en tant que Freelance.</p>
+                <p>Cette décision n'est pas facile à prendre, mais tellement jouissive quand elle est prise. Beaucoup d'appréhension, de peur de rater, de  #challenge. Mais n'est ce pas ce challenge qui nous pousse à nous surpasser ?</p>
+                <p>Ma décision est prise, et je sais que, malgré l'auto-entrepreneuria, je ne suis pas seul, je peux compter sur d'autres freelances (merci de ton soutien Antoine BEAUREGARD), sur des entreprise (Younup), sur ma famille et mes amis.</p>
+                <p>Bref, ce n'est que le début, mais j'ai déjà cette impression de liberté.</p>`,
+                skills: []
+            },
+            {
+                title: 'Younup',
+                id: 'younup',
+                date: '6mois',
+                content: `<p>Après avoir décidé de quitter Capgémini, j'ai pris contact avec diverses ESN.</p>
+                <p>Younup par le biais de Pierre-Marie PASSET est la première à me faire confiance, en même temps, Pierre-Marie était mon directeur d'agence quand je travaillais chez Créative et connaissait déjà mes compétences sur Angular.</p>
+                <p>J'ai donc intégré DSIA, l'un des clients de Younup, pour intervenir en tant que Lead dev Angular.</p>`,
+                skills: ['Angular', 'TypeScript', 'Javascript', 'HTML', 'Sass', 'SCRUM']
+            },
+        ],
+        other: [
+            {
+                title: 'Capgémini',
+                url: '/blog/capgemini'
+            },
+            {
+                title: 'Creative',
+                url: '/blog/creative'
+            }
+        ]
+    },
+    {
         template: 'capgemini',
         group: 'experience',
         breadcrumbs: [
