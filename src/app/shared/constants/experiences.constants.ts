@@ -2,7 +2,7 @@ export const experiences: Experience[] = [
     {
         type: 'experiences.dsia',
         name: 'DSIA',
-        url: '/blog/dsia',
+        url: '/blog/freelance',
         city: 'Nantes',
         startDate: '14/11/2019',
         endDate: '',
@@ -15,7 +15,7 @@ export const experiences: Experience[] = [
             'Sass',
             'HTML5',
         ],
-        showMore: false
+        showMore: true
     },
     {
         type: 'experiences.capgemini',
