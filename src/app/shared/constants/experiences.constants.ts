@@ -2,10 +2,10 @@ export const experiences: Experience[] = [
     {
         type: 'experiences.dsia',
         name: 'DSIA',
-        url: '/blog/freelance',
+        url: '/blog/dsia',
         city: 'Nantes',
         startDate: '14/11/2019',
-        endDate: '',
+        endDate: '03/07/2020',
         postcode: '44',
         logo: 'assets/logo/dsia.png',
         chips: [

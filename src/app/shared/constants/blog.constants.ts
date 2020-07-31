@@ -1,5 +1,67 @@
 export const blog: Article[] = [
     {
+        template: 'dsia',
+        group: 'dsia',
+        breadcrumbs: [
+            { name: 'Blog', url: '/blog', active: false },
+            { name: 'Experiences', url: '/blog', queryParams: { frag: 'experience' }, active: false },
+            { name: 'DSIA', url: '/blog/dsia', active: true },
+        ],
+        showMore: true,
+        icon: 'work',
+        title: 'DSIA',
+        subtitle: `Lead angular developer`,
+        content: `Première mission en free-lance! Et pas des moindres, 9 mois sur une application d'analyse de données chez un éditeur de logiciels`,
+        imagePath: 'assets/dsia.png',
+        dates: 'Novembre 2019 - Juillet 2020',
+        projects: [
+            {
+                title: 'Les débuts',
+                id: 'beginning',
+                date: '1 mois',
+                content: `<p>Première mission free-lance!</p>
+                <p>Me voilà (free-)lancé pour la première fois! Je suis arrivé dans l'équipe IMA composée d'un Scrum Master 3 dev back et un dev front en full agilité.</p>
+                <p>IMA (pour In-Memory Analytics) est une solution de traitement "In Memory" de grands volumes d'information à des fins analytiques. Il s'agit d'une solution BI née de prototypes réalisés dans le cadre de l'activité R&D de DSIA.</p>
+                <p>A fin de m'intégrer pleinement dans le projet et commencer à comprendre le fonctionnel de cette application, rien de mieux que de mettre les mains dans le code, et s'intégrer avec ses collègues (Merci Fred, Xavier, Benj, Seb, et Dany!).</p>
+                <p>Et ma première mission a été de faire des TU! Car l'application, qui avait débuté il y a deux ans, ne comportait que ... 65 TU à mon arrivée.</p>
+                <p>En parallèle, je suis rapidement devenu lead sur les revues de codes front de mes collègues.</p>`,
+                skills: ['Angular', 'TypeScript', 'Karma', 'Jasmine', 'HTML', 'Sass', 'SCRUM']
+            },
+            {
+                title: 'Build',
+                id: 'build',
+                date: '3 mois',
+                content: `<p>Une fois le fonctionnel ancré dans ma tête (Je comprends vite, mais il faut m'expliquer longuement :p). J'ai commencé à participer au développement des features que nous avions préalablement estimé lors des sprint plannings</p>
+                <p>La conception, réalisation et test unitaires étaient réalisés en binôme front/back.</p>
+                <p>À l'issue de ces quelques mois, près de 650 TUs ont été développé afin de s'assurer d'avoir le moins de régressions possible</p>`,
+                skills: ['Angular', 'TypeScript', 'Karma', 'Jasmine', 'HTML', 'Sass', 'SCRUM']
+            },
+            {
+                title: 'Éditeur de chart',
+                id: 'Anychart',
+                date: '5 mois',
+                content: `<p>Puis vint une énorme feature très importante pour DSIA: <b>L'éditeur de charts</b></p>
+                <p>Cet éditeur était déjà présent sur l'application mais le code n'était pas évolutif, exclusif à l'application IMA, pas très User Friendly, et très difficilement maintenable!</p>
+                <p>Il est essentiel pour l'appli de visualiser sous forme de différents graphiques les données (pie chart, cartesian, stock, pareto, ...) et nous utilisions la librairie <a href="https://www.anychart.com/" target="_blank">AnyChart</a> pour la visualisation.</p>
+                <p>Le but de la feature était d'externaliser la gestion de l'éditeur de graphique dans un package npm propriétaire (Verdaccio) afin de le réutiliser dans d'autres applications de DSIA.</p>
+                <p>J'ai réalisé toute la conception technico/fonctionnelle ainsi que le développement et le test de cet éditeur de graphique sur presque 5 mois.<br/>Il est désormais possible via l'éditeur de choisir le type de chart, avec une ou plusieurs séries, modifier les marges, les fonds, et toutes les options spécifiques aux différents charts</p>
+                <p>J'avais aussi les mains libres pour la partie UX/UI et je me suis réellement fait plaisir en intégrant ce composant comme je le souhaitais!</p>
+                <p>Suite à cela, le composant avait une couverture de code de plus de 93% soit près de 450 TU!</p>`,
+                skills: ['Angular', 'TypeScript', 'AnyChart', 'Karma', 'Jasmine', 'HTML', 'Sass', 'SCRUM']
+            },
+        ],
+        other: [
+            {
+                title: 'Free-lance',
+                url: '/blog/freelance'
+            },
+            {
+                title: 'Capgémini',
+                url: '/blog/capgemini'
+            }
+        ]
+    },
+    {
         template: 'freelance',
         group: 'freelance',
         breadcrumbs: [
@@ -28,7 +90,7 @@ export const blog: Article[] = [
             {
                 title: 'Younup',
                 id: 'younup',
-                date: '6mois',
+                date: '9mois',
                 content: `<p>Après avoir décidé de quitter Capgémini, j'ai pris contact avec diverses ESN.</p>
                 <p>Younup par le biais de Pierre-Marie PASSET est la première à me faire confiance, en même temps, Pierre-Marie était mon directeur d'agence quand je travaillais chez Créative et connaissait déjà mes compétences sur Angular.</p>
                 <p>J'ai donc intégré DSIA, l'un des clients de Younup, pour intervenir en tant que Lead dev Angular.</p>`,
@@ -37,12 +99,8 @@ export const blog: Article[] = [
         ],
         other: [
             {
-                title: 'Capgémini',
-                url: '/blog/capgemini'
-            },
-            {
-                title: 'Creative',
-                url: '/blog/creative'
+                title: 'DSIA',
+                url: '/blog/dsia'
             }
         ]
     },
@@ -85,6 +143,10 @@ export const blog: Article[] = [
             }
         ],
         other: [
+            {
+                title: 'DSIA',
+                url: '/blog/dsia'
+            },
             {
                 title: 'Creative',
                 url: '/blog/creative'
@@ -139,6 +201,10 @@ export const blog: Article[] = [
         ],
         other: [
             {
+                title: 'DSIA',
+                url: '/blog/dsia'
+            },
+            {
                 title: 'Capgemini',
                 url: '/blog/capgemini'
             },
@@ -185,6 +251,10 @@ export const blog: Article[] = [
             }
         ],
         other: [
+            {
+                title: 'DSIA',
+                url: '/blog/dsia'
+            },
             {
                 title: 'Capgemini',
                 url: '/blog/capgemini'
@@ -241,6 +311,10 @@ export const blog: Article[] = [
             skills: ['Ionic!', 'AngularJs', 'Cordova', 'Jade', 'SQLite', 'Sass']
         }],
         other: [
+            {
+                title: 'DSIA',
+                url: '/blog/dsia'
+            },
             {
                 title: 'Capgemini',
                 url: '/blog/capgemini'

@@ -7,7 +7,11 @@ mat-toolbar {
     left: 0;
     right: 0;
     z-index: 2;
-    background-color:  #91d3d2!important;
+    background-color:  var(--primary)!important;
+
+    #menu {
+        background-color: var(--text);
+    }
 
     .title-wrapper {
         display: flex;
@@ -36,7 +40,7 @@ mat-toolbar {
         width: 128vw;
         display: block;
         transform: translate(0%, -27%) rotate(12deg);
-        background-color: #91d3d2;
+        background-color: var(--primary);
         transition: all 500ms ease-in-out;
 
         @include breakpoint ($breakpoint-medium) {
@@ -45,6 +49,7 @@ mat-toolbar {
         
         &.hide {
             transform: translate(0%, -50%) rotate(0);
+            opacity: 0;
         }
     }
     .before {
@@ -67,7 +72,8 @@ mat-toolbar {
         }
 
         &.hide {
-            transform: translate(-63%, -63%) rotate(160deg);
+            transform: translate(-63%, -63%) rotate(0deg);
+            opacity: 0.5;
         }
     }
 
