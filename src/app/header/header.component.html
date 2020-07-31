@@ -1,78 +1,83 @@
 <mat-toolbar color="primary" role="header">
+  <div class="before"></div>
   <button id="menu" mat-icon-button (click)="sidenavService.toggle()" matTooltip="Menu" matTooltipPosition="below">
     <mat-icon>menu</mat-icon>
   </button>
-
   <span class="fill-remaining-space"></span>
-
-  <h1>Joël CHRABIE <span class="sr-only">{{'devweb' | translate}}</span></h1>
-
-  <span class="fill-remaining-space"></span>
+  <ng-container *ngIf="!isScrolled">
+    <h1><span class="bigger">J</span>OËL <span class="bigger">C</span>HRABIE <span class="sr-only">{{'devweb' | translate}}</span></h1>
+    <span class="fill-remaining-space"></span>
+  </ng-container>
 
   <ng-container *ngIf="isMobile; else notMenu">
-    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu" matTooltip="Menu" matTooltipPosition="below">
-      <mat-icon>more_vert</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item routerLink="" (click)="homeClick()">
-        <mat-icon>home</mat-icon>
-        <span>Accueil</span>
+    <div class="title-wrapper">
+      <ng-container *ngIf="isScrolled">
+        <h1><span class="bigger">J</span>OËL <span class="bigger">C</span>HRABIE <span class="sr-only">{{'devweb' | translate}}</span></h1>
+        <h2>Angular Freelance Developer</h2>
+      </ng-container>
+    </div>
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu" matTooltip="Menu" matTooltipPosition="below">
+        <mat-icon>more_vert</mat-icon>
       </button>
-      <button mat-menu-item (click)="openLogin()" *ngIf="!(authService.user$ | async); else delog">
-        <mat-icon>person</mat-icon>
-        <span>S'identifier</span>
-      </button>
-      <ng-template #delog>
-          <button mat-menu-item (click)="this.authService.logout()">
-            <mat-icon>power_settings_new</mat-icon>
-            <span class="sr-only">Se délogué</span>
-          </button>
-      </ng-template>
-      <button mat-menu-item (click)="toggleTheme()">
-        <mat-icon>invert_colors</mat-icon>
-        <span>Changer le thème</span>
-      </button>
-      <button mat-menu-item (click)="hireClick()" [routerLink]="['/contact']">
-        <mat-icon>phone</mat-icon>
-        <span>Hire Me!</span>
-      </button>
-    </mat-menu>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="" (click)="homeClick()">
+          <mat-icon>home</mat-icon>
+          <span>Accueil</span>
+        </button>
+        <button mat-menu-item (click)="openLogin()" *ngIf="!(authService.user$ | async); else delog">
+          <mat-icon>person</mat-icon>
+          <span>S'identifier</span>
+        </button>
+        <ng-template #delog>
+            <button mat-menu-item (click)="this.authService.logout()">
+              <mat-icon>power_settings_new</mat-icon>
+              <span class="sr-only">Se délogué</span>
+            </button>
+        </ng-template>
+        <button mat-menu-item (click)="toggleTheme()">
+          <mat-icon>invert_colors</mat-icon>
+          <span>Changer le thème</span>
+        </button>
+        <button mat-menu-item (click)="hireClick()" [routerLink]="['/contact']">
+          <mat-icon>phone</mat-icon>
+          <span>Hire Me!</span>
+        </button>
+      </mat-menu>
   </ng-container>
   <ng-template #notMenu>
-    <button mat-icon-button routerLink="" (click)="homeClick()" matTooltip="Retour à la page d'accueil" matTooltipPosition="below">
-      <mat-icon>home</mat-icon>
-      <span class="sr-only">Retour à la page d'accueil</span>
-    </button>
-    <button
-      mat-icon-button
-      (click)="openLogin()"
-      matTooltip="S'identifier"
-      matTooltipPosition="below"
-      *ngIf="!(authService.user$ | async); else delog">
-      <mat-icon>person</mat-icon>
-      <span class="sr-only">S'identifier</span>
-    </button>
-    <ng-template #delog>
+    <div class="title-wrapper">
+      <button mat-icon-button routerLink="" (click)="homeClick()" matTooltip="Retour à la page d'accueil" matTooltipPosition="below">
+        <mat-icon>home</mat-icon>
+        <span class="sr-only">Retour à la page d'accueil</span>
+      </button>
       <button
         mat-icon-button
-        (click)="this.authService.logout()"
-        matTooltip="Sign out"
-        matTooltipPosition="below">
-        <mat-icon>power_settings_new</mat-icon>
-        <span class="sr-only">Sign out</span>
+        (click)="openLogin()"
+        matTooltip="S'identifier"
+        matTooltipPosition="below"
+        *ngIf="!(authService.user$ | async); else delog">
+        <mat-icon>person</mat-icon>
+        <span class="sr-only">S'identifier</span>
       </button>
-    </ng-template>
-    <button
-      mat-icon-button
-      (click)="toggleTheme()"
-      matTooltip="Inverser le thème du site"
-      matTooltipPosition="below"
-      class="fab-secondary">
-      <mat-icon>invert_colors</mat-icon>
-      <span class="sr-only">Changer le thème</span>
-    </button>
-    <button mat-raised-button [routerLink]="['/contact']" class="fab-secondary" (click)="hireClick()">
-      Hire Me!
-    </button>
+      <ng-template #delog>
+        <button
+          mat-icon-button
+          (click)="this.authService.logout()"
+          matTooltip="Sign out"
+          matTooltipPosition="below">
+          <mat-icon>power_settings_new</mat-icon>
+          <span class="sr-only">Sign out</span>
+        </button>
+      </ng-template>
+      <button mat-raised-button [routerLink]="['/contact']" class="fab-secondary" (click)="hireClick()">
+        Hire Me!
+      </button>
+  
+      <ng-container *ngIf="isScrolled">
+        <h1><span class="bigger">J</span>OËL <span class="bigger">C</span>HRABIE <span class="sr-only">{{'devweb' | translate}}</span></h1>
+        <h2>Angular Freelance Developer</h2>
+      </ng-container>
+    </div>
   </ng-template>
+  <div class="after"></div>
 </mat-toolbar>
