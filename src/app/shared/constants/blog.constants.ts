@@ -1,7 +1,7 @@
 export const blog: Article[] = [
     {
         template: 'dsia',
-        group: 'dsia',
+        group: 'experience',
         breadcrumbs: [
             { name: 'Blog', url: '/blog', active: false },
             { name: 'Experiences', url: '/blog', queryParams: { frag: 'experience' }, active: false },

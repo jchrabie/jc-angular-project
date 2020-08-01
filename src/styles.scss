@@ -62,7 +62,7 @@ app-skills {
     margin: 20px 0;
 
     @include breakpoint ($breakpoint-medium) {
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     app-card {

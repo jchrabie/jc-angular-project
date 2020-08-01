@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ShareButtonsModule } from '@ngx-share/buttons';
 
 import { BlogRoutingModule } from './blog-routing.module';
 import { BlogComponent } from './blog.component';
@@ -12,6 +12,7 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
   imports: [
     SharedModule,
     BlogRoutingModule,
+    ShareButtonsModule,
   ],
   declarations: [
     BlogComponent,

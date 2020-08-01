@@ -84,9 +84,9 @@ export const skills: Skill[] = [
             },
             {
                 title: 'A11y',
-                icon: 'accessibility',
+                icon: 'accessible_forward',
                 imagePath: '/assets/a11y.jpg',
-                customIcon: true
+                customIcon: false
             },
             {
                 title: 'I18n',
@@ -108,9 +108,9 @@ export const skills: Skill[] = [
         content: [
             {
                 title: 'Scrum',
-                icon: 'scrum',
+                icon: 'cached',
                 imagePath: '/assets/scrum.jpg',
-                customIcon: true
+                customIcon: false
             },
             {
                 title: 'SAFe',

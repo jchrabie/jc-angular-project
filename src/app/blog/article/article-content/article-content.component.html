@@ -10,4 +10,10 @@
             </mat-chip>
         </mat-chip-list>
     </div>
+    <share-buttons [theme]="'circles-dark'"
+        [include]="['facebook','twitter','linkedin']"
+        [show]="3"
+        [showText]="true"
+        [url]="'https://www.joelchrabie.com/blog/' + article.template"
+    ></share-buttons>
 </div>

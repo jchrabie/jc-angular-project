@@ -3,11 +3,15 @@
 @import "breakpoints";
 
 .container {
-    margin-left: 20%;
+    padding: 0;
+
+    @include breakpoint($breakpoint-large) {
+        margin-left: 20%;
+    }
 }
 
 #title {
-    margin: 20px;
+    margin: 20px 0;
     font-size: 3em;
     flex: 0 0 94%;
     height: 174px;
@@ -26,15 +30,47 @@
 }
 
 #introduction {
-    margin: 10px 20px 50px;
-    font-size: 1.2em;
+    font-size: 1em;
     flex: 0 0 94%;
 
     p {
         margin-bottom: 0;
+        text-align: justify;
     }
 }
 
 #signature {
     font-style: italic;
+}
+
+.carac-wrapper {
+    display: grid;
+    width: 100%;
+    grid-gap: 30px;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto;
+    align-items: flex-start;
+
+    @include breakpoint($breakpoint-medium) {
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto;
+    }
+
+    .carac-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        mat-icon, .mat-icon-custom {
+            margin: 0;
+            height: 120px;
+            width: 120px;
+            font-size: 120px;
+            line-height: 120px;
+            color: var(--primary);
+            vertical-align: middle;
+            text-align: center!important;
+        }
+    }
 }

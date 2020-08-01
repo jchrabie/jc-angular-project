@@ -13,8 +13,8 @@
   <button mat-fab color="primary" class="card-button" [ngClass]="{'no-content': !card.content && !card.type}">
     <mat-icon *ngIf="card.customIcon; else materialIcon" [svgIcon]="card.icon"></mat-icon>
     <ng-template #materialIcon>
-        <mat-icon>{{card.icon}}</mat-icon>
-      </ng-template>
+      <mat-icon>{{card.icon}}</mat-icon>
+    </ng-template>
   </button>
   <mat-card-content *ngIf="card.type; else rawContent">
     <app-card-content [cardContent]="card.type + '.content' | translate"></app-card-content>

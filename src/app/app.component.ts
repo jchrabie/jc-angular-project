@@ -71,11 +71,10 @@ export class AppComponent implements OnInit {
         this.meta.updateTag({ name: 'image', content: header.imagePath });
         this.meta.updateTag({ name: 'description', content: header.description });
 
-        setTimeout(() => {
-          document.getElementsByClassName('img-background')[0].scrollIntoView();
-        }, 0);
+        document.getElementsByClassName('mat-drawer-content')[0].scrollTo(0, 0);
       });
   }
+
 
   private iconRegistry() {
     const icons: string[] = [ `angular`, `angularjs`, `analytics`, `accessibility`, `css`, `english`, `europe`, `facebook`, `france`,

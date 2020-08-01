@@ -8,7 +8,7 @@ import { skills, Skill } from '../shared/constants/skills.constants';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
-  get skills(): Skill[]{
-    return skills
+  get skills(): Skill[] {
+    return skills;
   }
 }

@@ -26,7 +26,7 @@ export const dark: Theme = {
         '--foreground': '#3030308a',
 
         '--background': '#303030',
-        '--background-dark': '#151515',
+        '--background-dark': '#303030',
 
         '--primary': '#00bcd4',
         '--primary-dark': 'rgb(97,169,160)',

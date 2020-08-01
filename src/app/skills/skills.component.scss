@@ -2,7 +2,12 @@
 @import 'headers';
 
 .container {
-    padding: 10vh 0 0 0;
+    padding: 0;
+    margin: 0 -64px;
+
+    @include breakpoint($breakpoint-medium) {
+        margin: 0;
+    }
 }
 
 h2 {
@@ -13,4 +18,9 @@ h2 {
 
 h3 {
     flex: 0 0 94%;
+}
+
+app-card {
+    min-width: 260px;
+    max-width: 260px;
 }
