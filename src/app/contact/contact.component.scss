@@ -12,10 +12,11 @@
     flex-basis: 0;
     min-width: 300px;
     max-width: 500px;
+    text-align: justify;
 }
 
-:host ::ng-deep app-card {
-    min-width: 300px
+:host app-card ::ng-deep mat-card {
+    width: 310px;
 }
 
 p.small.mat-line {

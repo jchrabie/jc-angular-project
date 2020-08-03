@@ -10,6 +10,10 @@ cookie-law .cookie-law-wrapper {
     background: var(--background);
 
     .copy span {
-        color: white;
+        color: var(--text);
     }
+}
+
+.mat-fab.mat-primary, .mat-flat-button.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
+    background-color: var(--primary)!important;
 }

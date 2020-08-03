@@ -10,7 +10,21 @@ mat-toolbar {
     background-color:  var(--primary)!important;
 
     #menu {
-        background-color: var(--text);
+        display: flex;
+        align-items: center;
+
+        button {
+            background-color: var(--text);
+        }
+
+        span {
+            margin-left: 20px;
+            display: none;
+
+            @include breakpoint ($breakpoint-medium) {
+                display: inline;
+            }
+        }
     }
 
     .title-wrapper {
@@ -19,6 +33,10 @@ mat-toolbar {
         justify-content: flex-end;
         transform: translateY(35px);
 
+        @include breakpoint ($breakpoint-large) {
+            transform: translateY(45px);
+        }
+
         h1, h2 {
             flex: 1 1 100%;
             text-align: right;
@@ -26,7 +44,12 @@ mat-toolbar {
     }
 
     h1 {
-        font-size: 2em;
+        font-size: 1.8em;
+        padding: 0;
+
+        @include breakpoint ($breakpoint-large) {
+            padding-top: 20px;
+        }
 
         .bigger {
             font-size: 1.5em;

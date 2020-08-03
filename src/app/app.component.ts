@@ -77,7 +77,7 @@ export class AppComponent implements OnInit {
 
 
   private iconRegistry() {
-    const icons: string[] = [ `angular`, `angularjs`, `analytics`, `accessibility`, `css`, `english`, `europe`, `facebook`, `france`,
+    const icons: string[] = [ 'a', `angular`, `angularjs`, `analytics`, `accessible`, `accessibility`, 'brush', `css`, `english`, `europe`, `facebook`, `france`,
       `html`, `ionic`, `javascript`, `linkedin`, `malte`, `nodejs`, `safe`, `sass`, `scrum`, `typescript`, `viadeo` ];
 
     icons.forEach(icon => this.matIconRegistry

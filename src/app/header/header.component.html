@@ -1,8 +1,11 @@
 <mat-toolbar color="primary" role="header">
   <div class="before"></div>
-  <button id="menu" mat-icon-button (click)="sidenavService.toggle()" matTooltip="Menu" matTooltipPosition="below">
-    <mat-icon>menu</mat-icon>
-  </button>
+  <div id="menu">
+    <button mat-icon-button (click)="sidenavService.toggle()" matTooltip="Menu" matTooltipPosition="below">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Menu</span>
+  </div>
   <span class="fill-remaining-space"></span>
   <ng-container *ngIf="!isScrolled">
     <h1><span class="bigger">J</span>OËL <span class="bigger">C</span>HRABIE <span class="sr-only">{{'devweb' | translate}}</span></h1>
@@ -24,20 +27,16 @@
           <mat-icon>home</mat-icon>
           <span>Accueil</span>
         </button>
-        <button mat-menu-item (click)="openLogin()" *ngIf="!(authService.user$ | async); else delog">
+        <!-- <button mat-menu-item (click)="openLogin()" *ngIf="!(authService.user$ | async); else delog">
           <mat-icon>person</mat-icon>
           <span>S'identifier</span>
-        </button>
+        </button> 
         <ng-template #delog>
             <button mat-menu-item (click)="this.authService.logout()">
               <mat-icon>power_settings_new</mat-icon>
               <span class="sr-only">Se délogué</span>
             </button>
-        </ng-template>
-        <button mat-menu-item (click)="toggleTheme()">
-          <mat-icon>invert_colors</mat-icon>
-          <span>Changer le thème</span>
-        </button>
+        </ng-template>-->
         <button mat-menu-item (click)="hireClick()" [routerLink]="['/contact']">
           <mat-icon>phone</mat-icon>
           <span>Hire Me!</span>
@@ -50,7 +49,7 @@
         <mat-icon>home</mat-icon>
         <span class="sr-only">Retour à la page d'accueil</span>
       </button>
-      <button
+      <!-- <button
         mat-icon-button
         (click)="openLogin()"
         matTooltip="S'identifier"
@@ -67,8 +66,8 @@
           matTooltipPosition="below">
           <mat-icon>power_settings_new</mat-icon>
           <span class="sr-only">Sign out</span>
-        </button>
-      </ng-template>
+        </button> 
+      </ng-template>-->
       <button mat-raised-button [routerLink]="['/contact']" class="fab-secondary" (click)="hireClick()">
         Hire Me!
       </button>
