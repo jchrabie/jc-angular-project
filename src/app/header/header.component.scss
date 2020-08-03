@@ -31,11 +31,7 @@ mat-toolbar {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
-        transform: translateY(35px);
-
-        @include breakpoint ($breakpoint-large) {
-            transform: translateY(45px);
-        }
+        transform: translateY(20px);
 
         h1, h2 {
             flex: 1 1 100%;
@@ -46,10 +42,6 @@ mat-toolbar {
     h1 {
         font-size: 1.8em;
         padding: 0;
-
-        @include breakpoint ($breakpoint-large) {
-            padding-top: 20px;
-        }
 
         .bigger {
             font-size: 1.5em;
