@@ -12,8 +12,10 @@ export class SearchService {
   }
 
   setFilter(therm: string): void {
-    this.filter.push(therm);
-    this.analyticsService.emit('Experiences', 'Chips Search', 'adding', therm);
+    if (this.filter.indexOf(therm) === -1) {
+      this.filter.push(therm);
+      this.analyticsService.emit('Experiences', 'Chips Search', 'adding', therm);
+    }
   }
 
   deleteFilter(therm: string): void {

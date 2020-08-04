@@ -14,10 +14,7 @@
       [formControl]="searchCtrl"
       [matAutocomplete]="auto"
       [matChipInputFor]="chipList"
-      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-      [matChipInputAddOnBlur]="addOnBlur"
       (matChipInputTokenEnd)="add($event)"
-      (clic)="filter($event)"
       id="chip-list-input"
     />
   </mat-chip-list>
