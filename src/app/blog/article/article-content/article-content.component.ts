@@ -5,7 +5,6 @@ import { Article } from '../../../shared/constants/blog.constants';
   selector: 'app-article-content',
   templateUrl: './article-content.component.html',
   styleUrls: ['./article-content.component.scss'],
-  encapsulation: ViewEncapsulation.None
 })
 export class ArticleContentComponent {
   @Input() article: Article;

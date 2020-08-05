@@ -1,19 +1,37 @@
-a {
-    color: var(--primary);
-    cursor: pointer;
-    text-decoration: underline;
-}
+:host {
 
-.project {
-    margin: 50px 0;
-}
+    .project {
+        margin: 50px 0;
+    }
 
-h2 small {
-    display: block;
-    float: right;
-    color: var(--text-light);
-}
+    h2 small {
+        display: block;
+        float: right;
+        color: var(--text-light);
+    }
 
-.content {
-    padding: 20px;
+    .content {
+        padding: 20px;
+    }
+
+    ::ng-deep .img-wrapper {
+        a, a:-webkit-any-link {
+            color: var(--primary);
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+
+        .img-container {
+            text-align: center;
+            height: inherit;
+            margin: 20px 0;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
 }

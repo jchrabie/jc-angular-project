@@ -45,7 +45,25 @@ export const blog: Article[] = [
                 <p>Il est essentiel pour l'appli de visualiser sous forme de différents graphiques les données (pie chart, cartesian, stock, pareto, ...) et nous utilisions la librairie <a href="https://www.anychart.com/" target="_blank">AnyChart</a> pour la visualisation.</p>
                 <p>Le but de la feature était d'externaliser la gestion de l'éditeur de graphique dans un package npm propriétaire (Verdaccio) afin de le réutiliser dans d'autres applications de DSIA.</p>
                 <p>J'ai réalisé toute la conception technico/fonctionnelle ainsi que le développement et le test de cet éditeur de graphique sur presque 5 mois.<br/>Il est désormais possible via l'éditeur de choisir le type de chart, avec une ou plusieurs séries, modifier les marges, les fonds, et toutes les options spécifiques aux différents charts</p>
-                <p>J'avais aussi les mains libres pour la partie UX/UI et je me suis réellement fait plaisir en intégrant ce composant comme je le souhaitais!</p>
+                <p>J'avais aussi les mains libres pour la partie UX/UI et je me suis réellement fait plaisir en intégrant ce composant comme je le souhaitais!<br/>Vous trouverez ci-dessous quelques copies écrans du chart editor:</p>
+                <div class="img-wrapper">
+                    <div class="img-container">
+                        <img src="assets/cartesian.png" alt="Graphique cartésien">
+                        <span>Graphique Cartésien</span>
+                    </div>
+                    <div class="img-container">
+                        <img src="assets/pie.png" alt="Graphique Camembert">
+                        <span>Graphique Camembert</span>
+                    </div>
+                    <div class="img-container">
+                        <img src="assets/stock.png" alt="Graphique Stock">
+                        <span>Graphique Stock</span>
+                    </div>
+                    <div class="img-container">
+                        <img src="assets/treemap.png" alt="Graphique Treemap">
+                        <span>Graphique Treemap</span>
+                    </div>
+                </div>
                 <p>Suite à cela, le composant avait une couverture de code de plus de 93% soit près de 450 TU!</p>`,
                 skills: ['Angular', 'TypeScript', 'AnyChart', 'Karma', 'Jasmine', 'HTML', 'Sass', 'SCRUM']
             },
