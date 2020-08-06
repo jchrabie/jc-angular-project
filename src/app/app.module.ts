@@ -24,13 +24,16 @@ import { SharedModule } from './shared/shared.module';
 
 const route = [
   { path: 'skills', component: SkillsComponent },
-  { path: 'contact', loadChildren: './contact/contact-routing.module#ContactRoutingModule' },
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact-routing.module').then(m => m.ContactRoutingModule)
+  },
   { path: 'experiences', component: ExperienceListComponent },
   { path: '', component: HomeComponent },
   { path: 'pdf', redirectTo: 'assets/CV.pdf'},
   {
-      path: 'blog/:template',
-      loadChildren: './blog/blog-routing.module#BlogRoutingModule'
+    path: 'blog/:template',
+    loadChildren: () => import('./blog/blog-routing.module').then(m => m.BlogRoutingModule)
   },
   { path: '**', redirectTo: '' }
 ];

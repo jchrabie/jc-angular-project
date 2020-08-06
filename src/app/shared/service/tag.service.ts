@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 
 class MetaTag {
     name: string;
@@ -22,7 +23,7 @@ export class TagService {
   private descriptionMeta: string = 'description';
   private imageMeta: string = 'image';
 
-  constructor(private titleService: Title, private metaService: Meta) { }
+  constructor(private titleService: Title, private metaService: Meta, @Inject(DOCUMENT) private doc: Document) { }
 
   public setTitle(title: string): void {
     this.titleService.setTitle(`Joël CHRABIE | ${title}`);
@@ -30,7 +31,7 @@ export class TagService {
 
   public setSocialMediaTags(url: string, title: string, description: string, image: string): void {
     const tags = [
-      new MetaTag(this.urlMeta, `og:${this.urlMeta}`, `https://www.joelchrabie.com${url}`),
+      new MetaTag(this.urlMeta, `og:${this.urlMeta}`, this.doc.URL),
       new MetaTag(this.titleMeta, `og:${this.titleMeta}`, `Joël CHRABIE | ${title}`),
       new MetaTag(this.descriptionMeta, `og:${this.descriptionMeta}`, description),
       new MetaTag(this.imageMeta, `og:${this.imageMeta}`, image),
@@ -38,9 +39,17 @@ export class TagService {
 
     this.setTags(tags);
     this.setTitle(title);
+    this.createLinkForCanonicalURL();
   }
 
   private setTags(tags: MetaTag[]): void {
     tags.forEach(siteTag => this.metaService.updateTag({ name: siteTag.name, property: siteTag.property, content: siteTag.value }));
   }
+
+  private createLinkForCanonicalURL() {
+     const canonical: HTMLLinkElement = Array.from(this.doc.head.getElementsByTagName('link')).find((l: HTMLLinkElement) => l.rel === 'canonical');
+     const shortLink: HTMLLinkElement = Array.from(this.doc.head.getElementsByTagName('link')).find((l: HTMLLinkElement) => l.rel === 'shortlink');
+     canonical.setAttribute('href', this.doc.URL);
+     shortLink.setAttribute('href', this.doc.URL);
+   }
 }

@@ -22,7 +22,7 @@
                 "node_modules/breakpoint-sass/stylesheets"
               ]
             },
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets",
@@ -113,6 +113,10 @@
         },
         "server": {
           "builder": "@angular-devkit/build-angular:server",
+          "externalDependencies": [
+            "grpc",
+            "@grpc/proto-loader"
+          ],
           "options": {
             "outputPath": "dist/server",
             "main": "src/main.server.ts",
@@ -181,6 +185,34 @@
             "exclude": [
               "**/node_modules/**"
             ]
+          }
+        }
+      }
+    },
+    "jc-angular-project-server": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "src/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "none"
+            }
           }
         }
       }
