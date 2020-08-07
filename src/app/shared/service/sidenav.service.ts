@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MatSidenav } from '@angular/material';
+import { MatSidenav } from '@angular/material/sidenav';
 
 import { linkList, Link } from '../constants/linkList.constants';
 import { AnalyticsService } from './analytics.service';

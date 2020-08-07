@@ -18,7 +18,7 @@
 import 'zone.js/dist/zone-node';
 
 import * as express from 'express';
-import {join} from 'path';
+import { join } from 'path';
 
 // Express server
 const app = express();
@@ -27,29 +27,45 @@ const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
-const {AppServerModuleNgFactory, LAZY_MODULE_MAP, ngExpressEngine, provideModuleMap} = require('./dist/server/main');
+const { AppServerModuleNgFactory, LAZY_MODULE_MAP, ngExpressEngine, provideModuleMap } = require('./dist/server/main');
 
 // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
-app.engine('html', ngExpressEngine({
-  bootstrap: AppServerModuleNgFactory,
-  providers: [
-    provideModuleMap(LAZY_MODULE_MAP)
-  ]
-}));
-
+app.engine(
+  'html',
+  ngExpressEngine({
+    bootstrap: AppServerModuleNgFactory,
+    providers: [provideModuleMap(LAZY_MODULE_MAP)],
+  })
+);
 app.set('view engine', 'html');
 app.set('views', DIST_FOLDER);
 
 // Example Express Rest API endpoints
 // app.get('/api/**', (req, res) => { });
 // Serve static files from /browser
-app.get('*.*', express.static(DIST_FOLDER, {
-  maxAge: '1y'
-}));
+app.get(
+  '*.*',
+  express.static(DIST_FOLDER, {
+    maxAge: '1y',
+  })
+);
 
 // All regular routes use the Universal engine
 app.get('*', (req, res) => {
   res.render('index', { req });
+  const domino = require('domino');
+  const fs = require('fs');
+  const path = require('path');
+  const template = fs.readFileSync('dist/browser/index.html').toString();
+  const win = domino.createWindow(template);
+
+  global['window'] = win;
+  global['document'] = win.document;
+  global['DOMTokenList'] = win.DOMTokenList;
+  global['Node'] = win.Node;
+  global['Text'] = win.Text;
+  global['HTMLElement'] = win.HTMLElement;
+  global['navigator'] = win.navigator;
 });
 
 // Start up the Node server

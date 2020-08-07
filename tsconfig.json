@@ -10,18 +10,19 @@
     "allowJs": true,
     "resolveJsonModule": true,
     "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ]
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"]
   },
   "files": [
-      "src/typings.d.ts",
-      "src/polyfills.ts",
-      "src/app/app.module.ts",
-      "src/main.ts"
+    "src/typings.d.ts",
+    "src/polyfills.ts",
+    "src/app/app.module.ts",
+    "src/app/app.server.module.ts",
+    "src/app/home/home.module.ts",
+    "src/app/contact/contact.module.ts",
+    "src/app/experience-list/experience-list.module.ts",
+    "src/app/skills/skills.module.ts",
+    "src/main.ts",
+    "src/main.server.ts"
   ]
 }

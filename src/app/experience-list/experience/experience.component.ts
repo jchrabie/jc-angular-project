@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { MatExpansionPanel } from '@angular/material';
+import { MatExpansionPanel } from '@angular/material/expansion';
 
 import { SearchService } from '../../shared/service/search.service';
 import { AnalyticsService } from '../../shared/service/analytics.service';

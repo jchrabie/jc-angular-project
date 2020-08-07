@@ -1,20 +1,17 @@
 <div class="content">
-    <app-breadcrumbs [breadcrumbs]="breadcrumbs"></app-breadcrumbs>
-    <h2>{{article.title}} <small>{{article.dates}}</small></h2>
-    <div class="project" *ngFor="let project of article.projects" [id]="project.id">
-        <h3>{{project.title}} <span *ngIf="project.date"> - {{project.date}}</span></h3>
-        <p [innerHTML]="project.content"></p>
-        <mat-chip-list *ngIf="project.skills">
-            <mat-chip *ngFor="let skill of project.skills" [selected]="false">
-                {{skill}}
-            </mat-chip>
-        </mat-chip-list>
-    </div>
-    <share-buttons [theme]="'circles-dark'"
-        [include]="['facebook','twitter','linkedin']"
-        [show]="3"
-        [showText]="true"
-        [autoSetMeta]="false"
-        [url]="'https://www.joelchrabie.com/blog/' + article.template"
-    ></share-buttons>
+  <app-breadcrumbs [breadcrumbs]="breadcrumbs"></app-breadcrumbs>
+  <h2>
+    {{ article.title }} <small>{{ article.dates }}</small>
+  </h2>
+  <div class="project" *ngFor="let project of article.projects" [id]="project.id">
+    <h3>
+      {{ project.title }} <span *ngIf="project.date"> - {{ project.date }}</span>
+    </h3>
+    <p [innerHTML]="project.content"></p>
+    <mat-chip-list *ngIf="project.skills">
+      <mat-chip *ngFor="let skill of project.skills" [selected]="false">
+        {{ skill }}
+      </mat-chip>
+    </mat-chip-list>
+  </div>
 </div>

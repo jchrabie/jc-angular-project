@@ -13,82 +13,63 @@ import { SidenavService } from './service/sidenav.service';
 import { ThemeService } from './service/theme.service';
 import { SearchService } from './service/search.service';
 import { TagService } from './service/tag.service';
-import { AuthService } from './service/auth.service';
 
 import { CardComponent } from './components/card/card.component';
-import { CardContentComponent } from './components/card-content/card-content.component';
+import { CardContentComponent } from './components/card/card-content/card-content.component';
 import { FilteredSearchPipe } from './pipes/filtered-search.pipe';
-import { MaterialModule } from './material/material.module';
-import { LoginComponent } from './components/login/login.component';
+import { MaterialModule } from '../material/material.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
-import { SpeedDialFabComponent } from './components/speed-dial-fab/speed-dial-fab.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
-
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http);
 }
 
 @NgModule({
-    imports: [
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [ HttpClient ]
-            }
-        }),
-        CommonModule,
-        MaterialModule,
-        BrowserModule,
-        BrowserAnimationsModule,
-        RouterModule,
-        FormsModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-    ],
-    providers: [
-        AnalyticsService,
-        AuthService,
-        SidenavService,
-        SearchService,
-        TagService,
-        ThemeService,
-    ],
-    declarations: [
-        CardComponent,
-        CardContentComponent,
-        FilteredSearchPipe,
-        LoginComponent,
-        HeaderComponent,
-        SidenavComponent,
-        FooterComponent,
-        SearchbarComponent,
-        SpeedDialFabComponent
-    ],
-    exports: [
-        CardComponent,
-        CardContentComponent,
-        CommonModule,
-        MaterialModule,
-        BrowserModule,
-        BrowserAnimationsModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-        FormsModule,
-        TranslateModule,
-        FilteredSearchPipe,
-        HeaderComponent,
-        SidenavComponent,
-        FooterComponent,
-        SearchbarComponent,
-        SpeedDialFabComponent
-    ],
-    entryComponents: [
-        LoginComponent
-    ]
+  imports: [
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+    CommonModule,
+    MaterialModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
+  providers: [AnalyticsService, SidenavService, SearchService, TagService, ThemeService],
+  declarations: [
+    CardComponent,
+    CardContentComponent,
+    FilteredSearchPipe,
+    HeaderComponent,
+    SidenavComponent,
+    FooterComponent,
+    SearchbarComponent,
+  ],
+  exports: [
+    CardComponent,
+    CardContentComponent,
+    BrowserModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule,
+    TranslateModule,
+    FilteredSearchPipe,
+    HeaderComponent,
+    SidenavComponent,
+    FooterComponent,
+    SearchbarComponent,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}

@@ -26,8 +26,16 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              {"glob": "robots.txt", "input": "src/assets", "output": "/"},
-              {"glob": "sitemap.xml", "input": "src/assets", "output": "/"}
+              {
+                "glob": "robots.txt",
+                "input": "src/assets",
+                "output": "/"
+              },
+              {
+                "glob": "sitemap.xml",
+                "input": "src/assets",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.scss"
@@ -104,10 +112,10 @@
               "browserTarget": "jc-angular-project:build:production"
             },
             "fr": {
-             "browserTarget": "jc-angular-project:build:fr"
+              "browserTarget": "jc-angular-project:build:fr"
             },
             "en": {
-             "browserTarget": "jc-angular-project:build:en"
+              "browserTarget": "jc-angular-project:build:en"
             }
           }
         },
@@ -243,7 +251,7 @@
       }
     }
   },
-  "defaultProject": "jc-angular-project", 
+  "defaultProject": "jc-angular-project",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
@@ -252,5 +260,8 @@
     "@schematics/angular:directive": {
       "prefix": "app"
     }
+  },
+  "cli": {
+    "analytics": "cc99aae6-1478-421f-a258-c7acd45440d3"
   }
 }

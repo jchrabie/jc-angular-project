@@ -6,16 +6,16 @@ import { ArticleComponent } from './article/article.component';
 const routes: Routes = [
   {
     path: 'blog',
-    component: BlogComponent
+    component: BlogComponent,
   },
   {
     path: 'blog/:template',
-    component: ArticleComponent
-  }
+    component: ArticleComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class BlogRoutingModule { }
+export class BlogRoutingModule {}

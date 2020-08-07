@@ -5,18 +5,16 @@
     "baseUrl": "./",
     // Set the module format to "commonjs":
     "module": "commonjs",
-    "types": []
+    "types": [],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
-  "files": [
-    "./main.server.ts"
-  ],
-  "exclude": [
-    "test.ts",
-    "**/*.spec.ts"
-  ],
+  "files": ["./main.server.ts"],
+  "exclude": ["test.ts", "**/*.spec.ts"],
   // Add "angularCompilerOptions" with the AppServerModule you wrote
   // set as the "entryModule".
   "angularCompilerOptions": {
-    "entryModule": "app/app.server.module#AppServerModule"
+    "entryModule": "app/app.server.module#AppServerModule",
+    "enableIvy": false
   }
 }

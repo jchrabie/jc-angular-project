@@ -1,38 +1,38 @@
-
 @import 'headers';
 
 :host {
-    .wrapper {
-        width: 100%;
+  .wrapper {
+    width: 100%;
+    margin: 0px 10%;
+  }
+
+  .container {
+    padding: 0;
+    margin: 0 -64px;
+    justify-content: center;
+
+    @include breakpoint($breakpoint-medium) {
+      justify-content: space-around;
+      margin: 0;
     }
 
-    .container {
-        padding: 0;
-        margin: 0 -64px;
-        justify-content: center;
-
-        @include breakpoint($breakpoint-medium) {
-            justify-content: space-around;
-            margin: 0;
-        }
-
-        @include breakpoint($breakpoint-large) {
-            justify-content: end;
-        }
+    @include breakpoint($breakpoint-large) {
+      justify-content: end;
     }
+  }
 
-    h2 {
-        margin: 0;
-        font-size: 3em;
-        flex: 0 0 94%;
-    }
+  h2 {
+    margin: 0;
+    font-size: 3em;
+    flex: 0 0 94%;
+  }
 
-    h3 {
-        flex: 0 0 94%;
-    }
+  h3 {
+    flex: 0 0 94%;
+  }
 
-    app-card {
-        min-width: 260px;
-        max-width: 260px;
-    }
+  app-card {
+    min-width: 260px;
+    max-width: 260px;
+  }
 }

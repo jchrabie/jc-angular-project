@@ -1,18 +1,12 @@
 import { NgModule } from '@angular/core';
-import { ShareButtonsModule } from '@ngx-share/buttons';
 
-import { ContactRoutingModule } from './contact-routing.module';
-import { ContactComponent } from './contact.component';
 import { SharedModule } from '../shared/shared.module';
+import { HomeRoutingModule } from './home-routing.module';
+import { HomeComponent } from './home.component';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
-  imports: [
-    SharedModule,
-    ContactRoutingModule,
-    ShareButtonsModule,
-  ],
-  declarations: [
-    ContactComponent,
-  ]
+  imports: [SharedModule, HomeRoutingModule, MaterialModule],
+  declarations: [HomeComponent],
 })
-export class ContactModule { }
+export class HomeModule {}
