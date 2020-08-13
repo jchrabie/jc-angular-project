@@ -26,5 +26,9 @@ cookie-law .cookie-law-wrapper {
     top: 64px;
     position: fixed;
     height: 10px;
+
+    @include breakpoint($breakpoint-medium) {
+      top: 56px;
+    }
   }
 }
