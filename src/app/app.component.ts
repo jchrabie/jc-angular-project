@@ -4,7 +4,9 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router, NavigationEnd } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { filter, map } from 'rxjs/operators';
+import { filter, map, takeUntil, throttleTime } from 'rxjs/operators';
+import { fromEvent } from 'rxjs/internal/observable/fromEvent';
+import { Subject } from 'rxjs';
 
 import { SidenavService } from './shared/service/sidenav.service';
 import { getHeaderByType, Header } from './shared/constants/header.constants';
@@ -15,11 +17,14 @@ import { TagService } from './shared/service/tag.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [ SidenavService, MatSidenav ],
-  encapsulation: ViewEncapsulation.None
+  providers: [SidenavService, MatSidenav],
+  encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent implements OnInit {
   public cookieLawSeen: boolean;
+  public scroll: number = 0;
+
+  private destroy$: Subject<void> = new Subject();
 
   @ViewChild('cookieLaw', { static: true }) cookieLawEl: any;
 
@@ -29,16 +34,14 @@ export class AppComponent implements OnInit {
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer,
     private router: Router,
-    private tagService: TagService,
+    private tagService: TagService
   ) {
-
     // this language will be used as a fallback when a translation isn't found in the current language
     this.translate.setDefaultLang('fr');
 
     // the lang to use, if the lang isn't available, it will use the current loader to get them
     this.translate.use('fr');
-    this.translate.onLangChange
-      .subscribe(() => document.documentElement.lang = this.translate.currentLang);
+    this.translate.onLangChange.subscribe(() => (document.documentElement.lang = this.translate.currentLang));
 
     this.iconRegistry();
   }
@@ -62,7 +65,7 @@ export class AppComponent implements OnInit {
             title: article.title,
             imagePath: `https://www.joelchrabie.com/${article.imagePath}`,
             description: article.content,
-            canonical: `https://www.joelchrabie.com/blog/${article.template}`
+            canonical: `https://www.joelchrabie.com/blog/${article.template}`,
           };
         } else {
           header = getHeaderByType(finalUrl);
@@ -74,12 +77,53 @@ export class AppComponent implements OnInit {
       });
   }
 
+  ngAfterViewInit() {
+    const content = document.querySelector('.mat-sidenav-content');
+
+    fromEvent(content, 'scroll')
+      .pipe(
+        takeUntil(this.destroy$),
+        throttleTime(10),
+        map(() => {
+          const currentTarget = event.currentTarget as Element;
+          const winScroll = currentTarget.scrollTop;
+          const height = currentTarget.scrollHeight - currentTarget.clientHeight;
+
+          return (winScroll / height) * 100;
+        })
+      )
+      .subscribe((scroll) => (this.scroll = scroll));
+  }
 
   private iconRegistry() {
-    const icons: string[] = [ 'a', `angular`, `angularjs`, `analytics`, `accessible`, `accessibility`, 'brush', `css`, `english`, `europe`, `facebook`, `france`,
-      `html`, `ionic`, `javascript`, `linkedin`, `malte`, `nodejs`, `safe`, `sass`, `scrum`, `typescript`, `viadeo` ];
+    const icons: string[] = [
+      'a',
+      `angular`,
+      `angularjs`,
+      `analytics`,
+      `accessible`,
+      `accessibility`,
+      'brush',
+      `css`,
+      `english`,
+      `europe`,
+      `facebook`,
+      `france`,
+      `html`,
+      `ionic`,
+      `javascript`,
+      `linkedin`,
+      `malte`,
+      `nodejs`,
+      `safe`,
+      `sass`,
+      `scrum`,
+      `typescript`,
+      `viadeo`,
+    ];
 
-    icons.forEach(icon => this.matIconRegistry
-      .addSvgIcon(icon, this.domSanitizer.bypassSecurityTrustResourceUrl(`assets/svg/${icon}.svg`)));
+    icons.forEach((icon) =>
+      this.matIconRegistry.addSvgIcon(icon, this.domSanitizer.bypassSecurityTrustResourceUrl(`assets/svg/${icon}.svg`))
+    );
   }
 }

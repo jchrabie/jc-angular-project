@@ -4,71 +4,84 @@
 @import 'background-images';
 @import 'scrollbar';
 @import 'colorss';
+@import 'fonts';
 
 @import '~@ngx-share/button/themes/circles/circles-dark-theme';
 
 body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 
-    h3 {
-        color: var(--primary);
-    }
+  h3 {
+    color: var(--primary);
+  }
+
+  h1 {
+    font-family: Origami, Roboto, 'Helvetica Neue', sans-serif !important;
+  }
 }
 
 .light-theme .mat-drawer-container {
-    background-color: var(--background);
+  background-color: var(--background);
 }
 
 mat-sidenav-container {
-    height: 100vh;
+  height: 100vh;
 }
 
 .mat-drawer-container {
-    background-color: var(--background);
-    color: var(--text);
+  background-color: var(--background);
+  color: var(--text);
 }
 
 .light-theme .mat-toolbar.mat-primary {
-    color: var(--text)!important;
+  color: var(--text) !important;
+}
+
+.mat-progress-bar-primary.mat-progress-bar-fill.mat-progress-bar-element::after {
+  background-color: var(--primary) !important;
+}
+
+.mat-progress-bar-buffer.mat-progress-bar-element {
+  background-color: white !important;
 }
 
 app-skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: baseline;
 }
 
 .fill-remaining-space {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    border: 0;
-  }
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 50px;
-    justify-content: center;
-    margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 50px;
+  justify-content: center;
+  margin: 20px 0;
 
-    @include breakpoint ($breakpoint-medium) {
-        justify-content: space-evenly;
-    }
+  @include breakpoint($breakpoint-medium) {
+    justify-content: space-evenly;
+  }
 
-    app-card {
-        flex: 1;
-        margin: 20px;
-        min-width: 280px;
-        max-width: 280px;
-    }
+  app-card {
+    flex: 1;
+    margin: 20px;
+    min-width: 280px;
+    max-width: 280px;
+  }
 }

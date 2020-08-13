@@ -17,6 +17,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatRadioModule,
     MatButtonModule,
     MatIconModule,
+    MatProgressBarModule,
     MatSidenavModule,
     MatInputModule,
     MatCheckboxModule,
@@ -49,6 +51,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatMenuModule,
     MatRadioModule,
     MatCheckboxModule,
+    MatProgressBarModule,
     MatSidenavModule,
     MatCheckboxModule,
     MatCardModule,

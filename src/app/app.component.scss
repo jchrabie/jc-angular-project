@@ -1,19 +1,30 @@
 mat-sidenav {
-    min-width: 300px;
+  min-width: 300px;
 }
 
 main {
-    margin: 40vh 64px 64px;
+  margin: 40vh 64px 64px;
 }
 
 cookie-law .cookie-law-wrapper {
-    background: var(--background);
+  background: var(--background);
 
-    .copy span {
-        color: var(--text);
-    }
+  .copy span {
+    color: var(--text);
+  }
 }
 
-.mat-fab.mat-primary, .mat-flat-button.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
-    background-color: var(--primary)!important;
+.mat-fab.mat-primary,
+.mat-flat-button.mat-primary,
+.mat-mini-fab.mat-primary,
+.mat-raised-button.mat-primary {
+  background-color: var(--primary) !important;
+}
+
+.mat-drawer-content {
+  mat-progress-bar {
+    top: 64px;
+    position: fixed;
+    height: 10px;
+  }
 }
