@@ -1,54 +1,125 @@
-@import "breakpoint";
-@import "breakpoints";
+@import 'breakpoint';
+@import 'breakpoints';
 
 mat-toolbar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    background-color: #e8e8e8;
-    color: var(--text);
+  background-color: #424242;
+
+  mat-divider {
+    border-color: var(--text);
+    margin-left: -1px;
+    display: none;
+
+    @include breakpoint($breakpoint-medium) {
+      display: block;
+    }
+  }
+
+  mat-toolbar-row {
+    height: auto;
+    min-height: 64px;
+    font-size: 1rem;
+    white-space: pre-line;
+
+    &.last-row {
+      background-color: var(--text);
+
+      .mat-mini-fab {
+        margin: 0 1em;
+      }
+
+      a:-webkit-any-link {
+        color: var(--primary);
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
-mat-toolbar-row > * {
-    flex: 1 1 auto;
+.row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 1em;
+
+  &.space-between {
+    justify-content: space-between;
+  }
+
+  .col-sm-12 {
+    flex: 1 1 100%;
+  }
+
+  .col-sm-6 {
+    flex: 1 1 50%;
+  }
+
+  .col-sm-4 {
+    flex: 1 1 33.3333%;
+  }
+
+  .col-md-6 {
+    @include breakpoint($breakpoint-medium) {
+      flex: 1 1 50%;
+    }
+  }
+
+  .col-md-3 {
+    @include breakpoint($breakpoint-medium) {
+      flex: 1 1 25%;
+    }
+  }
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.12);
+
+  @include breakpoint($breakpoint-medium) {
+    display: none;
+  }
 }
 
 img {
-    height: 20px;
+  height: 20px;
 }
 
 #device {
-    margin-right: 20px;
-    &::after {
-        content: 'phone_iphone';
-        @include breakpoint($breakpoint-medium) {
-            content: 'tablet';
-            @include breakpoint($breakpoint-large) {
-                content: 'desktop_windows';
-            }
-        }
+  margin-right: 20px;
+  &::after {
+    content: 'phone_iphone';
+    @include breakpoint($breakpoint-medium) {
+      content: 'tablet';
+      @include breakpoint($breakpoint-large) {
+        content: 'desktop_windows';
+      }
     }
+  }
 }
 
 #devices {
-    font-size: 0.5em;
-    font-weight: initial;
-    display: flex;
-    align-items: center;
+  font-size: 0.5em;
+  font-weight: initial;
+  display: flex;
+  align-items: center;
 
-    & span::after {
-        content: 'mobile';
-        @include breakpoint($breakpoint-medium) {
-            content: 'tablette';
-            @include breakpoint($breakpoint-large) {
-                content: 'desktop';
-            }
-        }
+  & span::after {
+    content: 'mobile';
+    @include breakpoint($breakpoint-medium) {
+      content: 'tablette';
+      @include breakpoint($breakpoint-large) {
+        content: 'desktop';
+      }
     }
+  }
 }
 
 .socialLinks {
-    background-color: white!important;
+  background-color: white !important;
+}
+
+.center {
+  @include breakpoint($breakpoint-medium) {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
 }

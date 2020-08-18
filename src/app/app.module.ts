@@ -15,11 +15,16 @@ import { MaterialModule } from './material/material.module';
 import { SkillsModule } from './skills/skills.module';
 import { ExperienceListModule } from './experience-list/experience-list.module';
 import { HomeModule } from './home/home.module';
+import { LegalModule } from './legal/legal.module';
 
 const route = [
   {
     path: 'skills',
     loadChildren: () => import('./skills/skills-routing.module').then((m) => m.SkillsRoutingModule),
+  },
+  {
+    path: 'legal',
+    loadChildren: () => import('./legal/legal-routing.module').then((m) => m.LegalRoutingModule),
   },
   {
     path: 'contact',
@@ -49,6 +54,7 @@ const route = [
     SkillsModule,
     ExperienceListModule,
     HomeModule,
+    LegalModule,
     HttpClientModule,
     HttpClientJsonpModule,
     FontAwesomeModule,

@@ -23,8 +23,8 @@ cookie-law .cookie-law-wrapper {
 
 .mat-drawer-content {
   mat-progress-bar {
-    top: 64px;
     position: fixed;
     height: 10px;
+    z-index: 2;
   }
 }

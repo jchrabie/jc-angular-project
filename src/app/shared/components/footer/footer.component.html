@@ -1,14 +1,49 @@
 <mat-toolbar color="basic" role="footer">
-    <mat-toolbar-row>
+  <mat-toolbar-row>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <mat-list role="list">
+          <div mat-subheader>A la recherche d'un développeur Freelance Angular sur Nantes ?</div>
+          <div mat-subheader>Vous souhaitez me rencontrer?</div>
+        </mat-list>
+        <button mat-stroked-button [routerLink]="['/contact']" color="primary" class="center">Contactez moi</button>
+        <hr />
+      </div>
+      <mat-divider [vertical]="true"></mat-divider>
+      <div class="col-md-3 col-sm-6">
+        <mat-list role="list">
+          <div mat-subheader>Quick Links</div>
+          <mat-list-item role="listitem" [routerLink]="['/']">Accueil</mat-list-item>
+          <mat-list-item role="listitem" [routerLink]="['/contact']">Contact</mat-list-item>
+          <mat-list-item role="listitem" [routerLink]="['/blog']">Blog</mat-list-item>
+        </mat-list>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <mat-list role="list">
+          <div mat-subheader>Derniers Articles</div>
+          <mat-list-item role="listitem" [routerLink]="['/blog/freelance']">Freelance</mat-list-item>
+          <mat-list-item role="listitem" [routerLink]="['/blog/capgemini']">Capgémini</mat-list-item>
+          <mat-list-item role="listitem" [routerLink]="['/blog/dsia']">DSIA</mat-list-item>
+        </mat-list>
+      </div>
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row class="last-row">
+    <div class="row space-between">
       <div id="devices">
         <mat-icon id="device"></mat-icon>
         <span>Vous êtes sur la version </span>
       </div>
-      <a [href]="social.url" *ngFor="let social of socials" ng-if="socials.length">
-        <button mat-mini-fab class="socialLinks">
+      <a href="/legal">Mentions légales</a>
+      <div class="socials">
+        <a [href]="social.url" *ngFor="let social of socials" ng-if="socials.length">
+          <button mat-mini-fab class="socialLinks">
             <mat-icon [svgIcon]="social.title"></mat-icon>
-        </button>
-        <span class="sr-only">{{social.title}}</span>
-      </a>
-    </mat-toolbar-row>
-  </mat-toolbar>
+          </button>
+          <span class="sr-only">{{ social.title }}</span>
+        </a>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

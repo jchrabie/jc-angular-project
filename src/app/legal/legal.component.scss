@@ -1,0 +1,12 @@
+@import 'breakpoint';
+@import 'breakpoints';
+
+.container {
+  padding: 0;
+  display: block;
+  text-align: justify;
+
+  @include breakpoint($breakpoint-large) {
+    margin: 0 15%;
+  }
+}
