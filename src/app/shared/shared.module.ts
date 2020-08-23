@@ -22,6 +22,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { LazyLoadDirective } from './directive/lazy-load.directive';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -55,6 +56,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SidenavComponent,
     FooterComponent,
     SearchbarComponent,
+    LazyLoadDirective,
   ],
   exports: [
     CardComponent,
@@ -70,6 +72,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SidenavComponent,
     FooterComponent,
     SearchbarComponent,
+    LazyLoadDirective,
   ],
 })
 export class SharedModule {}

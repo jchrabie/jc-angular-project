@@ -50,59 +50,7 @@ mat-toolbar {
 
     .bigger {
       font-size: 1.5em;
-      color: var(--text);
-
-      &.expanded {
-        color: var(--primary);
-      }
+      color: var(--primary);
     }
-  }
-
-  .after {
-    height: 100vh;
-    position: absolute;
-    z-index: -1;
-    width: 128vw;
-    display: block;
-    transform: translate(0%, -27%) rotate(12deg);
-    background-color: var(--primary);
-    transition: all 500ms ease-in-out;
-
-    @include breakpoint($breakpoint-medium) {
-      transform: translate(0%, -27%) rotate(9deg);
-    }
-
-    &.hide {
-      transform: translate(0%, -50%) rotate(0);
-      opacity: 0;
-    }
-  }
-  .before {
-    height: 100vh;
-    position: absolute;
-    transition: all 500ms ease-in-out;
-    z-index: -1;
-    right: 0;
-    width: 100vw;
-    display: block;
-    background-color: var(--text);
-    transform: translate(-52%, 0%) rotate(60deg);
-
-    @include breakpoint($breakpoint-medium) {
-      transform: translate(-60%, -60%) rotate(60deg);
-    }
-
-    @include breakpoint($breakpoint-large) {
-      transform: translate(-63%, -63%) rotate(57deg);
-    }
-
-    &.hide {
-      transform: translate(-63%, -63%) rotate(0deg);
-      opacity: 0.5;
-    }
-  }
-
-  .hide ~ .title-wrapper {
-    transform: translateY(0);
   }
 }

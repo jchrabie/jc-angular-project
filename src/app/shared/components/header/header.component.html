@@ -1,34 +1,15 @@
 <mat-toolbar color="primary" role="header">
   <div class="before"></div>
   <div id="menu">
-    <button
-      mat-icon-button
-      (click)="sidenavService.toggle()"
-      matTooltip="Menu"
-      matTooltipPosition="below"
-      [ngClass]="isScrolled ? '' : 'expanded-btn'"
-    >
+    <button mat-icon-button (click)="sidenavService.toggle()" matTooltip="Menu" matTooltipPosition="below">
       <mat-icon>menu</mat-icon>
     </button>
     <span>Menu</span>
   </div>
   <span class="fill-remaining-space"></span>
-  <ng-container *ngIf="!isScrolled">
-    <h1>
-      <span class="bigger expanded">J</span>OEL <span class="bigger expanded">C</span>HRABIE
-      <span class="sr-only">{{ 'devweb' | translate }}</span>
-    </h1>
-    <span class="fill-remaining-space"></span>
-  </ng-container>
-
-  <div class="title-wrapper">
-    <ng-container *ngIf="isScrolled">
-      <h1>
-        <span class="bigger">J</span>OEL <span class="bigger">C</span>HRABIE
-        <span class="sr-only">{{ 'devweb' | translate }}</span>
-      </h1>
-      <h2>Angular Freelance Developer</h2>
-    </ng-container>
-  </div>
-  <div class="after"></div>
+  <h1>
+    <span class="bigger">J</span>OEL <span class="bigger">C</span>HRABIE
+    <span class="sr-only">{{ 'devweb' | translate }}</span>
+  </h1>
+  <span class="fill-remaining-space"></span>
 </mat-toolbar>

@@ -1,37 +1,83 @@
 :host {
+  .project {
+    margin: 50px 0;
+  }
 
-    .project {
-        margin: 50px 0;
+  h2 small {
+    display: block;
+    float: right;
+    color: var(--text-light);
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  ::ng-deep {
+    a,
+    a:-webkit-any-link {
+      color: var(--text);
+      cursor: pointer;
+      text-decoration: underline;
+      font-weight: bold;
     }
 
-    h2 small {
-        display: block;
-        float: right;
-        color: var(--text-light);
+    .img-container {
+      text-align: center;
+      height: inherit;
+      margin: 20px 0;
+
+      img {
+        width: 100%;
+      }
     }
 
-    .content {
-        padding: 20px;
+    ol li {
+      margin: 1em 0;
     }
 
-    ::ng-deep .img-wrapper {
-        a, a:-webkit-any-link {
-            color: var(--primary);
-            cursor: pointer;
-            text-decoration: underline;
-        }
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: column;
-
-        .img-container {
-            text-align: center;
-            height: inherit;
-            margin: 20px 0;
-
-            img {
-                width: 100%;
-            }
-        }
+    .quote {
+      margin-top: 0;
+      text-align: center;
+      font-style: italic;
+      font-size: 0.8em;
     }
+
+    pre {
+      background-color: #1e1e1e;
+      font-family: Consolas;
+      color: white;
+      padding: 1em;
+      border-radius: 6px;
+      white-space: pre-wrap;
+
+      .module {
+        color: #c586c0;
+      }
+
+      .decorator {
+        color: #4ebc7c;
+      }
+
+      .function {
+        color: #dccd79;
+      }
+
+      .attr {
+        color: #9ccdc4;
+      }
+
+      .string {
+        color: #ce723b;
+      }
+
+      .keyword {
+        color: #3e9cca;
+      }
+
+      .comment {
+        color: #6a9955;
+      }
+    }
+  }
 }
