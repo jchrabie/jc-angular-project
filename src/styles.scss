@@ -30,8 +30,8 @@ mat-sidenav-container {
 }
 
 .mat-drawer-container {
-  background-color: var(--background);
-  color: var(--text);
+  background-color: var(--text);
+  color: var(--background);
 }
 
 .light-theme .mat-toolbar.mat-primary {
@@ -43,7 +43,7 @@ mat-sidenav-container {
 }
 
 .mat-progress-bar-buffer.mat-progress-bar-element {
-  background-color: var(--text) !important;
+  background-color: #424242 !important;
 }
 
 app-skills {

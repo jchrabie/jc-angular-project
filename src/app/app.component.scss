@@ -1,9 +1,16 @@
+@import 'breakpoint';
+@import 'breakpoints';
+
 mat-sidenav {
   min-width: 300px;
 }
 
 main {
-  margin: 90px 64px 64px;
+  margin: 90px 1em;
+
+  @include breakpoint($breakpoint-large) {
+    margin: 90px 64px 64px;
+  }
 }
 
 cookie-law .cookie-law-wrapper {

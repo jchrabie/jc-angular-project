@@ -75,3 +75,17 @@
     }
   }
 }
+
+.face {
+  left: 0;
+  top: 74px;
+  position: fixed;
+  height: calc(100% - 74px);
+  z-index: -1;
+  opacity: 0.05;
+
+  @include breakpoint($breakpoint-medium) {
+    left: auto;
+    right: 0;
+  }
+}
