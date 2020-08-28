@@ -9,6 +9,7 @@ export const blog: Article[] = [
     ],
     showMore: true,
     icon: 'code',
+    iconLink: 'eco-conception',
     title: "Lazy-load d'images",
     subtitle: `Chargement paresseux.`,
     content: `Le lazy loading, ou chargement paresseux pour les franco-français, consiste à spécifier quels composants, image, fichier, ... est à inclure au chargement et lesquelles ne sont pas nécessaires pour un premier rendu de notre belle page web.`,
@@ -217,6 +218,7 @@ export const blog: Article[] = [
     ],
     showMore: true,
     icon: 'work',
+    iconLink: 'experience',
     title: 'DSIA',
     subtitle: `Lead angular developer`,
     content: `Première mission en free-lance! Et pas des moindres, 9 mois sur une application d'analyse de données chez un éditeur de logiciels`,
@@ -296,6 +298,7 @@ export const blog: Article[] = [
     ],
     showMore: true,
     icon: 'send',
+    iconLink: 'freelance',
     title: 'Free-Lance',
     subtitle: `Développeur Web Senior`,
     content: `Fini les CDI dans les ESN, je me lance en tant que Free-Lance !`,
@@ -340,6 +343,7 @@ export const blog: Article[] = [
     ],
     showMore: true,
     icon: 'work',
+    iconLink: 'experience',
     title: 'Capgemini',
     subtitle: `Développeur Web Senior`,
     content: `Suite à une mission en tant que prestataire pour Capgemini, j'ai choisi d'intégrer directement l'entreprise.`,
@@ -424,6 +428,7 @@ export const blog: Article[] = [
     subtitle: 'Développeur Web',
     content: `Arrivé chez Creative, j'ai travaillé à Sopra Steria pour la CNAMTS en AngularJS et chez Capgemini pour un client dans le secteur du retail de luxe français.`,
     icon: 'work',
+    iconLink: 'experience',
     imagePath: 'assets/creative.jpg',
     dates: 'Octobre 2016 - Octobre 2018',
     projects: [
@@ -495,6 +500,7 @@ export const blog: Article[] = [
     content: `Embauché sur profil, j'ai travaillé en interne sur divers missions, technologies et frameworks.`,
     imagePath: 'assets/sqli.jpg',
     icon: 'work',
+    iconLink: 'experience',
     dates: 'Mars 2016 - Septembre 2016',
     projects: [
       {
@@ -546,6 +552,7 @@ export const blog: Article[] = [
     subtitle: 'Développeur Web (stagiaire)',
     content: `Suite à ma formation à l'ENI, j'ai réalisé au sein de CGI une application mobile hybride avec Ionic 1.`,
     icon: 'work',
+    iconLink: 'experience',
     imagePath: 'assets/cgi.jpg',
     dates: 'Février 2016 - Mars 2016',
     projects: [
@@ -609,6 +616,7 @@ export const blog: Article[] = [
     imagePath: 'assets/i18n.jpg',
     content: `Parceque les sites web ont pour vocation d'être visible partout dans le monde, j'ai pris à coeur d'utiliser des outils d'internationalisation comme les fichiers xliff et la librairie i18n propre à Angular.`,
     icon: 'translate',
+    iconLink: 'concept',
     projects: [
       {
         title: 'Introduction',
@@ -685,6 +693,7 @@ export const blog: Article[] = [
     subtitle: 'Adaptation Multi Devices',
     content: `A l'heure de l'explosition de l'internet mobile, les sites web doivent permettre de s'afficher sur n'importe quel support. Pour ce faire j'utilise de manière approprié le responsiveDesign et le concept de mobileFirst.`,
     icon: 'devices',
+    iconLink: 'concept',
     imagePath: 'assets/responsive.jpg',
     projects: [
       {
@@ -850,6 +859,7 @@ export const blog: Article[] = [
     ],
     showMore: true,
     subtitle: 'a11y',
+    iconLink: 'concept',
     content: `Améliorer l’accessibilité de votre site web permettra de toucher un public plus large, d’augmenter le trafic et les conversions sur votre site. Il faut toujours être conscient qu’entre 15% et 20% de la population souffrent d’un handicap: visuel, auditif, moteur…`,
     icon: 'accessible_forward',
     imagePath: 'assets/a11y.jpg',
@@ -936,6 +946,7 @@ export const blog: Article[] = [
     content: `Améliorer l’accessibilité de votre site web permettra de toucher un public plus large, d’augmenter le trafic et les conversions sur votre site. Il faut toujours être conscient qu’entre 15% et 20% de la population souffrent d’un handicap: visuel, auditif, moteur…`,
     imagePath: 'assets/analytics.jpg',
     icon: 'bar_chart',
+    iconLink: 'concept',
     projects: [
       {
         title: 'En cours',
@@ -970,6 +981,7 @@ export interface Article {
   content: string;
   subtitle: string;
   icon: string;
+  iconLink?: string;
   imagePath: string;
   dates?: string;
   projects: Project[];

@@ -10,12 +10,28 @@
       <mat-card-subtitle>{{ card.subtitle }}</mat-card-subtitle>
     </mat-card-header>
   </ng-template>
-  <button mat-fab color="primary" class="card-button" [ngClass]="{ 'no-content': !card.content && !card.type }">
+  <button
+    mat-fab
+    color="primary"
+    class="card-button"
+    [ngClass]="{ 'no-content': !card.content && !card.type }"
+    *ngIf="card.iconLink; else noLink"
+    routerLink="/blog"
+    [queryParams]="{ frag: card.iconLink }"
+  >
     <mat-icon *ngIf="card.customIcon; else materialIcon" [svgIcon]="card.icon"></mat-icon>
     <ng-template #materialIcon>
       <mat-icon>{{ card.icon }}</mat-icon>
     </ng-template>
   </button>
+  <ng-template #noLink>
+    <button mat-fab color="primary" class="card-button" [ngClass]="{ 'no-content': !card.content && !card.type }">
+      <mat-icon *ngIf="card.customIcon; else materialIcon" [svgIcon]="card.icon"></mat-icon>
+      <ng-template #materialIcon>
+        <mat-icon>{{ card.icon }}</mat-icon>
+      </ng-template>
+    </button></ng-template
+  >
   <mat-card-content *ngIf="card.type; else rawContent">
     <app-card-content [cardContent]="card.type + '.content' | translate"></app-card-content>
   </mat-card-content>

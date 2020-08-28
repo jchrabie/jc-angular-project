@@ -9,4 +9,9 @@
   @include breakpoint($breakpoint-large) {
     margin: 0 15%;
   }
+
+  a:-webkit-any-link {
+    color: var(--primary);
+    font-weight: bold;
+  }
 }
