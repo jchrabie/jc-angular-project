@@ -69,7 +69,6 @@
       width: 120px;
       font-size: 120px;
       line-height: 120px;
-      color: var(--primary);
       vertical-align: middle;
       text-align: center !important;
     }
@@ -82,7 +81,7 @@
   position: fixed;
   height: calc(100% - 74px);
   z-index: -1;
-  opacity: 0.05;
+  opacity: 0.1;
 
   @include breakpoint($breakpoint-medium) {
     left: auto;

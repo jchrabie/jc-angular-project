@@ -25,6 +25,12 @@
   .card-button {
     top: 124px;
   }
+
+  .light-theme & {
+    .mat-card-image {
+      height: 50%;
+    }
+  }
 }
 
 p.small.mat-line {

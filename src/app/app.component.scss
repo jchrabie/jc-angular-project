@@ -33,5 +33,9 @@ cookie-law .cookie-law-wrapper {
     position: fixed;
     height: 10px;
     z-index: 2;
+
+    rect {
+      fill: var(--background-light);
+    }
   }
 }

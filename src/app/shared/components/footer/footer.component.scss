@@ -2,7 +2,7 @@
 @import 'breakpoints';
 
 mat-toolbar {
-  background-color: #424242;
+  background-color: var(--background-light);
 
   mat-divider {
     border-color: var(--text);
@@ -21,7 +21,7 @@ mat-toolbar {
     white-space: pre-line;
 
     &.last-row {
-      background-color: var(--text);
+      background-color: var(--background);
 
       .mat-mini-fab {
         margin: 0 1em;

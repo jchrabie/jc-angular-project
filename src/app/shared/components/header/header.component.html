@@ -12,4 +12,7 @@
     <span class="sr-only">{{ 'devweb' | translate }}</span>
   </h1>
   <span class="fill-remaining-space"></span>
+  <mat-slide-toggle [checked]="isDarkTheme" (change)="toggleTheme()">
+    <mat-icon [svgIcon]="isDarkTheme ? 'moon' : 'sun'"></mat-icon>
+  </mat-slide-toggle>
 </mat-toolbar>

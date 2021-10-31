@@ -6,17 +6,17 @@ import { AnalyticsService } from '../../service/analytics.service';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
   @Input() private cardData: Card;
-  @Input() private isList?: boolean;
+  @Input() public isList?: boolean;
 
   get card(): Card {
     return this.cardData;
   }
 
-  constructor(private analyticsService: AnalyticsService) { }
+  constructor(private analyticsService: AnalyticsService) {}
 
   ngOnInit() {
     if (!this.isList) {

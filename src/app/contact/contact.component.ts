@@ -3,19 +3,18 @@ import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit } from '@angular/core';
 import CardContent from '../../model/CardContent';
 
-
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
   public card: any;
 
   constructor(private translateService: TranslateService) {
-    this.translateService.onLangChange
-      .subscribe(() => this.translateService.get(this.card.subtitleRaw)
-        .subscribe(res => this.card.subtitle = res));
+    this.translateService.onLangChange.subscribe(() =>
+      this.translateService.get(this.card.subtitleRaw).subscribe((res) => (this.card.subtitle = res))
+    );
   }
 
   ngOnInit() {
@@ -32,8 +31,9 @@ export class ContactComponent implements OnInit {
       content: [
         new CardContent('06 88 74 00 93', 'Mobile', 'phone'),
         new CardContent('Nantes', 'Localisation', 'place'),
-        new CardContent('contact@joelchrabie.com', 'Mail', 'email')
-      ]
+        new CardContent('contact@joelchrabie.com', 'Mail', 'email'),
+        new CardContent('www.joelchrabie.com', 'Site', 'qr_code'),
+      ],
     };
   }
 }

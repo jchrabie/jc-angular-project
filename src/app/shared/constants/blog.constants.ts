@@ -1,4 +1,245 @@
+import { Card } from './cards.constants';
+
 export const blog: Article[] = [
+  {
+    template: 'cbp',
+    group: 'experience',
+    breadcrumbs: [
+      { name: 'Blog', url: '/blog', active: false },
+      { name: 'Experiences', url: '/blog', queryParams: { frag: 'experience' }, active: false },
+      { name: 'CBP', url: '/blog/cbp', active: true },
+    ],
+    title: 'CBP',
+    showMore: true,
+    subtitle: 'Développeur Angular Sénior',
+    content: `Après 9 mois de mission chez DSIA, j'ai intégré le groupe CBP en partenariat avec NéoSoft pour la création d'une application d'adhésion en marque blanche pour des assurances immobilières.`,
+    icon: 'work',
+    iconLink: 'experience',
+    imagePath: 'assets/cbp.png',
+    dates: 'Octobre 2020 - Novembre 2020',
+    projects: [
+      {
+        title: 'Espace Adhésion',
+        id: 'espace-adhesion',
+        content: `<p>Crée en 1991, le Groupe CBP est un courtier spécialisé dans l’assurance-emprunteur. Les dix premières années d'activité ont été consavré au conseil et à la gestion des contrats collectifs bancaires, notamment auprès du Crédit Lyonnais, des Banques Populaires, des Caisses d’Épargne.</p>
+        <p>Au début des années 2000, CBP c'est orientés vers les contrats individuels, qui ont pris de l’ampleur à partir de 2008, notamment avec la Loi Lagarde. Aujourd’hui, il y a plus de 700 collaborateurs en France dont plus de 150 à l’informatique.</p>
+        <p>La France demeure le marché principal avec environ 82 % du chiffre d’affaires du groupe. Fort de plus de 15 millions de clients, dont 12 millions en France, CBP s'impose comme leaders aussi bien en Europe qu’en France. Le développement a toujours été basé sur les innovations produit et client.</p>
+        <p>A titre d’exemple, CBP étaient les 1ers à déployer une solution de vente en ligne pour l’assurance emprunteur au début des années 2000, et continu à optimiser la fluidité des services à chaque étape du contrat : adhésion, opérations après-vente, sinistres</p>
+        <p>J'ai intégré le Pôle Adhésion qui permet aux distributeurs de choisir une offre sur mesure d'assurance immobilière pour les futurs adhérents</p>
+        <p>L'application se présente sous forme d'une application en marque blanche, où le thème et le logo changeaient en fonction du distributeur</p>`
+      },
+      {
+        title: 'Sesame V5',
+        id: 'sesame-v5',
+        date: '13 mois',
+        content: `<p>Comme expliqué précédemment, j'ai intégré le pôle adhésion, composé d'un chef de projet, 2 testeurs, une PO, deux expertes fonctionnelles et une vingtaine de développeurs front/back</p>
+                <p>En tant que développeur front sénior j'étais en charge avec mes collègues d'estimer, développer et tester les nouvelles fonctionnalités de l'application B2B.</p>
+                <p>Avec le responsable technique front nous avons entrepris deux grands chantiers:</p>
+                <ul>
+                  <li>L'intégration de store NgRx pour communiquer avec les APIs Back</li>
+                  <li>La création d'une librairie de design system pour externaliser des composants réutilisables pour d'autres applications</li>
+                </ul>
+                <p>Rapidement, j'ai été proposé pour construire l'équivalent de l'application B2B pour les particuliers.</p>
+                <p>En parallèle de la création de cette nouvelle application et afin de pouvoir facilement modifier le design de l'application et passer sur un design V2, j'ai entrepris un énorme chantier pour supprimer la librairie Bootstrap et remplacer par un framework maison CSS.</p>
+                `,
+        skills: ['Angular', 'A11y', 'design-system', 'NgRx', 'TypeScript', 'Jest', 'HTML', 'Sass'],
+      },
+    ],
+    other: [
+      {
+        title: 'DSIA',
+        url: '/blog/dsia',
+      },
+      {
+        title: 'Free-lance',
+        url: '/blog/freelance',
+      },
+    ],
+  },
+ /* {
+    template: 'html-tips',
+    group: 'tips',
+    breadcrumbs: [
+      { name: 'Blog', url: '/blog', active: false },
+      { name: 'EcoConception', url: '/blog', queryParams: { frag: 'tips' }, active: false },
+      { name: 'Lazy Load', url: '/blog/lazy-load', active: true },
+    ],
+    showMore: true,
+    icon: 'bulb',
+    customIcon: true,
+    iconLink: 'tips',
+    title: 'HTML Tips',
+    subtitle: `Trucs et astuces HTML.`,
+    content: `Le HTML est le squelette de notre application web. Je vous partage des trucs et astuces autour de ce langage`,
+    imagePath: 'assets/html.jpg',
+    projects: [
+      {
+        title: "Qu'est-ce que le lazy loading?",
+        id: 'what',
+        content: `
+        <p>Le lazy loading, ou chargement paresseux
+        pour les franco-français, consiste à spécifier quels composants, image,
+        fichier, ... est à inclure au chargement et lesquelles ne sont pas nécessaires
+        pour un premier rendu de notre belle page web.</p>
+        `,
+      },
+      {
+        title: 'Mais à quoi ça sert ?',
+        id: 'meaning',
+        content: `
+        <p>A rien ! *Joke*</p>
+
+        <p>Plus sérieusement, le lazy loading permet
+        un gain considérable en performance de votre site web, car chaque utilisateur
+        ne va pas consulter l'intégralité de votre site web, consulter l'ensemble de
+        vos articles de haut en bas, voir toutes vos images, ... (même si
+        on aimerait).</p>
+
+        <p>Dans ce cas il est totalement inutile de
+        charger dès le démarrage le contenu du blog alors que l'utilisateur est sur la
+        page contact, de charger la dernière image alors qu'elle n'est pas dans le
+        viewport (surface de la fenêtre du navigateur). Il est donc recommandé de les
+        charger qu'à partir du moment où l'utilisateur décide d'aller sur le blog ou de
+        scroller vers le bas pour voir l'ensemble de nos images.</p>
+        `,
+      },
+    ],
+    other: [
+      {
+        title: 'Free-lance',
+        url: '/blog/freelance',
+      },
+    ],
+  },*/
+  {
+    template: 'dsia',
+    group: 'experience',
+    breadcrumbs: [
+      { name: 'Blog', url: '/blog', active: false },
+      { name: 'Experiences', url: '/blog', queryParams: { frag: 'experience' }, active: false },
+      { name: 'DSIA', url: '/blog/dsia', active: true },
+    ],
+    showMore: true,
+    icon: 'work',
+    iconLink: 'experience',
+    title: 'DSIA',
+    subtitle: `Lead angular developer`,
+    content: `Première mission en free-lance! Et pas des moindres, 9 mois sur une application d'analyse de données chez un éditeur de logiciels`,
+    imagePath: 'assets/dsia.png',
+    dates: 'Novembre 2019 - Juillet 2020',
+    projects: [
+      {
+        title: 'Les débuts',
+        id: 'beginning',
+        date: '1 mois',
+        content: `<p>Première mission free-lance!</p>
+                <p>Me voilà (free-)lancé pour la première fois! Je suis arrivé dans l'équipe IMA composée d'un Scrum Master 3 dev back et un dev front en full agilité.</p>
+                <p>IMA (pour In-Memory Analytics) est une solution de traitement "In Memory" de grands volumes d'information à des fins analytiques. Il s'agit d'une solution BI née de prototypes réalisés dans le cadre de l'activité R&D de DSIA.</p>
+                <p>A fin de m'intégrer pleinement dans le projet et commencer à comprendre le fonctionnel de cette application, rien de mieux que de mettre les mains dans le code, et s'intégrer avec ses collègues (Merci Fred, Xavier, Benj, Seb, et Dany!).</p>
+                <p>Et ma première mission a été de faire des TU! Car l'application, qui avait débuté il y a deux ans, ne comportait que ... 65 TU à mon arrivée.</p>
+                <p>En parallèle, je suis rapidement devenu lead sur les revues de codes front de mes collègues.</p>`,
+        skills: ['Angular', 'TypeScript', 'Karma', 'Jasmine', 'HTML', 'Sass', 'SCRUM'],
+      },
+      {
+        title: 'Build',
+        id: 'build',
+        date: '3 mois',
+        content: `<p>Une fois le fonctionnel ancré dans ma tête (Je comprends vite, mais il faut m'expliquer longuement :p). J'ai commencé à participer au développement des features que nous avions préalablement estimé lors des sprint plannings</p>
+                <p>La conception, réalisation et test unitaires étaient réalisés en binôme front/back.</p>
+                <p>À l'issue de ces quelques mois, près de 650 TUs ont été développé afin de s'assurer d'avoir le moins de régressions possible</p>`,
+        skills: ['Angular', 'TypeScript', 'Karma', 'Jasmine', 'HTML', 'Sass', 'SCRUM'],
+      },
+      {
+        title: 'Éditeur de chart',
+        id: 'Anychart',
+        date: '5 mois',
+        content: `<p>Puis vint une énorme feature très importante pour DSIA: <b>L'éditeur de charts</b></p>
+                <p>Cet éditeur était déjà présent sur l'application mais le code n'était pas évolutif, exclusif à l'application IMA, pas très User Friendly, et très difficilement maintenable!</p>
+                <p>Il est essentiel pour l'appli de visualiser sous forme de différents graphiques les données (pie chart, cartesian, stock, pareto, ...) et nous utilisions la librairie <a href="https://www.anychart.com/" target="_blank">AnyChart</a> pour la visualisation.</p>
+                <p>Le but de la feature était d'externaliser la gestion de l'éditeur de graphique dans un package npm propriétaire (Verdaccio) afin de le réutiliser dans d'autres applications de DSIA.</p>
+                <p>J'ai réalisé toute la conception technico/fonctionnelle ainsi que le développement et le test de cet éditeur de graphique sur presque 5 mois.<br/>Il est désormais possible via l'éditeur de choisir le type de chart, avec une ou plusieurs séries, modifier les marges, les fonds, et toutes les options spécifiques aux différents charts</p>
+                <p>J'avais aussi les mains libres pour la partie UX/UI et je me suis réellement fait plaisir en intégrant ce composant comme je le souhaitais!<br/>Vous trouverez ci-dessous quelques copies écrans du chart editor:</p>
+                <div class="img-wrapper">
+                    <div class="img-container">
+                        <img src="assets/cartesian.png" appLazyLoad alt="Graphique cartésien">
+                        <p class="quote">Graphique Cartésien</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="assets/pie.png" appLazyLoad alt="Graphique Camembert">
+                        <p class="quote">Graphique Camembert</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="assets/stock.png" appLazyLoad alt="Graphique Stock">
+                        <p class="quote">Graphique Stock</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="assets/treemap.png" appLazyLoad alt="Graphique Treemap">
+                        <p class="quote">Graphique Treemap</p>
+                    </div>
+                </div>
+                <p>Suite à cela, le composant avait une couverture de code de plus de 93% soit près de 450 TU!</p>`,
+        skills: ['Angular', 'TypeScript', 'AnyChart', 'Karma', 'Jasmine', 'HTML', 'Sass', 'SCRUM'],
+      },
+    ],
+    other: [
+      {
+        title: 'CBP',
+        url: '/blog/cbp',
+      },
+      {
+        title: 'Free-lance',
+        url: '/blog/freelance',
+      },
+      {
+        title: 'Capgémini',
+        url: '/blog/capgemini',
+      },
+    ],
+  },
+  {
+    template: 'freelance',
+    group: 'freelance',
+    breadcrumbs: [
+      { name: 'Blog', url: '/blog', active: false },
+      { name: 'Freelance', url: '/blog/freelance', active: true },
+    ],
+    showMore: true,
+    icon: 'send',
+    iconLink: 'freelance',
+    title: 'Free-Lance',
+    subtitle: `Développeur Web Senior`,
+    content: `Fini les CDI dans les ESN, je me lance en tant que Free-Lance !`,
+    imagePath: 'assets/liberte.jpg',
+    dates: "Novembre 2019 - Aujourd'hui",
+    projects: [
+      {
+        title: 'Démarrage du projet',
+        id: 'demarrage',
+        date: '',
+        content: `<p>Être libre et se lancer, #Freelance !</p>
+                <p>Ca y est, je saute le pas. Après plusieurs années dans les ESN, je viens de décider de me lancer en tant que Freelance.</p>
+                <p>Cette décision n'est pas facile à prendre, mais tellement jouissive quand elle est prise. Beaucoup d'appréhension, de peur de rater, de  #challenge. Mais n'est ce pas ce challenge qui nous pousse à nous surpasser ?</p>
+                <p>Ma décision est prise, et je sais que, malgré l'auto-entrepreneuria, je ne suis pas seul, je peux compter sur d'autres freelances (merci de ton soutien Antoine BEAUREGARD), sur des entreprise (Younup), sur ma famille et mes amis.</p>
+                <p>Bref, ce n'est que le début, mais j'ai déjà cette impression de liberté.</p>`,
+        skills: [],
+      },
+      {
+        title: 'Younup',
+        id: 'younup',
+        date: '9mois',
+        content: `<p>Après avoir décidé de quitter Capgémini, j'ai pris contact avec diverses ESN.</p>
+                <p>Younup par le biais de Pierre-Marie PASSET est la première à me faire confiance, en même temps, Pierre-Marie était mon directeur d'agence quand je travaillais chez Créative et connaissait déjà mes compétences sur Angular.</p>
+                <p>J'ai donc intégré DSIA, l'un des clients de Younup, pour intervenir en tant que Lead dev Angular.</p>`,
+        skills: ['Angular', 'TypeScript', 'Javascript', 'HTML', 'Sass', 'SCRUM'],
+      },
+    ],
+    other: [
+      {
+        title: 'DSIA',
+        url: '/blog/dsia',
+      },
+    ],
+  },
   {
     template: 'lazy-load',
     group: 'eco-conception',
@@ -205,131 +446,6 @@ export const blog: Article[] = [
       {
         title: 'Free-lance',
         url: '/blog/freelance',
-      },
-    ],
-  },
-  {
-    template: 'dsia',
-    group: 'experience',
-    breadcrumbs: [
-      { name: 'Blog', url: '/blog', active: false },
-      { name: 'Experiences', url: '/blog', queryParams: { frag: 'experience' }, active: false },
-      { name: 'DSIA', url: '/blog/dsia', active: true },
-    ],
-    showMore: true,
-    icon: 'work',
-    iconLink: 'experience',
-    title: 'DSIA',
-    subtitle: `Lead angular developer`,
-    content: `Première mission en free-lance! Et pas des moindres, 9 mois sur une application d'analyse de données chez un éditeur de logiciels`,
-    imagePath: 'assets/dsia.png',
-    dates: 'Novembre 2019 - Juillet 2020',
-    projects: [
-      {
-        title: 'Les débuts',
-        id: 'beginning',
-        date: '1 mois',
-        content: `<p>Première mission free-lance!</p>
-                <p>Me voilà (free-)lancé pour la première fois! Je suis arrivé dans l'équipe IMA composée d'un Scrum Master 3 dev back et un dev front en full agilité.</p>
-                <p>IMA (pour In-Memory Analytics) est une solution de traitement "In Memory" de grands volumes d'information à des fins analytiques. Il s'agit d'une solution BI née de prototypes réalisés dans le cadre de l'activité R&D de DSIA.</p>
-                <p>A fin de m'intégrer pleinement dans le projet et commencer à comprendre le fonctionnel de cette application, rien de mieux que de mettre les mains dans le code, et s'intégrer avec ses collègues (Merci Fred, Xavier, Benj, Seb, et Dany!).</p>
-                <p>Et ma première mission a été de faire des TU! Car l'application, qui avait débuté il y a deux ans, ne comportait que ... 65 TU à mon arrivée.</p>
-                <p>En parallèle, je suis rapidement devenu lead sur les revues de codes front de mes collègues.</p>`,
-        skills: ['Angular', 'TypeScript', 'Karma', 'Jasmine', 'HTML', 'Sass', 'SCRUM'],
-      },
-      {
-        title: 'Build',
-        id: 'build',
-        date: '3 mois',
-        content: `<p>Une fois le fonctionnel ancré dans ma tête (Je comprends vite, mais il faut m'expliquer longuement :p). J'ai commencé à participer au développement des features que nous avions préalablement estimé lors des sprint plannings</p>
-                <p>La conception, réalisation et test unitaires étaient réalisés en binôme front/back.</p>
-                <p>À l'issue de ces quelques mois, près de 650 TUs ont été développé afin de s'assurer d'avoir le moins de régressions possible</p>`,
-        skills: ['Angular', 'TypeScript', 'Karma', 'Jasmine', 'HTML', 'Sass', 'SCRUM'],
-      },
-      {
-        title: 'Éditeur de chart',
-        id: 'Anychart',
-        date: '5 mois',
-        content: `<p>Puis vint une énorme feature très importante pour DSIA: <b>L'éditeur de charts</b></p>
-                <p>Cet éditeur était déjà présent sur l'application mais le code n'était pas évolutif, exclusif à l'application IMA, pas très User Friendly, et très difficilement maintenable!</p>
-                <p>Il est essentiel pour l'appli de visualiser sous forme de différents graphiques les données (pie chart, cartesian, stock, pareto, ...) et nous utilisions la librairie <a href="https://www.anychart.com/" target="_blank">AnyChart</a> pour la visualisation.</p>
-                <p>Le but de la feature était d'externaliser la gestion de l'éditeur de graphique dans un package npm propriétaire (Verdaccio) afin de le réutiliser dans d'autres applications de DSIA.</p>
-                <p>J'ai réalisé toute la conception technico/fonctionnelle ainsi que le développement et le test de cet éditeur de graphique sur presque 5 mois.<br/>Il est désormais possible via l'éditeur de choisir le type de chart, avec une ou plusieurs séries, modifier les marges, les fonds, et toutes les options spécifiques aux différents charts</p>
-                <p>J'avais aussi les mains libres pour la partie UX/UI et je me suis réellement fait plaisir en intégrant ce composant comme je le souhaitais!<br/>Vous trouverez ci-dessous quelques copies écrans du chart editor:</p>
-                <div class="img-wrapper">
-                    <div class="img-container">
-                        <img src="assets/cartesian.png" appLazyLoad alt="Graphique cartésien">
-                        <p class="quote">Graphique Cartésien</p>
-                    </div>
-                    <div class="img-container">
-                        <img src="assets/pie.png" appLazyLoad alt="Graphique Camembert">
-                        <p class="quote">Graphique Camembert</p>
-                    </div>
-                    <div class="img-container">
-                        <img src="assets/stock.png" appLazyLoad alt="Graphique Stock">
-                        <p class="quote">Graphique Stock</p>
-                    </div>
-                    <div class="img-container">
-                        <img src="assets/treemap.png" appLazyLoad alt="Graphique Treemap">
-                        <p class="quote">Graphique Treemap</p>
-                    </div>
-                </div>
-                <p>Suite à cela, le composant avait une couverture de code de plus de 93% soit près de 450 TU!</p>`,
-        skills: ['Angular', 'TypeScript', 'AnyChart', 'Karma', 'Jasmine', 'HTML', 'Sass', 'SCRUM'],
-      },
-    ],
-    other: [
-      {
-        title: 'Free-lance',
-        url: '/blog/freelance',
-      },
-      {
-        title: 'Capgémini',
-        url: '/blog/capgemini',
-      },
-    ],
-  },
-  {
-    template: 'freelance',
-    group: 'freelance',
-    breadcrumbs: [
-      { name: 'Blog', url: '/blog', active: false },
-      { name: 'Freelance', url: '/blog/freelance', active: true },
-    ],
-    showMore: true,
-    icon: 'send',
-    iconLink: 'freelance',
-    title: 'Free-Lance',
-    subtitle: `Développeur Web Senior`,
-    content: `Fini les CDI dans les ESN, je me lance en tant que Free-Lance !`,
-    imagePath: 'assets/liberte.jpg',
-    dates: "Novembre 2019 - Aujourd'hui",
-    projects: [
-      {
-        title: 'Démarrage du projet',
-        id: 'demarrage',
-        date: '',
-        content: `<p>Être libre et se lancer, #Freelance !</p>
-                <p>Ca y est, je saute le pas. Après plusieurs années dans les ESN, je viens de décider de me lancer en tant que Freelance.</p>
-                <p>Cette décision n'est pas facile à prendre, mais tellement jouissive quand elle est prise. Beaucoup d'appréhension, de peur de rater, de  #challenge. Mais n'est ce pas ce challenge qui nous pousse à nous surpasser ?</p>
-                <p>Ma décision est prise, et je sais que, malgré l'auto-entrepreneuria, je ne suis pas seul, je peux compter sur d'autres freelances (merci de ton soutien Antoine BEAUREGARD), sur des entreprise (Younup), sur ma famille et mes amis.</p>
-                <p>Bref, ce n'est que le début, mais j'ai déjà cette impression de liberté.</p>`,
-        skills: [],
-      },
-      {
-        title: 'Younup',
-        id: 'younup',
-        date: '9mois',
-        content: `<p>Après avoir décidé de quitter Capgémini, j'ai pris contact avec diverses ESN.</p>
-                <p>Younup par le biais de Pierre-Marie PASSET est la première à me faire confiance, en même temps, Pierre-Marie était mon directeur d'agence quand je travaillais chez Créative et connaissait déjà mes compétences sur Angular.</p>
-                <p>J'ai donc intégré DSIA, l'un des clients de Younup, pour intervenir en tant que Lead dev Angular.</p>`,
-        skills: ['Angular', 'TypeScript', 'Javascript', 'HTML', 'Sass', 'SCRUM'],
-      },
-    ],
-    other: [
-      {
-        title: 'DSIA',
-        url: '/blog/dsia',
       },
     ],
   },
@@ -894,7 +1010,7 @@ export const blog: Article[] = [
                     <p>L’Initiative pour l’accessibilité du Web, Web Accessibility Initiative du W3C (WAI (en anglais)) développe des spécifications techniques, des règles, des techniques et ressources d’accompagnement qui décrivent des solutions d’accessibilité. Elles sont considérées comme des normes internationales pour l’accessibilité du web: par exemple, WCAG 2.0 est aussi une norme ISO : ISO/IEC 40500.</p>
                     <p>Beaucoup d’aspects de l’accessibilité sont relativement faciles à comprendre et à mettre en œuvre. Certaines solutions d’accessibilité sont plus complexes et requièrent plus de connaissances pour être implémentées.</p>
                     <p>Il est plus efficace d’incorporer l’accessibilité au début d’un projet pour ne pas avoir à revenir en arrière et recommencer le travail.</p>
-                    <p>Aujourd'hui, le service public ce doit d'être accessible à tout le monde, demain, il en sera de même pour toute entreprise du Cac40.<br/>Aux états unis, tous les sites se doivent d'être accessible sous peine de poursuites et de sanction financière!</p>
+                    <p>Aujourd'hui, le service public ce doit d'��tre accessible à tout le monde, demain, il en sera de même pour toute entreprise du Cac40.<br/>Aux états unis, tous les sites se doivent d'être accessible sous peine de poursuites et de sanction financière!</p>
                 `,
       },
       {
@@ -972,7 +1088,7 @@ export const blog: Article[] = [
   },
 ];
 
-export interface Article {
+export interface Article extends Card {
   template: string;
   group: string;
   showMore: boolean;
@@ -981,6 +1097,7 @@ export interface Article {
   content: string;
   subtitle: string;
   icon: string;
+  customIcon?: boolean;
   iconLink?: string;
   imagePath: string;
   dates?: string;

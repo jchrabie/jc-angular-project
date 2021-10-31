@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnDestroy, AfterViewInit, OnInit } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -13,9 +13,10 @@ import { takeUntil, throttleTime, map } from 'rxjs/operators';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnDestroy, AfterViewInit {
+export class HeaderComponent implements OnDestroy, OnInit, AfterViewInit {
   public isMobile: boolean;
   public isScrolled: boolean = true;
+  public isDarkTheme: boolean;
   private destroy$: Subject<void> = new Subject();
 
   @ViewChild('menu', { static: true }) public menu: ElementRef;
@@ -34,6 +35,10 @@ export class HeaderComponent implements OnDestroy, AfterViewInit {
     fromEvent(window, 'scroll')
       .pipe(takeUntil(this.destroy$))
       .subscribe((e: Event) => console.log(this.getYPosition(e)));
+  }
+
+  ngOnInit() {
+    this.isDarkTheme = this.themeService.isDarkTheme();
   }
 
   ngAfterViewInit() {
@@ -64,6 +69,7 @@ export class HeaderComponent implements OnDestroy, AfterViewInit {
 
   toggleTheme() {
     this.themeService.isDarkTheme() ? this.themeService.setLightTheme() : this.themeService.setDarkTheme();
+    this.isDarkTheme = this.themeService.isDarkTheme();
     this.analyticsService.emit('click', 'header', 'theme', this.themeService.isDarkTheme() ? 'dark' : 'light');
   }
 

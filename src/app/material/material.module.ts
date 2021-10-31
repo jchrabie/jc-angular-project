@@ -18,6 +18,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   imports: [
@@ -27,6 +28,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatButtonModule,
     MatIconModule,
     MatProgressBarModule,
+    MatSlideToggleModule,
     MatSidenavModule,
     MatInputModule,
     MatCheckboxModule,
@@ -47,6 +49,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatDialogModule,
     MatButtonModule,
     MatIconModule,
+    MatSlideToggleModule,
     MatInputModule,
     MatMenuModule,
     MatRadioModule,

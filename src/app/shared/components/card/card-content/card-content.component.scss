@@ -1,11 +1,14 @@
 mat-list {
-    margin-top: -20px;
+  & .small {
+    font-size: 0.6em;
+  }
 
-    & .small {
-        font-size: .6em;
-    }
+  mat-icon {
+    color: var(--primary);
+  }
+}
 
-    mat-icon {
-        color: var(--primary);
-    }
+span {
+  padding: 20px 0;
+  display: block;
 }

@@ -1,5 +1,17 @@
 export const experiences: Experience[] = [
   {
+    type: 'experiences.cbp',
+    name: 'CBP',
+    url: '/blog/cbp',
+    city: 'Nantes',
+    startDate: '10/2020',
+    endDate: '12/2021',
+    postcode: '44',
+    logo: 'assets/cbp.png',
+    chips: ['Angular', 'TypeScript', 'JavaScript', 'Sass', 'HTML5'],
+    showMore: true,
+  },
+  {
     type: 'experiences.dsia',
     name: 'DSIA',
     url: '/blog/dsia',

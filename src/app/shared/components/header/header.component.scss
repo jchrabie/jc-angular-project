@@ -7,14 +7,31 @@ mat-toolbar {
   left: 0;
   right: 0;
   z-index: 2;
-  background-color: #424242 !important;
+  background-color: var(--background-light) !important;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  ::ng-deep .mat-slide-toggle.mat-checked {
+    mat-icon {
+      display: none;
+      @include breakpoint($breakpoint-medium) {
+        display: inline-block;
+      }
+    }
+
+    .mat-slide-toggle-bar {
+      @include breakpoint($breakpoint-medium) {
+        margin: 0 10px;
+      }
+    }
+  }
 
   #menu {
     display: flex;
     align-items: center;
 
     button {
-      background-color: var(--text);
+      background-color: var(--background);
 
       &.expanded-btn {
         background-color: var(--primary);
@@ -47,6 +64,7 @@ mat-toolbar {
   h1 {
     font-size: 1.8em;
     padding: 0;
+    color: var(--text);
 
     .bigger {
       font-size: 1.5em;
